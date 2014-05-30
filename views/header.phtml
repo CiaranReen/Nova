@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Playground</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>/public/css/style.css"/>
+    <script type="text/javascript" src="<?php echo URL; ?>/public/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo URL; ?>/public/js/custom.js"></script>
+</head>
+<body>
+
+<div id="header">
+    <nav id="nav">
+        <ul id="site-header">
+            <li><a href="<?php echo URL; ?>/">Home</a></li>
+            <?php if ($_SESSION['loggedIn'] === true) : ?>
+                <li><a href="<?php echo URL; ?>/area/">Your Area</a></li>
+                <li><a class="btn btn-primary" href="<?php echo URL; ?>/auth/logout/">Logout</a></li>
+            <?php else: ?>
+                <li><a href="<?php echo URL; ?>/courses/">Courses</a></li>
+                <li><a class="right-nav btn btn-primary" href="<?php echo URL; ?>/auth/">Login</a></li>
+                <li><a class="right-nav btn btn-primary" href="<?php echo URL; ?>/register/">Register</a></li>
+            <?php endif; ?>
+        </ul>
+    </nav>
+</div>
+
+<div id="content">

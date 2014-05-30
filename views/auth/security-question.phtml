@@ -1,0 +1,7 @@
+<form id="forgotten-password" action="<?php echo URL; ?>/auth/reset/" method="post">
+    <p>Q: <?php echo $this->security_question[0]['question']; ?></p>
+    <input type="text" name="answer" placeholder="Answer...">
+    <input type="submit" value="Continue">
+</form>
+
+

@@ -1,0 +1,73 @@
+body {
+    color: #555555;
+    font-family: Ubuntu,"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif !important;
+    font-size: 1.8em !important;
+    font-weight: 300 !important;
+    line-height: 1.8em !important;
+}
+
+body h1, body h2, body h3 {
+    color: #888888;
+    font-family: Ubuntu,"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-weight: 300;
+}
+
+#header {
+    background-color: #252527;
+    height: 65px;
+}
+
+#site-header {
+    padding-top: 22px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 1060px;
+}
+
+#site-header li {
+    list-style: none;
+    display: inline;
+}
+
+#site-header li a {
+    color: #ADADAD;
+    font-size: 18px;
+    padding: 15px 26px;
+    text-decoration: none;
+}
+
+#site-header li a:hover {
+    color: #ffffff;
+}
+
+.btn-primary {
+    background: none repeat scroll 0 0 #3F3F3F;
+    border: medium none;
+    box-shadow: none;
+    padding: 15px 15px !important;
+}
+
+.btn-primary:hover {
+    background: none repeat scroll 0 0 #3F3F3F;
+}
+
+.right-nav {
+    float: right !important;
+    margin-bottom: 10px !important;
+    margin-left: 10px;
+}
+
+#content {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+    padding: 20px;
+    width: 1060px;
+    min-height: 845px;
+}
+
+#footer {
+    background-color: green;
+    padding: 20px;
+}

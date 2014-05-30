@@ -1,0 +1,23 @@
+<form id="register" action="<?php echo URL; ?>/register/" method="post">
+<input type="text" name="first-name" placeholder="First Name*">
+<input type="text" name="last-name" placeholder="Last Name*">
+<select name="age">
+    <option value="">Your Age</option>
+    <option value="false">Below 13</option>
+    <option value="true">Above 13</option>
+</select>
+<input type="text" name="company" placeholder="Company">
+<input type="email" name="email" placeholder="Email address*">
+<input type="password" name="password" placeholder="Password*">
+<input type="password" name="conf-password" placeholder="Password (again)*">
+<select name="security-question">
+    <option value="">Security Question</option>
+    <?php foreach ($this->security_questions as $sq) : ?>
+        <option value="<?php echo $sq['id']; ?>"><?php echo $sq['question']; ?></option>
+    <?php endforeach; ?>
+</select>
+<input type="text" name="answer" placeholder="Answer*">
+<input type="submit" value="Join Playground">
+</form>
+
+
