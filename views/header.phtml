@@ -23,6 +23,7 @@
             <li><a href="<?php echo URL; ?>/">Home</a></li>
             <?php if ($_SESSION['loggedIn'] === true) : ?>
                 <li><a href="<?php echo URL; ?>/area/">Your Area</a></li>
+                <li><a href="<?php echo URL; ?>/account/">My Account</a></li>
                 <li><a class="btn btn-primary" href="<?php echo URL; ?>/auth/logout/">Logout</a></li>
             <?php else: ?>
                 <li><a href="<?php echo URL; ?>/courses/">Courses</a></li>

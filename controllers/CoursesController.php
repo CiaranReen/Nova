@@ -21,7 +21,6 @@ class CoursesController extends GoBaseController {
     public function indexAction()
     {
         $courseModel = new Courses();
-
         $courses = $courseModel->fetchAll('course');
 
         $this->view->courses = $courses;
