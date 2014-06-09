@@ -1,25 +1,27 @@
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Price</th>
-        <th>Number of Videos</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><a href="<?php echo URL; ?>/courses/view/<?php echo $this->course['id']; ?>"><?php echo $this->course['name']; ?></a></td>
-        <td><?php echo $this->course['description']; ?></td>
-        <td><?php echo $this->course['price']; ?></td>
-        <td><?php echo $this->course['no_of_videos']; ?></td>
-        <?php if ($this->is_subscribed === true) : ?>
-            <td>Subscribed</td>
-        <?php else: ?>
-            <td><a href="<?php echo URL; ?>">Subscribe</a></td>
-        <?php endif; ?>
-    </tr>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col-md-9">
+        <a href="<?php echo URL; ?>/courses/view/<?php echo $this->course['id']; ?>"><?php echo $this->course['name']; ?></a>
+        <img src="<?php echo URL; ?>/public/images/<?php echo $this->course['image']; ?>"/>
+        <?php echo $this->course['description']; ?>
+        <?php echo $this->course['price']; ?>
+        <?php echo $this->course['no_of_videos']; ?>
+    </div>
+    <div class="col-md-3">
+        <h1>Subscribe</h1>
+        <form action="" method="POST">
+            <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_CeMyfzmPBnaYxxa8JyRIu2R4"
+                data-amount="2500"
+                data-name="Playground"
+                data-description="Ultimate PHP for Beginner's (£25.00)"
+                data-image="/128x128.png">
+            </script>
+        </form>
+
+
+    </div>
+
+</div>
 
 

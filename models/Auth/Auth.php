@@ -21,21 +21,15 @@ class Auth extends GoBaseModel {
      */
     public function login($email, $password)
     {
-        $sql = $this->db->prepare('SELECT id FROM user WHERE email = :email AND password = :password');
+        $sql = $this->db->prepare('SELECT * FROM user WHERE email = :email AND password = :password');
 
         $sql->execute(array (
             ':email' => $email,
             ':password' => $password,
         ));
 
-        if ($sql->rowCount() > 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        $data = $sql->fetchAll();
+        return $data;
     }
 
     public function getSecurityQuestionByEmail($email)

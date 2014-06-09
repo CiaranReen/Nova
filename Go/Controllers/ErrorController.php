@@ -6,7 +6,7 @@
  * Time: 12:06
  * This is the parent controller for the GoPHP framework */
 
-abstract class GoBaseController {
+abstract class ErrorController {
 
     /**
      * @var

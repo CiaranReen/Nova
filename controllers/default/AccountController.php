@@ -23,10 +23,11 @@ class AccountController extends GoBaseController {
     public function indexAction()
     {
         $accountModel = new Account();
-        $account = $accountModel->fetchAll('user');
+        $account = $accountModel->find(GoSession::get('user_id'), 'user');
 
         if ($this->isPost() === true)
         {
+            $where = $this->getRequest('id');
             $data = array (
                 'first_name' => $this->getRequest('first-name'),
                 'last_name' => $this->getRequest('last-name'),
@@ -34,8 +35,8 @@ class AccountController extends GoBaseController {
                 'email' => $this->getRequest('email'),
             );
 
-            $accountModel->save($data, 'user');
-            $this->;
+            $accountModel->updateRecord($data, 'user', $where);
+            $this->view->render('account/success');
         }
 
         $this->view->account = $account;

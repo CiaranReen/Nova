@@ -27,6 +27,7 @@ class RegisterController extends GoBaseController {
                 $userData = array (
                     'first_name' => $this->getRequest('first-name'),
                     'last_name' => $this->getRequest('last-name'),
+                    'role' => 'default',
                     'is_over_13' => $this->getRequest('age'),
                     'company' => $this->getRequest('company'),
                     'email' => $this->getRequest('email'),
@@ -35,7 +36,7 @@ class RegisterController extends GoBaseController {
                     'security_question_answer' => $this->getRequest('answer'),
                 );
 
-                $save = $registerModel->save($userData, 'user');
+                $save = $registerModel->insertRecord($userData, 'user');
                 $this->view->render('register/success');
             }
             else

@@ -33,7 +33,13 @@ class GoBaseModel extends GoDatabase {
         return $resultSet;
     }
 
-    public function save($data, $tableName)
+    /**
+     * INSERT a new record into the db
+     * @param $data
+     * @param $tableName
+     * @return bool
+     */
+    public function insertRecord($data, $tableName)
     {
         //Values
         $values = '';
@@ -53,6 +59,26 @@ class GoBaseModel extends GoDatabase {
         $columns = substr($columns, 0, -2);
 
         $insertSql = $this->insert($tableName, $columns, $values);
+
+        $query = $this->db->prepare($insertSql);
+        $query->execute();
+
+        return true;
+    }
+
+    public function updateRecord($data, $tableName, $where)
+    {
+
+        //Columns and values
+        $setSql = '';
+        foreach ($data as $key => $value)
+        {
+            $setSql .= '`' . $key . '` = \'' . $value . '\', ';
+        }
+
+        $setSql = substr($setSql, 0, -2);
+
+        $insertSql = $this->update($tableName, $setSql, $where);
 
         $query = $this->db->prepare($insertSql);
         $query->execute();
@@ -151,6 +177,18 @@ class GoBaseModel extends GoDatabase {
     }
 
     /**
+     * UPDATE clause for the gORM Query Handler
+     * @param $tableName
+     * @param $setSql
+     * @param $where
+     * @return string
+     */
+    public function update($tableName, $setSql, $where)
+    {
+        return ('UPDATE `'. $tableName .'` SET ' . $setSql . ' WHERE `id` = \'' . $where . '\';');
+    }
+
+    /**
      * Sha1 encryption for passwords
      * @param $password
      * @return string
@@ -159,6 +197,16 @@ class GoBaseModel extends GoDatabase {
     {
         $hashedPassword = sha1($password);
         return $hashedPassword;
+    }
+
+    public function sha1SaltPasswordHash()
+    {
+
+    }
+
+    public function bCryptPasswordHash()
+    {
+
     }
 
     /**
@@ -172,6 +220,13 @@ class GoBaseModel extends GoDatabase {
 
         $data = $sql->fetchAll();
         return $data;
+    }
+
+    public function delete($id, $tableName)
+    {
+        $sql = $this->db->prepare('DELETE FROM ' . $tableName . ' WHERE id = ' . $id);
+        $sql->execute();
+        return true;
     }
 
 }

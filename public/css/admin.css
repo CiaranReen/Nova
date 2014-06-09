@@ -12,32 +12,50 @@ body h1, body h2, body h3 {
 }
 
 #header {
-    background-color: #252527;
-    height: 65px;
+    border-bottom: 1px solid #526267;
+    height: 36px;
 }
 
-#site-header {
-    padding-top: 22px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    width: 1160px;
+.admin-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    min-height: 845px;
 }
 
-#site-header li {
+#admin-nav li {
     list-style: none;
-    display: inline;
+    background-color: #515B5F;
+    margin: 0;
 }
 
-#site-header li a {
-    color: #ADADAD;
-    font-size: 18px;
-    padding: 15px 26px;
+#admin-nav a {
+    color: #D8E0E2;
+    display: block;
+    padding-top: 45px;
     text-decoration: none;
+    text-shadow: 0 1px 1px #202324;
+    width: 82px;
 }
 
-#site-header li a:hover {
-    color: #ffffff;
+.table-widget {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 #ACAEAF;
+    clear: both;
+    margin-top: 22px;
+}
+
+.stock-table th {
+    border-bottom: 1px solid #D3D3D3;
+    border-right: 1px solid #E5E5E5;
+    box-shadow: 0 1px 0 1px #FFFFFF inset;
+    color: #6C6C6C;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 12px 0;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .btn-primary {
@@ -55,18 +73,4 @@ body h1, body h2, body h3 {
     float: right !important;
     margin-bottom: 10px !important;
     margin-left: 10px;
-}
-
-#content {
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #fff;
-    padding: 20px;
-    width: 1160px;
-    min-height: 845px;
-}
-
-#footer {
-    background-color: green;
-    padding: 20px;
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>/public/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>/public/css/admin.css"/>
+    <script type="text/javascript" src="<?php echo URL; ?>/public/js/custom.js"></script>
+
+</head>
+<body>
+
+<div id="header">
+    <p>Playground Admin Panel</p>
+</div>
+
+<div class="row">
+    <div id="nav" class="col-md-3">
+        <nav id="admin-nav">
+            <ul>
+                <li id="youarehere"><a href="/admin">Dashboard</a>
+                <li><a href="/admin/courses">Courses</a>
+                <li><a href="/admin/users">Users</a>
+            </ul>
+        </nav>
+    </div>
+    <div id="content-right" class="col-md-9">
