@@ -28,8 +28,15 @@ class AjaxController extends GoBaseController {
     {
         $ajaxModel = new Ajax();
         $courseId = $this->getRequest('courseid');
-        //var_dump($courseId); die();
         $ajaxModel->delete($courseId, 'course');
+        return true;
+    }
+
+    public function deleteuserAction()
+    {
+        $ajaxModel = new Ajax();
+        $userId = $this->getRequest('userid');
+        $ajaxModel->delete($userId, 'user');
         return true;
     }
 }

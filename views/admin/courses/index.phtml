@@ -16,7 +16,7 @@
         <tbody>
         <?php foreach ($this->courses as $course) : ?>
             <tr id="<?php echo $course['id']; ?>">
-                <td><a href="<?php echo URL; ?>/courses/view/<?php echo $course['id']; ?>"><?php echo $course['name']; ?></a></td>
+                <td><a href="<?php echo URL; ?>/admin/courses/edit/<?php echo $course['id']; ?>"><?php echo $course['name']; ?></a></td>
                 <td><?php echo $course['description']; ?></td>
                 <td><?php echo $course['price']; ?></td>
                 <td><?php echo $course['no_of_videos']; ?></td>

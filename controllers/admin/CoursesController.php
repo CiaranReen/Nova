@@ -48,4 +48,28 @@ class CoursesController extends GoBaseController {
             $this->view->render('courses/add');
         }
     }
+
+    public function editAction()
+    {
+        $courseModel = new Courses();
+
+        $courseId = $this->getParam('edit');
+
+        if ($this->isPost() === true)
+        {
+            $data = array (
+                'name' => $this->getRequest('name'),
+                'price' => $this->getRequest('price'),
+            );
+
+            $courseModel->updateRecord($data, 'course', $this->getRequest('id'));
+            $this->goToUrl('/admin/courses');
+        }
+        else
+        {
+            $course = $courseModel->find($courseId, 'course');
+            $this->view->course = $course;
+            $this->view->render('courses/edit');
+        }
+    }
 }

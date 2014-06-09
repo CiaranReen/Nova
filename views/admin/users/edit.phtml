@@ -1,0 +1,14 @@
+<form id="register" action="<?php echo URL; ?>/admin/users/edit" method="post">
+    <input type="hidden" value="<?php echo $this->user['id']; ?>" name="id">
+    <input type="text" value="<?php echo $this->user['first_name']; ?>" name="first-name" placeholder="First Name*">
+    <input type="text" value="<?php echo $this->user['last_name']; ?>" name="last-name" placeholder="Last Name*">
+    <select name="age">
+        <option value="">Your Age</option>
+        <option <?php echo ($this->user['is_over_13'] == 'false')?"selected":""; ?> value="false">Below 13</option>
+        <option <?php echo ($this->user['is_over_13'] == 'true')?"selected":""; ?> value="true">Above 13</option>
+    </select>
+    <input type="text" value="<?php echo $this->user['company']; ?>" name="company" placeholder="Company">
+    <input type="email" value="<?php echo $this->user['email']; ?>" name="email" placeholder="Email address*">
+    <input type="password"  name="password" placeholder="Password*">
+    <input type="submit" value="Save">
+</form>

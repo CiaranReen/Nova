@@ -22,6 +22,7 @@ body h1, body h2, body h3 {
     margin-left: auto;
     text-align: center;
     width: 1160px;
+    z-index: 5;
 }
 
 #site-header li {

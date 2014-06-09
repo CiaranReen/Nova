@@ -13,5 +13,6 @@ require 'Go/Controllers/GoBaseController.php';
 require 'Go/Views/GoBaseView.php';
 require 'Go/Models/GoBaseModel.php';
 require 'Go/Session/GoSession.php';
+require 'vendor/autoload.php';
 
 $app = new Bootstrap();

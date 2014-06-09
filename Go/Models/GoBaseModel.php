@@ -68,7 +68,6 @@ class GoBaseModel extends GoDatabase {
 
     public function updateRecord($data, $tableName, $where)
     {
-
         //Columns and values
         $setSql = '';
         foreach ($data as $key => $value)
