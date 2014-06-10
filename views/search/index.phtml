@@ -1,10 +1,8 @@
-<div class="row">
-    <?php foreach ($this->results as $result) : ?>
-        <div class="col-md-3">
-            <a href="<?php echo URL; ?>/courses/view/<?php echo $result['id']; ?>">
-                <img src="<?php echo URL; ?>/public/images/<?php echo $result['image']; ?>" width="250" height="200"/>
-            </a>
-            <?php echo $result['description']; ?>
-        </div>
-    <?php endforeach; ?>
-</div>
+<h1>Search Results</h1>
+<?php foreach ($this->results as $result) : ?>
+    <a href="<?php echo URL; ?>/courses/view/<?php echo $result['id']; ?>">
+        <p><?php echo $result[4]; ?></p>
+    </a>
+    <?php echo $result[6]; ?>
+    <p>Category <?php echo $result['name']; ?></p>
+<?php endforeach; ?>
