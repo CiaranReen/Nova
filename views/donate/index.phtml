@@ -1,0 +1,24 @@
+<h1>Donate</h1>
+<h4>Everything you find on Playground will be free, forever.</h4>
+<p>Playground operate a small team with costs that we need to run this website. If you find Playground helpful, consider donating any amount to help us out.</p>
+<form action="" method="post">
+    $<input id="amount" type="number" name="amount" placeholder="10">
+    <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_CeMyfzmPBnaYxxa8JyRIu2R4"
+        data-amount=""
+        data-name="Playground"
+        data-description="Donate"
+        data-image="/128x128.png">
+    </script>
+</form>
+<script>
+    $(document).ready(function () {
+        $("#amount").keyup(function () {
+            var value = $("#amount").val() + "00";
+            $(".stripe-button").attr("data-amount", value);
+        });
+    });
+</script>
+
+

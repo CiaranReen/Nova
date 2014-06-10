@@ -1,0 +1,13 @@
+<div class="row">
+    <?php foreach ($this->courses as $course) : ?>
+        <div class="col-md-3">
+            <a href="<?php echo URL; ?>/courses/view/<?php echo $course['id']; ?>"><?php echo $course['name']; ?></a>
+            <img src="<?php echo URL; ?>/public/images/<?php echo $course['image']; ?>" width="250" height="200"/>
+            <?php echo $course['description']; ?>
+            <?php echo $course['price']; ?>
+            <?php echo $course['no_of_videos']; ?>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+

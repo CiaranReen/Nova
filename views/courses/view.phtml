@@ -1,25 +1,54 @@
 <div class="row">
     <div class="col-md-9">
-        <a href="<?php echo URL; ?>/courses/view/<?php echo $this->course['id']; ?>"><?php echo $this->course['name']; ?></a>
         <img src="<?php echo URL; ?>/public/images/<?php echo $this->course['image']; ?>"/>
-        <?php echo $this->course['description']; ?>
-        <?php echo $this->course['price']; ?>
-        <?php echo $this->course['no_of_videos']; ?>
     </div>
-    <div class="col-md-3">
-        <h1>Subscribe</h1>
-        <form action="" method="POST">
-            <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="pk_test_CeMyfzmPBnaYxxa8JyRIu2R4"
-                data-amount="2500"
-                data-name="Playground"
-                data-description="Ultimate PHP for Beginner's ($25.00)"
-                data-image="/128x128.png">
-            </script>
-        </form>
-    </div>
-
 </div>
+<h1>Topics</h1>
+<form action="/courses/view/<?php echo $this->course['id'] ?>" method="get">
+    Sort By:
+    <select id="select-sort" name="action">
+        <option value="DESC">Difficulty: High to Low</option>
+        <option value="ASC">Difficulty: Low to High</option>
+    </select>
+    <input class="sort" type="submit" value="Apply">
+</form>
+<?php foreach ($this->topics as $topic) : ?>
+    <a class="topic-anchor" href="/topic/view/<?php echo $topic['id']; ?>">
+        <div class="topic">
+            <h3><?php echo $topic['name']; ?></h3>
+            <?php if ($topic['difficulty'] == '1') : ?>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle-o"></i>
+                <i class="fa fa-circle-o"></i>
+                <i class="fa fa-circle-o"></i>
+                <i class="fa fa-circle-o"></i>
+            <?php elseif ($topic['difficulty'] == '2') : ?>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle-o"></i>
+                <i class="fa fa-circle-o"></i>
+                <i class="fa fa-circle-o"></i>
+            <?php elseif ($topic['difficulty'] == '3') : ?>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle-o"></i>
+                <i class="fa fa-circle-o"></i>
+            <?php elseif ($topic['difficulty'] == '4') : ?>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle-o"></i>
+            <?php elseif ($topic['difficulty'] == '5') : ?>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+            <?php endif; ?>
+            <p><?php echo $topic['description']; ?></p>
+        </div></a>
+<?php endforeach; ?>
 
 

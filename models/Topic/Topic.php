@@ -6,22 +6,21 @@
  * Time: 16:05
  */
 
-class Courses extends GoBaseModel {
+class Topic extends GoBaseModel {
 
     public function __construct()
     {
         parent::__construct();
     }
 
-    public function getTopics($courseId, $sort = null)
+    public function getTopics($courseId)
     {
         $sql = $this->db->prepare("SELECT * FROM course_topic as ct
         INNER JOIN topic as t ON ct.topic_id = t.id
-        WHERE ct.course_id = :courseId
-        ORDER BY t.difficulty " . $sort);
+        WHERE ct.course_id = :courseId");
 
         $sql->execute(array (
-            ':courseId' => $courseId,
+            ':courseId' => $courseId
         ));
 
         return $sql->fetchAll();

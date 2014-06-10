@@ -8,6 +8,9 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
+    <!-- Font awesome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Latest compiled and minified JavaScript -->
     <script type="text/javascript" src="<?php echo URL; ?>/public/js/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -20,7 +23,7 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#site-header').dropit();
+            $('.site-header').dropit();
         });
     </script>
 </head>
@@ -28,26 +31,37 @@
 <body>
 <div id="header">
     <nav id="nav">
-        <ul id="site-header">
-            <li><a href="<?php echo URL; ?>/">Home</a></li>
+        <ul class="site-header">
+            <li><a href="<?php echo URL; ?>/">Playground</a></li>
             <li>
-                <a href="#_">Courses</a>
+                <a href="#_">Categories</a>
                 <ul>
-                    <li><a href="<?php echo URL; ?>/courses/category/php">PHP</a></li>
-                    <li><a href="<?php echo URL; ?>/courses/category/sql">SQL</a></li>
-                    <li><a href="<?php echo URL; ?>/courses/category/jquery">Jquery</a></li>
-                    <li><a href="<?php echo URL; ?>/courses/category/gophp">GoPHP</a></li>
+                    <?php foreach ($this->categories as $category) : ?>
+                        <li><a href="<?php echo URL; ?>/category/view/<?php echo $category['id']; ?>"><?php echo $category['name']; ?></a></li>
+                    <?php endforeach; ?>
                 </ul>
             </li>
+            <li><a href="/donate">Donate</a></li>
+            <li>
+                <form class="search-container" action="<?php echo URL; ?>/search/">
+                    <input type="text" class="search-text" name="query" placeholder="Search for courses...">
+                </form>
+            </li>
             <?php if ($_SESSION['loggedIn'] === true) : ?>
-                <li><a href="<?php echo URL; ?>/area/">Your Area</a></li>
-                <li><a href="<?php echo URL; ?>/account/">My Account</a></li>
-                <li><a class="btn btn-primary" href="<?php echo URL; ?>/auth/logout/">Logout</a></li>
+                <li class="pull-right">
+                    <a href="#_"><?php echo $this->user['first_name'] . ' ' . $this->user['last_name']; ?></a>
+                    <ul>
+                        <li><a href="<?php echo URL; ?>/area/">Your Area</a></li>
+                        <li><a href="<?php echo URL; ?>/account/">My Account</a></li>
+                        <li><a href="<?php echo URL; ?>/auth/logout/">Logout</a></li>
+                    </ul>
+                </li>
             <?php else: ?>
-                <li><a class="right-nav btn btn-primary" href="<?php echo URL; ?>/auth/">Login</a></li>
-                <li><a class="right-nav btn btn-primary" href="<?php echo URL; ?>/register/">Register</a></li>
+                <li class="pull-right"><a href="<?php echo URL; ?>/auth/">Login</a></li>
+                <li class="pull-right"><a href="<?php echo URL; ?>/register/">Register</a></li>
             <?php endif; ?>
         </ul>
+
     </nav>
 </div>
 

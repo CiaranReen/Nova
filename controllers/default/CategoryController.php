@@ -5,23 +5,15 @@
  * Date: 27/05/14
  * Time: 11:37
  */
+require 'models/Index/Index.php';
 
-class IndexController extends GoBaseController {
+class CategoryController extends GoBaseController {
 
     //Call the GoBaseController construct
     function __construct()
     {
         parent::__construct();
-        $loggedIn = GoSession::get('loggedIn');
-        if ($loggedIn === false)
-        {
-            GoSession::destroy();
-            $this->user = false;
-        }
-    }
 
-    public function indexAction()
-    {
         $indexModel = new Index();
         $categories = $indexModel->fetchAll('category');
         $user = $indexModel->find(GoSession::get('user_id'), 'user');
@@ -32,6 +24,21 @@ class IndexController extends GoBaseController {
         }
 
         $this->view->categories = $categories;
+    }
+
+    public function indexAction()
+    {
         $this->view->render('index/index');
+    }
+
+    public function viewAction()
+    {
+        $categoryModel = new Category();
+        $categoryId = $this->getParam('view');
+
+        $courses = $categoryModel->getCourses($categoryId);
+
+        $this->view->courses = $courses;
+        $this->view->render('category/view');
     }
 }

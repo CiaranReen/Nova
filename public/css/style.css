@@ -1,23 +1,24 @@
 body {
-    color: #555555;
-    font-family: Ubuntu,"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif !important;
-    font-weight: 300 !important;
-    line-height: 1.8em !important;
+    color: #444444;
+    font-family: 'Proxima Nova',sans-serif;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0;
+    min-width: 1000px;
 }
 
 body h1, body h2, body h3 {
     color: #888888;
-    font-family: Ubuntu,"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
     font-weight: 300;
 }
 
 #header {
     background-color: #252527;
-    height: 65px;
+    height: 45px;
 }
 
-#site-header {
-    padding-top: 22px;
+#nav {
+    padding-top: 14px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -25,20 +26,36 @@ body h1, body h2, body h3 {
     z-index: 5;
 }
 
-#site-header li {
+.site-header li {
+    float: left;
     list-style: none;
     display: inline;
 }
 
-#site-header li a {
+.site-header li a {
     color: #ADADAD;
     font-size: 18px;
     padding: 15px 26px;
     text-decoration: none;
 }
 
-#site-header li a:hover {
+.site-header li a:hover {
     color: #ffffff;
+}
+
+.search-container {
+    width: 40%;
+}
+
+.search-text {
+    border: 0 none;
+    border-radius: 2px;
+    font-size: 14px;
+    font-style: normal;
+    height: 29px;
+    margin: -5px 0 0;
+    padding: 1px 0 0 30px;
+    width: 400px;
 }
 
 .btn-primary {
@@ -58,6 +75,26 @@ body h1, body h2, body h3 {
     margin-left: 10px;
 }
 
+.fa-circle-o, .fa-circle {
+    color: #61A055;
+}
+
+.topic-anchor p {
+    color: #444444;
+}
+
+.topic {
+    padding: 8px;
+}
+
+.topic:hover {
+    background: #eeeeee;
+}
+
+.topic-anchor:hover {
+    text-decoration: none;
+}
+
 #content {
     margin-right: auto;
     margin-left: auto;
@@ -68,6 +105,5 @@ body h1, body h2, body h3 {
 }
 
 #footer {
-    background-color: green;
     padding: 20px;
 }
