@@ -10,7 +10,15 @@ class Bootstrap {
 
     function __construct()
     {
-        define('URL', 'http://playground.dev');
+        if ($_SERVER['HTTP_HOST'] == 'playground.dev')
+        {
+            define('URL', 'http://playground.dev');
+        }
+        else
+        {
+            define('URL', 'http://playgrounddev.netau.net');
+        }
+
         session_start();
 
         $url = isset($_GET['url']) ? $_GET['url'] : null;

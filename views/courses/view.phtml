@@ -13,7 +13,7 @@
     <input class="sort" type="submit" value="Apply">
 </form>
 <?php foreach ($this->topics as $topic) : ?>
-    <a class="topic-anchor" href="/topic/view/<?php echo $topic['id']; ?>">
+    <a class="topic-anchor" href="/topics/view/<?php echo $topic['id']; ?>">
         <div class="topic">
             <h3><?php echo $topic['name']; ?></h3>
             <?php if ($topic['difficulty'] == '1') : ?>

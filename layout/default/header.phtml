@@ -34,23 +34,23 @@
         <ul class="site-header">
             <li><a href="<?php echo URL; ?>/">Playground</a></li>
             <li>
-                <a href="#_">Categories</a>
-                <ul>
+                <a href="#_">Categories <i class="fa fa-chevron-down"></i></a>
+                <ul class="category-dropdown">
                     <?php foreach ($this->categories as $category) : ?>
-                        <li><a href="<?php echo URL; ?>/category/view/<?php echo $category['id']; ?>"><?php echo $category['name']; ?></a></li>
+                        <li><a href="<?php echo URL; ?>/categories/view/<?php echo $category['id']; ?>"><?php echo $category['name']; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </li>
             <li><a href="/donate">Donate</a></li>
             <li>
                 <form class="search-container" action="<?php echo URL; ?>/search/">
-                    <input type="text" class="search-text" name="query" placeholder="Search for courses...">
+                    <i class="fa fa-search"></i><input type="text" class="search-text" name="query" placeholder="Search for courses...">
                 </form>
             </li>
             <?php if ($_SESSION['loggedIn'] === true) : ?>
                 <li class="pull-right">
-                    <a href="#_"><?php echo $this->user['first_name'] . ' ' . $this->user['last_name']; ?></a>
-                    <ul>
+                    <a href="#_"><?php echo $this->user['first_name'] . ' ' . $this->user['last_name']; ?> <i class="fa fa-chevron-down"></i></a>
+                    <ul class="category-dropdown">
                         <li><a href="<?php echo URL; ?>/area/">Your Area</a></li>
                         <li><a href="<?php echo URL; ?>/account/">My Account</a></li>
                         <li><a href="<?php echo URL; ?>/auth/logout/">Logout</a></li>

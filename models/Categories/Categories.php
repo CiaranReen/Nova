@@ -6,7 +6,7 @@
  * Time: 16:05
  */
 
-class Category extends GoBaseModel {
+class Categories extends GoBaseModel {
 
     public function __construct()
     {

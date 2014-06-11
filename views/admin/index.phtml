@@ -1,1 +1,86 @@
-<h1>This is the admin dashboard. Manage all the site content from here.</h1>
+<div class="row">
+    <div class="col-md-12">
+        <h1>Dashboard</h1>
+        <ul class="breadcrumbs-list">
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="index.html">Home</a>
+                <i class="fa fa-angle-right"></i>
+            </li>
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+            <li class="pull-right">
+                <div id="dashboard-report-range" class="dashboard-date-range tooltips" data-original-title="Change dashboard date range" data-placement="top" style="display: block;">
+                    <i class="fa fa-calendar"></i>
+                    <span>May 13, 2014 - June 11, 2014</span>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h3>Number of Topics per Course</h3>
+        <canvas id="pieGraph" width="600" height="400"></canvas>
+    </div>
+    <div class="col-md-6">
+        <h3>Number of donations per month</h3>
+        <canvas id="lineGraph" width="600" height="400"></canvas>
+    </div>
+</div>
+<script>
+    //Get context with jQuery - using jQuery's .get() method.
+    var ctx = $("#pieGraph").get(0).getContext("2d");
+    //This will get the first returned node in the jQuery collection.
+    var myNewChart = new Chart(ctx);
+
+    var data = [
+        {
+            value: 30   ,
+            color:"#F38630",
+            label : 'Sleep',
+            labelColor : 'white',
+            labelFontSize : '16'
+        },
+        {
+            value : 50,
+            color : "#E0E4CC"
+        },
+        {
+            value : 100,
+            color : "#69D2E7"
+        }
+    ];
+
+    new Chart(ctx).Pie(data);
+    </script>
+<script>
+    //Get context with jQuery - using jQuery's .get() method.
+    var ctx = $("#lineGraph").get(0).getContext("2d");
+    //This will get the first returned node in the jQuery collection.
+    var myNewChart = new Chart(ctx);
+
+    var data = {
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+            {
+                fillColor : "rgba(220,220,220,0.5)",
+                strokeColor : "rgba(220,220,220,1)",
+                pointColor : "rgba(220,220,220,1)",
+                pointStrokeColor : "#fff",
+                data : [65,59,90,81,56,55,40]
+            },
+            {
+                fillColor : "rgba(151,187,205,0.5)",
+                strokeColor : "rgba(151,187,205,1)",
+                pointColor : "rgba(151,187,205,1)",
+                pointStrokeColor : "#fff",
+                data : [28,48,40,19,96,27,100]
+            }
+        ]
+    };
+
+    new Chart(ctx).Line(data);
+</script>

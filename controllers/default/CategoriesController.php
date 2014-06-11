@@ -7,7 +7,7 @@
  */
 require 'models/Index/Index.php';
 
-class CategoryController extends GoBaseController {
+class CategoriesController extends GoBaseController {
 
     //Call the GoBaseController construct
     function __construct()
@@ -33,7 +33,7 @@ class CategoryController extends GoBaseController {
 
     public function viewAction()
     {
-        $categoryModel = new Category();
+        $categoryModel = new Categories();
         $categoryId = $this->getParam('view');
 
         $courses = $categoryModel->getCourses($categoryId);

@@ -24,11 +24,27 @@ class AjaxController extends GoBaseController {
         $this->view->render('index');
     }
 
+    public function deletecategoryAction()
+    {
+        $ajaxModel = new Ajax();
+        $categoryId = $this->getRequest('categoryid');
+        $ajaxModel->delete($categoryId, 'category');
+        return true;
+    }
+
     public function deletecourseAction()
     {
         $ajaxModel = new Ajax();
         $courseId = $this->getRequest('courseid');
         $ajaxModel->delete($courseId, 'course');
+        return true;
+    }
+
+    public function deletetopicAction()
+    {
+        $ajaxModel = new Ajax();
+        $topicId = $this->getRequest('topicid');
+        $ajaxModel->delete($topicId, 'topic');
         return true;
     }
 

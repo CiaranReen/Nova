@@ -1,0 +1,8 @@
+<form action="<?php echo URL; ?>/admin/topics/edit" method="post">
+    <input type="hidden" value="<?php echo $this->topic['id']; ?>" name="id">
+    <input type="text" value="<?php echo $this->topic['name']; ?>" name="name" placeholder="Topic Name...">
+    <input type="text" value="<?php echo $this->topic['difficulty']; ?>" name="difficulty" placeholder="Difficulty...">
+    <input type="text" value="<?php echo $this->topic['description']; ?>" name="description" placeholder="Description...">
+    <input type="text" value="<?php echo $this->topic['content']; ?>" name="content" placeholder="Content...">
+    <input type="submit" value="Save">
+</form>

@@ -13,7 +13,7 @@ body h1, body h2, body h3 {
 }
 
 #header {
-    background-color: #252527;
+    background-color: #3B414E;
     height: 45px;
 }
 
@@ -30,21 +30,80 @@ body h1, body h2, body h3 {
     float: left;
     list-style: none;
     display: inline;
+    border-left: 1px solid #ffffff;
 }
 
 .site-header li a {
-    color: #ADADAD;
+    color: #ffffff;
     font-size: 18px;
     padding: 15px 26px;
     text-decoration: none;
+    font-family: 'GeosansLight';
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .site-header li a:hover {
     color: #ffffff;
 }
 
+.category-dropdown {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+    font-family: 'Proxima Nova',sans-serif;
+    left: 0;
+    position: absolute;
+    top: 45px;
+    background-color: #FFFFFF;
+    border-color: #DDDDDD #DDDDDD #999999;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    display: none;
+    float: left;
+    font-size: 14px;
+    line-height: 18px;
+    list-style: none outside none;
+    padding: 3px 0;
+    z-index: 1000;
+}
+
+.category-dropdown li {
+    padding: 10px;
+    width: 100%;
+}
+
+.category-dropdown li a {
+    font-size: 14px;
+    line-height: 18px;
+    width: 160px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    color: #444444;
+    position: relative;
+}
+
+.category-dropdown li:hover {
+    background-color: #252527;
+}
+
 .search-container {
     width: 40%;
+}
+
+.fa-search {
+    position: absolute;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-top: 2px;
+    color: #aaaaaa;
+}
+
+.fa-chevron-down {
+    position: absolute;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 .search-text {
@@ -93,6 +152,21 @@ body h1, body h2, body h3 {
 
 .topic-anchor:hover {
     text-decoration: none;
+}
+
+.register-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 640px;
+}
+
+.register-container input {
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 32px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    padding: 0 5px;
 }
 
 #content {

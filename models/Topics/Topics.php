@@ -6,7 +6,7 @@
  * Time: 16:05
  */
 
-class Topic extends GoBaseModel {
+class Topics extends GoBaseModel {
 
     public function __construct()
     {

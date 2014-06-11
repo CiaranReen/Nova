@@ -21,22 +21,33 @@
     <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>/public/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>/public/css/admin.css"/>
     <script type="text/javascript" src="<?php echo URL; ?>/public/js/custom.js"></script>
+    <script src="<?php echo URL; ?>/public/Chart.js/Chart.js"></script>
 
 </head>
 <body>
 
 <div id="header">
-    <p>Playground Admin Panel</p>
+    <h1>Playground Admin Panel</h1>
 </div>
-
-<div class="row">
-    <div id="nav" class="col-md-3">
-        <nav id="admin-nav">
-            <ul>
-                <li id="youarehere"><a href="/admin">Dashboard</a>
-                <li><a href="/admin/courses">Courses</a>
-                <li><a href="/admin/users">Users</a>
-            </ul>
-        </nav>
-    </div>
-    <div id="content-right" class="col-md-9">
+<div class="clearfix"></div>
+<div class="page-container">
+    <div class="row">
+        <div class="admin-sidebar navbar-collapse collapse">
+            <nav id="admin-nav">
+                <ul>
+                    <li class="searchbar">
+                        <form class="searchbar-side">
+                            <div class="input-group">
+                                <input class="form-control search-box" type="text" placeholder="Search...">
+                            </div>
+                        </form>
+                    </li>
+                    <li id="active"><a href="/admin"><i class="fa fa-tachometer"></i> Dashboard <i class="fa fa-chevron-left"></i></a>
+                    <li><a href="/admin/categories"><i class="fa fa-list"></i> Categories <i class="fa fa-chevron-left"></i></a>
+                    <li><a href="/admin/courses"><i class="fa fa-book"></i> Courses <i class="fa fa-chevron-left"></i></a>
+                    <li><a href="/admin/topics"><i class="fa fa-pencil"></i> Topics <i class="fa fa-chevron-left"></i></a>
+                    <li><a href="/admin/users"><i class="fa fa-group"></i> Users <i class="fa fa-chevron-left"></i></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="content-right" class="col-md-9">

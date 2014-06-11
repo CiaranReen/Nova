@@ -1,6 +1,6 @@
 <form id="register" action="<?php echo URL; ?>/admin/courses/edit" method="post">
     <input type="hidden" value="<?php echo $this->course['id']; ?>" name="id">
     <input type="text" value="<?php echo $this->course['name']; ?>" name="name" placeholder="Course Name...">
-    <input type="text" value="<?php echo $this->course['price']; ?>" name="price" placeholder="Price...">
+    <input type="text" value="<?php echo $this->course['description']; ?>" name="description" placeholder="Description...">
     <input type="submit" value="Save">
 </form>

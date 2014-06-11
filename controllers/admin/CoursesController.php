@@ -37,7 +37,7 @@ class CoursesController extends GoBaseController {
         {
             $data = array (
                 'name' => $this->getRequest('name'),
-                'price' => $this->getRequest('price'),
+                'description' => $this->getRequest('description'),
             );
 
             $courseModel->insertRecord($data, 'course');
@@ -59,7 +59,7 @@ class CoursesController extends GoBaseController {
         {
             $data = array (
                 'name' => $this->getRequest('name'),
-                'price' => $this->getRequest('price'),
+                'description' => $this->getRequest('description'),
             );
 
             $courseModel->updateRecord($data, 'course', $this->getRequest('id'));

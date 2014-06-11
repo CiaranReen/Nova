@@ -221,11 +221,29 @@ class GoBaseModel extends GoDatabase {
         return $data;
     }
 
+    /**
+     * Delete a record from the specified table
+     * @param $id
+     * @param $tableName
+     * @return bool
+     */
     public function delete($id, $tableName)
     {
         $sql = $this->db->prepare('DELETE FROM ' . $tableName . ' WHERE id = ' . $id);
         $sql->execute();
         return true;
+    }
+
+    public function getSchema($tableName)
+    {
+        $sql = $this->db->prepare("SELECT * FROM INFORMATION_SCHEMA.COLUMNS
+        WHERE TABLE_NAME = :table");
+
+        $sql->execute(array (
+            ':table' => $tableName
+        ));
+
+        return $sql->fetchAll();
     }
 
 }

@@ -7,7 +7,7 @@
  */
 require 'models/Index/Index.php';
 
-class TopicController extends GoBaseController {
+class TopicsController extends GoBaseController {
 
     //Call the GoBaseController construct
     function __construct()
@@ -33,7 +33,7 @@ class TopicController extends GoBaseController {
 
     public function viewAction()
     {
-        $topicModel = new Topic();
+        $topicModel = new Topics();
         $topicId = $this->getParam('view');
 
         $topic = $topicModel->find($topicId, 'topic');
