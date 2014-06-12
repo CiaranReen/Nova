@@ -1,6 +1,53 @@
-<form id="register" action="<?php echo URL; ?>/admin/courses/edit" method="post">
-    <input type="hidden" value="<?php echo $this->course['id']; ?>" name="id">
-    <input type="text" value="<?php echo $this->course['name']; ?>" name="name" placeholder="Course Name...">
-    <input type="text" value="<?php echo $this->course['description']; ?>" name="description" placeholder="Description...">
-    <input type="submit" value="Save">
-</form>
+<div class="row">
+    <div class="col-md-12">
+        <h1>Edit Course</h1>
+        <ul class="breadcrumbs-list">
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="index.html">Home</a>
+                <i class="fa fa-angle-right"></i>
+            </li>
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+            <li class="pull-right">
+                <div id="dashboard-report-range" class="dashboard-date-range tooltips" data-original-title="Change dashboard date range" data-placement="top" style="display: block;">
+                    <i class="fa fa-calendar"></i>
+                    <span><?php echo date('l jS F Y'); ?></span>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <form action="" method="post">
+            <div class="form-body">
+                <?php foreach ($this->course as $course) : ?>
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" value="<?php echo $course['id']; ?>" name="id">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Course Name <span class="required"> * </span></label>
+                        <input class="form-control" type="text" value="<?php echo $course['name']; ?>" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Category <span class="required"> * </span></label>
+                            <?php foreach ($this->categories as $category) : ?>
+                                <label class="control-label"><?php echo $category['name']; ?></label>
+                                <input type="radio" <?php echo ($course[4] == $category['name'])?"checked":""; ?> name="category" autocomplete="off">
+                            <?php endforeach; ?>
+                    </div>
+                    <div class="form-group">
+                        <label class=" col-md-3 control-label">Description <span class="required"> * </span></label>
+                        <input class="form-control" type="text" value="<?php echo $course['description']; ?>" name="description">
+                    </div>
+                    <div class="form-actions fluid">
+                        <button class="btn blue" type="submit">Save</button>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </form>
+    </div>
+</div>

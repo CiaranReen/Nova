@@ -7,7 +7,9 @@
     <table class="table table-striped table-bordered table-advance table-hover">
         <thead>
         <tr>
+            <th>ID</th>
             <th>Name</th>
+            <th>Category</th>
             <th>Description</th>
             <th>Actions</th>
         </tr>
@@ -15,9 +17,12 @@
         <tbody>
         <?php foreach ($this->courses as $course) : ?>
             <tr id="<?php echo $course['id']; ?>">
-                <td><a href="<?php echo URL; ?>/admin/courses/edit/<?php echo $course['id']; ?>"><?php echo $course['name']; ?></a></td>
+                <td><?php echo $course['id']; ?></td>
+                <td><?php echo $course['name']; ?></td>
+                <td><?php echo $course[4]; ?></td>
                 <td><?php echo $course['description']; ?></td>
-                <td><a class="delete-course" href="#_">Delete</a><i class="fa fa-trash"></i></td>
+                <td><a class="delete-course" href="#_">Delete</a><i class="fa fa-trash"></i> /
+                <a href="<?php echo URL; ?>/admin/courses/edit/<?php echo $course['id']; ?>">Edit</a><i class="fa fa-trash"></i></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

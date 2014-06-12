@@ -72,6 +72,10 @@ h1 {
     text-decoration: none;
 }
 
+.searchbar {
+    background-color: #303030 !important;
+}
+
 .searchbar-side {
     margin: 22px 18px;
     padding: 0;
@@ -173,6 +177,12 @@ h1 {
 
 .table {
     margin-bottom: 0;
+}
+
+.required {
+    color: #E02222;
+    font-size: 12px;
+    padding-left: 2px;
 }
 
 .btn-primary {
