@@ -16,8 +16,15 @@ class UsersController extends GoBaseController {
         $loggedIn = GoSession::get('adminLoggedIn');
         if ($loggedIn === false)
         {
-            $this->view->render('login');
+            $this->goToUrl('/');
             exit;
+        }
+        $indexModel = new Index();
+        $user = $indexModel->find(GoSession::get('user_id'), 'user');
+
+        if (!empty($user))
+        {
+            $this->view->user = $user;
         }
     }
 

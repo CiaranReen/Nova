@@ -33,8 +33,14 @@
     </div>
     <div class="page-top-menu">
         <ul class="nav navbar-nav pull-right">
+            <li class="nav-dropdown-top dropdown-user">
+                <a href="#"><img class="img-circle" src="" alt="">
+                    <span class="username"><?php echo $this->user['first_name']; ?></span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+            </li>
             <li class="nav-dropdown-top">
-                <a href="/auth/logout/"><i class="fa fa-sign-out"></i></a>
+                <a class="sign-out-top" href="/auth/logout/"><i class="fa fa-sign-out"></i></a>
             </li>
         </ul>
     </div>
@@ -59,4 +65,4 @@
                 </ul>
             </nav>
         </div>
-        <div id="content-right">
+        <div class="content-right">
