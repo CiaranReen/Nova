@@ -1,35 +1,96 @@
+<h1>Dashboard</h1>
+<ul class="breadcrumbs-list">
+    <li>
+        <i class="fa fa-home"></i>
+        <a href="index.html">Home</a>
+        <i class="fa fa-angle-right"></i>
+    </li>
+    <li>
+        <a href="#">Dashboard</a>
+    </li>
+    <li class="pull-right">
+        <div id="dashboard-report-range" class="dashboard-date-range tooltips" data-original-title="Change dashboard date range" data-placement="top" style="display: block;">
+            <i class="fa fa-calendar"></i>
+            <span>May 13, 2014 - June 11, 2014</span>
+            <i class="fa fa-angle-down"></i>
+        </div>
+    </li>
+</ul>
+
 <div class="row">
-    <div class="col-md-12">
-        <h1>Dashboard</h1>
-        <ul class="breadcrumbs-list">
-            <li>
-                <i class="fa fa-home"></i>
-                <a href="index.html">Home</a>
-                <i class="fa fa-angle-right"></i>
-            </li>
-            <li>
-                <a href="#">Dashboard</a>
-            </li>
-            <li class="pull-right">
-                <div id="dashboard-report-range" class="dashboard-date-range tooltips" data-original-title="Change dashboard date range" data-placement="top" style="display: block;">
-                    <i class="fa fa-calendar"></i>
-                    <span>May 13, 2014 - June 11, 2014</span>
-                    <i class="fa fa-angle-down"></i>
-                </div>
-            </li>
-        </ul>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+        <div class="dashboard-stat blue-madison">
+            <div class="visual">
+                <i class="fa fa-book"></i>
+            </div>
+            <div class="details">
+                <div class="number"> 1349 </div>
+                <div class="desc"> Courses </div>
+            </div>
+            <a class="more-blue" href="#">
+                View more
+                <i class="fa fa-arrow-circle-o-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+        <div class="dashboard-stat red-garrison">
+            <div class="visual">
+                <i class="fa fa-gbp"></i>
+            </div>
+            <div class="details">
+                <div class="number"> &pound; 10,040.90 </div>
+                <div class="desc"> Donated </div>
+            </div>
+            <a class="more-red" href="#">
+                View more
+                <i class="m-icon-swapright m-icon-white"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+        <div class="dashboard-stat green-ivy">
+            <div class="visual">
+                <i class="fa fa-users"></i>
+            </div>
+            <div class="details">
+                <div class="number"> 10890 </div>
+                <div class="desc"> Users </div>
+            </div>
+            <a class="more-green" href="#">
+                View more
+                <i class="m-icon-swapright m-icon-white"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+        <div class="dashboard-stat purple-geyser">
+            <div class="visual">
+                <i class="fa fa-pencil"></i>
+            </div>
+            <div class="details">
+                <div class="number"> 697 </div>
+                <div class="desc"> Topics </div>
+            </div>
+            <a class="more-purple" href="#">
+                View more
+                <i class="m-icon-swapright m-icon-white"></i>
+            </a>
+        </div>
     </div>
 </div>
+
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-6">
         <h3>Number of Topics per Course</h3>
         <canvas id="pieGraph" width="600" height="400"></canvas>
     </div>
-    <div class="col-md-6">
-        <h3>Number of donations per month</h3>
+    <div class="col-md-6 col-sm-6">
+        <h3>Donations (£) per month</h3>
         <canvas id="lineGraph" width="600" height="400"></canvas>
     </div>
 </div>
+
 <script>
     //Get context with jQuery - using jQuery's .get() method.
     var ctx = $("#pieGraph").get(0).getContext("2d");
@@ -38,7 +99,7 @@
 
     var data = [
         {
-            value: 30   ,
+            value: 30,
             color:"#F38630",
             label : 'Sleep',
             labelColor : 'white',
@@ -55,29 +116,33 @@
     ];
 
     new Chart(ctx).Pie(data);
-    </script>
+</script>
 <script>
     //Get context with jQuery - using jQuery's .get() method.
     var ctx = $("#lineGraph").get(0).getContext("2d");
     //This will get the first returned node in the jQuery collection.
     var myNewChart = new Chart(ctx);
-
+    var janData = <?php echo json_encode($this->donations[0]['amount']); ?>;
+    var febData = <?php echo json_encode($this->donations[1]['amount']); ?>;
+    var marData = <?php echo json_encode($this->donations[2]['amount']); ?>;
+    var aprData = <?php echo json_encode($this->donations[3]['amount']); ?>;
+    var mayData = <?php echo json_encode($this->donations[4]['amount']); ?>;
+    var junData = <?php echo json_encode($this->donations[5]['amount']); ?>;
+    var julData = <?php echo json_encode($this->donations[6]['amount']); ?>;
+    var augData = <?php echo json_encode($this->donations[7]['amount']); ?>;
+    var sepData = <?php echo json_encode($this->donations[8]['amount']); ?>;
+    var octData = <?php echo json_encode($this->donations[9]['amount']); ?>;
+    var novData = <?php echo json_encode($this->donations[10]['amount']); ?>;
+    var decData = <?php echo json_encode($this->donations[11]['amount']); ?>;
     var data = {
-        labels : ["January","February","March","April","May","June","July"],
+        labels : ["January","February","March","April","May","June","July","August","September","October","November","December"],
         datasets : [
-            {
-                fillColor : "rgba(220,220,220,0.5)",
-                strokeColor : "rgba(220,220,220,1)",
-                pointColor : "rgba(220,220,220,1)",
-                pointStrokeColor : "#fff",
-                data : [65,59,90,81,56,55,40]
-            },
             {
                 fillColor : "rgba(151,187,205,0.5)",
                 strokeColor : "rgba(151,187,205,1)",
                 pointColor : "rgba(151,187,205,1)",
                 pointStrokeColor : "#fff",
-                data : [28,48,40,19,96,27,100]
+                data : [janData,febData,marData,aprData,mayData,junData,julData,augData,sepData,octData,novData,decData]
             }
         ]
     };

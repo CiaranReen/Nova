@@ -29,9 +29,33 @@ h1 {
     width: 100%;
 }
 
+.nav-dropdown-top a {
+    color: #999999;
+    font-size: 17px;
+}
+
+.active {
+    background-color: #D64635;
+}
+
+.active:hover {
+    background-color: #D64635;
+}
+
+.page-top-menu ul, .page-top-menu li, .page-top-menu a {
+    max-height: 46px;
+}
+
+
+.nav-dropdown-top a:hover {
+    background-color: #333333 !important;
+}
+
+
 .navbar-collapse {
     background-color: #3D3D3D;
     padding-right: 0;
+    padding-left: 0;
 }
 
 .admin-sidebar {
@@ -99,10 +123,147 @@ h1 {
     box-shadow: none;
 }
 
-.fa-chevron-left {
+.dashboard-date-range {
+    background-color: #bfcad1;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    margin-right: -30px;
+    padding: 8px 9px;
+    position: relative;
+    top: -8px;
+}
+
+.fa-chevron-left, .fa-chevron-down {
     float:right;
-    font-size: 12px;
+    font-size: 10px;
     margin-top: 4px;
+}
+
+.blue-madison {
+    background-color: #578ebe;
+}
+
+.red-garrison {
+    background-color: #E35B5A;
+}
+
+.green-ivy {
+    background-color: #44B6AE;
+}
+
+.purple-geyser {
+    background-color: #8775A7;
+}
+
+.visual {
+    display: block;
+    float: left;
+    font-size: 35px;
+    height: 80px;
+    line-height: 35px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+    width: 80px;
+}
+
+.visual i {
+    font-size: 110px;
+    line-height: 110px;
+    margin-left: -27px;
+    opacity: 0.3;
+    color: white;
+}
+
+.details {
+    padding-right: 15px;
+    position: absolute;
+    right: 15px;
+}
+
+.number {
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 36px;
+    margin-bottom: 0;
+    padding-top: 25px;
+    text-align: right;
+    color: #ffffff;
+}
+
+.desc {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-align: right;
+    color: white;
+    opacity: 0.8;
+}
+
+.more-blue {
+    background-color: #4884b8;
+    color: white;
+    clear: both;
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    opacity: 0.7;
+    padding: 6px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.more-red {
+    background-color: #E04C4B;
+    color: white;
+    clear: both;
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    opacity: 0.7;
+    padding: 6px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.more-green {
+    background-color: #3FA8A1;
+    color: white;
+    clear: both;
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    opacity: 0.7;
+    padding: 6px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+.more-purple {
+    background-color: #7D6AA0;
+    color: white;
+    clear: both;
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    opacity: 0.7;
+    padding: 6px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+.more-blue i, .more-green i, .more-red i, .more-purple i {
+    display: inline-block;
+    float: right;
+    margin-top: 1px;
+    background-position: -27px -10px;
+    background-repeat: no-repeat;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: top;
+    width: 14px;
 }
 
 #content-right {
@@ -183,6 +344,15 @@ h1 {
     color: #E02222;
     font-size: 12px;
     padding-left: 2px;
+}
+
+.page-title {
+    display: block;
+    float: left;
+    height: 46px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 235px;
 }
 
 .btn-primary {

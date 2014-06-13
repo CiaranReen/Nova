@@ -60,3 +60,17 @@
         </form>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        var tag = <?php echo json_encode($_GET['tag']); ?>;
+        $( "a[id^='id-']" ).each(function () {
+            var match = $(this).attr("id");
+            alert(match);
+            if (match.indexOf(tag) >= 0)
+            {
+                $(this).addClass(tag+"-focus").closest("li").addClass("li-"+tag+"-focus");
+            }
+        });
+    });
+</script>

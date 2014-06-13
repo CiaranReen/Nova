@@ -3,9 +3,20 @@
 </div>
 
 <div id="footer">
-    footer
 </div>
-
+<script>
+    $(document).ready(function () {
+        $(".side-list").on("click", function (e) {
+            $(this).siblings().removeClass("active");
+            $.cookie("a",this.id);
+        });
+        var a = $.cookie("a");
+        if (a) {
+            var child = $("#"+a).find("i").last().removeClass().addClass("fa fa-chevron-down");
+            $("#"+a).addClass("active");
+        }
+    });
+</script>
 </body>
 
 </html>
