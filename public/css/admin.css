@@ -215,6 +215,12 @@ h1 {
     text-transform: uppercase;
 }
 
+.more-blue:hover {
+    opacity: 0.9;
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .more-red {
     background-color: #E04C4B;
     color: white;
@@ -226,6 +232,12 @@ h1 {
     padding: 6px 10px;
     position: relative;
     text-transform: uppercase;
+}
+
+.more-red:hover {
+    opacity: 0.9;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .more-green {
@@ -240,6 +252,13 @@ h1 {
     position: relative;
     text-transform: uppercase;
 }
+
+.more-green:hover {
+    opacity: 0.9;
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .more-purple {
     background-color: #7D6AA0;
     color: white;
@@ -251,6 +270,12 @@ h1 {
     padding: 6px 10px;
     position: relative;
     text-transform: uppercase;
+}
+
+.more-purple:hover {
+    opacity: 0.9;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 
@@ -284,6 +309,18 @@ h1 {
 
 .breadcrumbs-list li {
     display: inline-block;
+}
+
+.breadcrumbs-list a {
+    color: #666;
+    font-size: 14px;
+    text-shadow: none;
+}
+
+.breadcrumbs-list i {
+    color: #999;
+    font-size: 14px;
+    text-shadow: none;
 }
 
 .table-widget {
