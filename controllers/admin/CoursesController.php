@@ -15,15 +15,24 @@ class CoursesController extends GoBaseController {
         $loggedIn = GoSession::get('adminLoggedIn');
         if ($loggedIn === false)
         {
-            $this->view->render('login');
+            $this->goToUrl('/');
             exit;
+        }
+        $indexModel = new Index();
+        $user = $indexModel->find(GoSession::get('user_id'), 'user');
+
+        if (!empty($user))
+        {
+            $this->view->user = $user;
         }
     }
 
     public function indexAction()
     {
         $courseModel = new Courses();
-        $courses = $courseModel->fetchAll('course');
+        //$courses = $courseModel->fetchAll('course');
+
+        $courses = $courseModel->getCourses();
 
         $this->view->courses = $courses;
         $this->view->render('courses/index');
@@ -67,7 +76,11 @@ class CoursesController extends GoBaseController {
         }
         else
         {
-            $course = $courseModel->find($courseId, 'course');
+            $course = $courseModel->getCourseById($courseId);
+            $categories = $courseModel->fetchAll('category');
+            //echo '<pre>'; var_dump($course); die();
+
+            $this->view->categories = $categories;
             $this->view->course = $course;
             $this->view->render('courses/edit');
         }

@@ -22,16 +22,31 @@
     <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>/public/css/admin.css"/>
     <script type="text/javascript" src="<?php echo URL; ?>/public/js/custom.js"></script>
     <script src="<?php echo URL; ?>/public/Chart.js/Chart.js"></script>
+    <script src="<?php echo URL; ?>/public/jquery-cookie/jquery.cookie.js"></script>
 
 </head>
 <body>
 
 <div id="header">
-    <h1>Playground Admin Panel</h1>
+    <div class="page-title">
+        <h1 class="title">Playground Admin Panel</h1>
+    </div>
+    <div class="page-top-menu">
+        <ul class="nav navbar-nav pull-right">
+            <li class="nav-dropdown-top dropdown-user">
+                <a href="#"><img class="img-circle" src="" alt="">
+                    <span class="username"><?php echo $this->user['first_name']; ?></span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+            </li>
+            <li class="nav-dropdown-top">
+                <a class="sign-out-top" href="/auth/logout/"><i class="fa fa-sign-out"></i></a>
+            </li>
+        </ul>
+    </div>
 </div>
-<div class="clearfix"></div>
+
 <div class="page-container">
-    <div class="row">
         <div class="admin-sidebar navbar-collapse collapse">
             <nav id="admin-nav">
                 <ul>
@@ -42,12 +57,12 @@
                             </div>
                         </form>
                     </li>
-                    <li id="active"><a href="/admin"><i class="fa fa-tachometer"></i> Dashboard <i class="fa fa-chevron-left"></i></a>
-                    <li><a href="/admin/categories"><i class="fa fa-list"></i> Categories <i class="fa fa-chevron-left"></i></a>
-                    <li><a href="/admin/courses"><i class="fa fa-book"></i> Courses <i class="fa fa-chevron-left"></i></a>
-                    <li><a href="/admin/topics"><i class="fa fa-pencil"></i> Topics <i class="fa fa-chevron-left"></i></a>
-                    <li><a href="/admin/users"><i class="fa fa-group"></i> Users <i class="fa fa-chevron-left"></i></a>
+                    <li id="1" class="side-list"><a href="/admin"><i class="fa fa-tachometer"></i> Dashboard <i class="fa fa-chevron-left"></i></a>
+                    <li id="2" class="side-list"><a href="/admin/categories"><i class="fa fa-list"></i> Categories <i class="fa fa-chevron-left"></i></a>
+                    <li id="3" class="side-list"><a href="/admin/courses"><i class="fa fa-book"></i> Courses <i class="fa fa-chevron-left"></i></a>
+                    <li id="4" class="side-list"><a href="/admin/topics"><i class="fa fa-pencil"></i> Topics <i class="fa fa-chevron-left"></i></a>
+                    <li id="5" class="side-list"><a href="/admin/users"><i class="fa fa-group"></i> Users <i class="fa fa-chevron-left"></i></a>
                 </ul>
             </nav>
         </div>
-        <div id="content-right" class="col-md-9">
+        <div class="content-right">

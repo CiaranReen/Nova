@@ -1,10 +1,9 @@
 <div class="row">
+    <h1>Categories</h1>
     <?php foreach ($this->courses as $course) : ?>
         <div class="col-md-3">
-            <a href="<?php echo URL; ?>/courses/view/<?php echo $course['id']; ?>">
-                <img src="<?php echo URL; ?>/public/images/<?php echo $course['image']; ?>" />
-            </a>
-            <?php echo $course['description']; ?>
+            <h3><a href="<?php echo URL; ?>/courses/view/<?php echo $course['id']; ?>"><?php echo $course['name']; ?></a></h3>
+            <p><?php echo $course['description']; ?></p>
         </div>
     <?php endforeach; ?>
 </div>

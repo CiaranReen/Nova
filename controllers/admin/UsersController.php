@@ -16,8 +16,15 @@ class UsersController extends GoBaseController {
         $loggedIn = GoSession::get('adminLoggedIn');
         if ($loggedIn === false)
         {
-            $this->view->render('login');
+            $this->goToUrl('/');
             exit;
+        }
+        $indexModel = new Index();
+        $user = $indexModel->find(GoSession::get('user_id'), 'user');
+
+        if (!empty($user))
+        {
+            $this->view->user = $user;
         }
     }
 
@@ -76,9 +83,9 @@ class UsersController extends GoBaseController {
             $data = array (
                 'first_name' => $this->getRequest('first-name'),
                 'last_name' => $this->getRequest('last-name'),
+                'is_over_13' => $this->getRequest('last-age'),
                 'email' => $this->getRequest('email'),
                 'role' => $this->getRequest('role'),
-                'company' => $this->getRequest('company'),
             );
 
             $userModel->updateRecord($data, 'user', $this->getRequest('id'));
