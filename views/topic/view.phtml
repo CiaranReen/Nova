@@ -1,5 +1,84 @@
-<h1><?php echo $this->topic['name']; ?></h1>
+<div class="page-header">
+    <h1><?php echo $this->topic['name']; ?></h1>
+</div>
+<?php if ($this->success) : ?>
+    <div class="alert-fade alert alert-success">
+        <?php echo $this->success; ?>
+    </div>
+<?php endif; ?>
 <p><?php echo $this->topic['description']; ?></p>
 <p><?php echo $this->topic['content']; ?></p>
+<video width="400" height="320" controls>
+    <source src="movie.mp4" type="video/mp4">
+</video>
+<div class="comments-section">
+    <h4>Comments</h4>
+    <form action="" method="post">
+        <div class="form-group">
+            <textarea class="form-control comments-box" name="comment" placeholder="Reply to this post..."></textarea>
+            <div class="form-actions fluid">
+                <input class="btn" type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+
+    <!-- Parent comments section -->
+    <?php foreach ($this->comments as $comment) : ?>
+        <p><a href="/profile/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $comment['username'] ?></a></p>
+        <p><?php echo $comment['comment']; ?></p>
+        <p><?php echo $comment['created']; ?></p>
+        <?php if ($this->user['username'] == $comment['username']) : ?>
+            <p><a class="delete-comment" href="#_">Delete</a></p>
+        <?php endif; ?>
+        <a class="comment-reply">Reply</a>
+        <form class="<?php echo $comment['id']; ?>-form with-parent" action="" method="post">
+            <div class="form-group">
+                <input class="form-control" type="hidden" name="parent" value="<?php echo $comment[0]; ?>">
+                <textarea class="form-control comments-box" name="comment-reply" placeholder="Reply to this comment..."></textarea>
+            </div>
+            <div class="form-actions fluid">
+                <input class="btn" type="submit" value="Submit">
+            </div>
+        </form>
+        <!-- End parent comments -->
+
+        <!-- Child comments section -->
+        <div class="child-comments">
+            <?php foreach ($this->childComments as $childComments) : ?>
+                <?php foreach ($childComments as$childComment) : ?>
+                    <?php if ($comment[0] == $childComment['parent']) : ?>
+                        <p><a href="/profile/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $childComment['username']; ?></a></p>
+                        <p><?php echo $childComment['comment']; ?></p>
+                        <p><?php echo $childComment['created']; ?></p>
+                        <?php if ($this->user['username'] == $comment['username']) : ?>
+                            <p><a class="delete-comment" href="#_">Delete</a></p>
+                        <?php endif; ?>
+                        <a class="comment-reply">Reply</a>
+                        <form class="<?php echo $childComment['id']; ?>-form with-parent" action="" method="post">
+                            <div class="form-group">
+                                <input type="hidden" name="parent" value="<?php echo $childComment['id']; ?>">
+                                <textarea class="form-control comments-box" name="comment-reply" placeholder="Reply to this comment..."></textarea>
+                            </div>
+                            <div class="form-actions fluid">
+                                <input class="btn" type="submit" value="Submit">
+                            </div>
+                        </form>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
+        <!-- End child comments -->
+    <?php endforeach; ?>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".alert-fade").delay(3000).fadeOut("slow");
+
+        $(".comment-reply").on("click", function () {
+            $(this).next("form").toggle();
+        });
+    });
+</script>
 
 

@@ -1,6 +1,7 @@
 <h1>Donate</h1>
 <h4>Everything you find on Playground will be free, forever.</h4>
 <p>Playground operate a small team with costs that we need to run this website. If you find Playground helpful, consider donating any amount to help us out.</p>
+<h3>Donate with card</h3>
 <form action="" method="post">
     $<input id="amount" type="number" name="amount" placeholder="10">
     <script
@@ -11,6 +12,13 @@
         data-description="Donate"
         data-image="/128x128.png">
     </script>
+</form>
+<h3>Or you can donate with PayPal</h3>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="AG2YF2J8WAWP6">
+    <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
 <script>
     $(document).ready(function () {

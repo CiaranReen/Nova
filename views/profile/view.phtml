@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="page-header"><h1><?php echo $this->user[0]['username']; ?>'s Profile</h1>
+    <div class="col-md-9">
+        <img src="<?php echo URL; ?>/public/images/<?php echo $this->course['image']; ?>"/>
+    </div>
+</div>
+<h1>Topics</h1>
+<form action="/courses/view/<?php echo $this->course['id'] ?>" method="get">
+    Sort By:
+    <select id="select-sort" name="action">
+        <option value="DESC">Difficulty: High to Low</option>
+        <option value="ASC">Difficulty: Low to High</option>
+    </select>
+    <input class="sort" type="submit" value="Apply">
+</form>
+<?php foreach ($this->topics as $topic) : ?>
+    <a class="topic-anchor" href="/topics/view/<?php echo $topic['id']; ?>">
+            <p><?php echo $topic['description']; ?></p>
+        </a>
+<?php endforeach; ?>
+</div>
+
+

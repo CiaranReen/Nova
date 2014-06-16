@@ -35,12 +35,9 @@ body h1, body h2, body h3 {
 
 .site-header li a {
     color: #ffffff;
-    font-size: 18px;
     padding: 15px 26px;
     text-decoration: none;
-    font-family: 'GeosansLight';
     text-transform: uppercase;
-    font-weight: bold;
 }
 
 .site-header li a:hover {
@@ -153,6 +150,34 @@ body h1, body h2, body h3 {
 .topic-anchor:hover {
     text-decoration: none;
 }
+
+/********* COMMENTS *********/
+.comments-section {
+    width: 630px;
+}
+
+.comments-box {
+    width: 630px;
+}
+
+.comment-user {
+    text-decoration: underline;
+    text-align: right;
+}
+
+.with-parent {
+    display: none;
+}
+
+.comment-reply {
+    cursor: pointer;
+}
+
+.child-comments {
+    margin-left: 40px;
+}
+
+/******* END COMMENTS *********/
 
 .register-container {
     margin-right: auto;

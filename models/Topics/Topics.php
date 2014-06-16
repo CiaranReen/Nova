@@ -25,4 +25,31 @@ class Topics extends GoBaseModel {
 
         return $sql->fetchAll();
     }
+
+    public function getCommentsByTopicId($topicId)
+    {
+        $sql = $this->db->prepare("SELECT * FROM comment AS c
+        INNER JOIN user AS u ON c.user_id = u.id
+        WHERE c.topic_id = :topicid
+        AND c.parent = 0");
+
+        $sql->execute(array (
+            ':topicid' => $topicId,
+        ));
+
+        return $sql->fetchAll();
+    }
+
+    public function getChildComments($commentId)
+    {
+        $sql = $this->db->prepare("SELECT * FROM comment as c
+        INNER JOIN user AS u ON c.user_id = u.id
+        WHERE c.parent = :parent");
+
+        $sql->execute(array (
+            ':parent' => $commentId
+        ));
+
+        return $sql->fetchAll();
+    }
 }
