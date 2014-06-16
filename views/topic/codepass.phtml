@@ -1,0 +1,27 @@
+<div class="page-header">
+    <h1><?php echo $this->codepass[0]['name']; ?> Code Pass</h1>
+</div>
+<?php if ($this->codePassFail) : ?>
+    <div class="alert alert-danger">
+        <?php echo $this->codePassFail; ?>
+    </div>
+<?php endif; ?>
+<?php if ($this->codePassSuccess) : ?>
+    <div class="alert alert-success">
+        <?php echo $this->codePassSuccess; ?>
+    </div>
+<?php endif; ?>
+<p>Points on completion: <?php echo $this->question['points']; ?></p>
+
+<!-- Questions section -->
+<form action="" method="post">
+    <?php foreach ($this->codepass as $question) : ?>
+        <p><?php echo $question['question'] ?></p>
+        <label><?php echo $question['answer_one']; ?></label><input name="<?php echo $question[0] ?>" type="checkbox" value="A">
+        <label><?php echo $question['answer_two']; ?></label><input name="<?php echo $question[0] ?>" type="checkbox" value="B">
+        <label><?php echo $question['answer_three']; ?></label><input name="<?php echo $question[0] ?>" type="checkbox" value="C">
+        <label><?php echo $question['answer_four']; ?></label><input name="<?php echo $question[0] ?>" type="checkbox" value="D">
+        <!-- End questions section -->
+    <?php endforeach; ?>
+    <input type="submit" value="Submit">
+</form>

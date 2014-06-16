@@ -52,4 +52,49 @@ class Topics extends GoBaseModel {
 
         return $sql->fetchAll();
     }
+
+    public function getCodePassQuestionsByTopicId($topicId)
+    {
+        $sql = $this->db->prepare("SELECT * FROM test_question AS tq
+        INNER JOIN topic AS t ON tq.topic_id = t.id
+        WHERE topic_id = :topicid");
+
+        $sql->execute(array (
+            ':topicid' => $topicId
+        ));
+
+        return $sql->fetchAll();
+    }
+
+    public function checkResults($questionId, $answer)
+    {
+        $sql = $this->db->prepare("SELECT * FROM test_question
+        WHERE id = :questionid AND correct_answer = :answer");
+
+        $sql->execute(array (
+            ':questionid' => $questionId,
+            ':answer' => $answer,
+        ));
+
+        if ($sql->rowCount() > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public function getBadge($topicId)
+    {
+        $sql = $this->db->prepare("SELECT * FROM badge
+        WHERE topic_id = :topicid");
+
+        $sql->execute(array (
+            ':topicid' => $topicId
+        ));
+
+        return $sql->fetchAll();
+    }
 }

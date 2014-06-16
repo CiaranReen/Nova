@@ -77,4 +77,49 @@ class TopicsController extends GoBaseController {
         $this->view->topic = $topic;
         $this->view->render('topic/view');
     }
+
+    public function codepassAction()
+    {
+        $topicModel = new Topics();
+
+        $topicId = $this->getParam('codepass');
+        $codePass = $topicModel->getCodePassQuestionsByTopicId($topicId);
+
+        //Validate test results
+        if ($this->isPost() === true)
+        {
+            $results = array ();
+            foreach ($_POST as $key=>$value)
+            {
+                $results[] = $topicModel->checkResults($key, $value);
+            }
+
+            if (in_array(false, $results))
+            {
+                //Calculate percentage
+                $totalElements = count($results);
+                $totalTrue = count(array_filter($results));
+                $percentage = ($totalTrue / $totalElements) * 100;
+                $this->view->codePassFail = 'You got ' . $percentage . '%. You need 100% to pass this test!';
+            }
+            else
+            {
+                //Passed. Save the corresponding badge in the db.
+                $user = $topicModel->find(GoSession::get('user_id'), 'user');
+                $badge = $topicModel->getBadge($topicId);
+
+                $data = array (
+                    'user_id' => $user['id'],
+                    'badge_id' => $badge[0][0]
+                );
+
+                $topicModel->insertRecord($data, 'user_badge');
+                $this->view->codePassSuccess = 'You got 100%! Well done! You\'ve earned the ' . $badge[0]['name'] . 'badge!' ;
+            }
+
+        }
+
+        $this->view->codepass = $codePass;
+        $this->view->render('topic/codepass');
+    }
 }
