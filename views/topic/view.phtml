@@ -29,8 +29,11 @@
     </form>
 
     <!-- Parent comments section -->
+    <?php if (empty($this->comments)) : ?>
+        <p>No comments have been posted yet.</p>
+    <?php endif; ?>
     <?php foreach ($this->comments as $comment) : ?>
-        <p><a href="/profile/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $comment['username'] ?></a></p>
+        <p><a href="/profile/view/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $comment['username'] ?></a></p>
         <p><?php echo $comment['comment']; ?></p>
         <p><?php echo $comment['created']; ?></p>
         <?php if ($this->user['username'] == $comment['username']) : ?>
@@ -53,7 +56,7 @@
             <?php foreach ($this->childComments as $childComments) : ?>
                 <?php foreach ($childComments as$childComment) : ?>
                     <?php if ($comment[0] == $childComment['parent']) : ?>
-                        <p><a href="/profile/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $childComment['username']; ?></a></p>
+                        <p><a href="/profile/view/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $childComment['username']; ?></a></p>
                         <p><?php echo $childComment['comment']; ?></p>
                         <p><?php echo $childComment['created']; ?></p>
                         <?php if ($this->user['username'] == $comment['username']) : ?>
