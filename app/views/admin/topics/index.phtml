@@ -1,0 +1,84 @@
+<h1>Topics</h1>
+<?php if (isset($this->success)) : ?>
+    <div class="alert alert-success">
+        <p>Topic added successfully</p>
+    </div>
+<?php endif ?>
+<a href="<?php echo URL; ?>/admin/topics/add">Add Topic</a>
+<div class="table-widget">
+    <table class="table table-striped table-bordered table-advance table-hover">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Difficulty</th>
+            <th>Description</th>
+            <th>Content</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($this->topics as $topic) : ?>
+            <tr id="<?php echo $topic['id']; ?>">
+                <td><a href="<?php echo URL; ?>/admin/topics/edit/<?php echo $topic['id']; ?>"><?php echo $topic['name']; ?></a></td>
+                <td><?php echo $topic['difficulty']; ?></td>
+                <td><?php echo $topic['description']; ?></td>
+                <td><?php echo $topic['content']; ?></td>
+                <td><a class="delete-topic" href="#_">Delete</a><i class="fa fa-trash"></i></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<script>
+    /*****************************************
+     * DELETE topic
+     *****************************************/
+    $(document).ready(function () {
+        $('.delete-topic').on('click', function(){
+            var c = confirm('Are you sure you want to DELETE this topic?');
+            if(c == true){
+                var topicid = $(this).closest('tr').attr('id');
+                $.ajax({
+                    url: "/admin/ajax/deletetopic",
+                    data: {topicid : topicid},
+                    dataType: "json",
+                    type: "POST",
+                    success: function(data){
+                        response(data);
+                    }
+                });
+                $(this).closest('tr').fadeOut(1000);
+            }
+        });
+    });
+
+    /*****************************************
+     * BULK DELETE topic
+     *****************************************/
+    $('.bulk-delete').on('click', function(){
+        var action = $('#bulk-actions option:selected').text();
+        if (action == 'Delete') {
+            var c = confirm('Are you sure you want to DELETE the selected topic(s)?');
+            if(c == true){
+                var productid = [];
+                $(':checkbox:checked').each(function(i){
+                    productid[i] = $(this).val();
+                    $.ajax({
+                        async: false,
+                        url: "/admin/ajax/deletetopic",
+                        data: {productid : productid[i]},
+                        dataType: "json",
+                        type: "POST",
+                        success: function(data){
+                            response(data);
+                        }
+                    });
+                });
+                $(':checkbox:checked').each(function(i){
+                    $(this).closest('tr').fadeOut(1000);
+                });
+            }
+        }
+    });
+</script>
+
