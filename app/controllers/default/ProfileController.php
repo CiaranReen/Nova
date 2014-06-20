@@ -30,11 +30,6 @@ class ProfileController extends NovaBaseController {
 
     public function viewAction()
     {
-        $profileModel = new Profile();
-        $username = $this->getParam('view');
-        $user = $profileModel->findByUsername($username);
-
-        $this->view->user = $user;
         $this->view->render('profile/view');
     }
 }

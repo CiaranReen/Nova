@@ -15,12 +15,14 @@ class Categories extends NovaBaseModel {
 
     public function getCourses($categoryId)
     {
-        $sql = $this->db->prepare('SELECT * FROM category_course AS cc
-        INNER JOIN course AS c ON cc.course_id = c.id
-        WHERE cc.category_id = :id');
+        $sql = $this->select()
+            ->from(array('category_course' => 'cc'))
+            ->innerJoin(array('course' => 'c'), 'cc.course_id = c.id')
+            ->where('cc.category_id = ?', $categoryId);
+        $query = $this->prepare($sql);
 
-        $sql->execute();
+        $query->execute();
 
-        return $sql->fetchAll();
+        return $query->fetchAll();
     }
 }

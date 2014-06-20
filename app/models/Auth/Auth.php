@@ -47,27 +47,28 @@ class Auth extends NovaBaseModel {
 
     public function getSecurityQuestionByEmail($email)
     {
-        $sql = $this->db->prepare('SELECT sq.question FROM user AS u INNER JOIN security_question AS sq
-        ON u.security_question_id = sq.id
-        WHERE email = :email');
+        $sql = $this->select('sq.question')
+            ->from(array('user' => 'u'))
+            ->innerJoin(array('security_question' => 'sq'), 'u.security_question_id = sq.id')
+            ->where('email = ?', $email);
 
-        $sql->execute(array (
-            ':email' => $email,
-        ));
+        $query = $this->prepare($sql);
 
-        $data = $sql->fetchAll();
-        return $data;
+        $query->execute();
+
+        return $query->fetchAll();
     }
 
     public function checkAnswer($answer)
     {
-        $sql = $this->db->prepare('SELECT * FROM user AS u WHERE security_question_answer = :answer');
+        $sql = $this->select()
+            ->from(array('user' => 'u'))
+            ->where('security_question_answer = ?', $answer);
 
-        $sql->execute(array (
-            ':answer' => $answer,
-        ));
+        $query = $this->prepare($sql);
+        $query->execute();
 
-        if ($sql->rowCount() > 0)
+        if ($query->rowCount() > 0)
         {
             return true;
         }

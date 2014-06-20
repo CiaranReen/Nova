@@ -261,10 +261,9 @@ class Solace extends Db {
                     ->from(array('' . $table . '' => ''))
                     ->where('id = ?', $id);
         $query = $this->prepare($sql);
-
         $query->execute();
 
-        return $query->fetch();
+        return $query->fetch(PDO::FETCH_ASSOC);
     }
 
     /**
@@ -272,12 +271,12 @@ class Solace extends Db {
      * @param       $table
      * @return      array
      */
-    final public function fetchAll($table)
+    public function fetchAll($table)
     {
         $sql = $this->select()
                     ->from(array('' . $table . '' => ''));
-
         $query = $this->prepare($sql);
+        $query->execute();
 
         return $query->fetchAll();
     }

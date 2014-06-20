@@ -9,15 +9,12 @@
 class IndexController extends NovaBaseController {
 
     //Call the NovaBaseController construct
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
-    }
-
-    public function indexAction()
-    {
         $indexModel = new Index();
         $categories = $indexModel->fetchAll('category');
+
         $user = $indexModel->find(NovaSession::get('user_id'), 'user');
 
         if (!empty($user))
@@ -26,6 +23,10 @@ class IndexController extends NovaBaseController {
         }
 
         $this->view->categories = $categories;
+    }
+
+    public function indexAction()
+    {
         $this->view->render('index/index');
     }
 }
