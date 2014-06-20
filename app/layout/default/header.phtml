@@ -49,7 +49,7 @@
             </li>
             <?php if (isset($_SESSION['loggedIn'])) : ?>
                 <li class="pull-right">
-                    <a href="#_"><?php echo $this->user['first_name'] . ' ' . $this->user['last_name']; ?> <i class="fa fa-chevron-down"></i></a>
+                    <a href="#_"><?php echo $this->user[0]['first_name'] . ' ' . $this->user[0]['last_name']; ?> <i class="fa fa-chevron-down"></i></a>
                     <ul class="category-dropdown">
                         <li><a href="<?php echo URL; ?>/profile/view/<?php echo $this->user['username']; ?>">Your Area</a></li>
                         <li><a href="<?php echo URL; ?>/account/">My Account</a></li>

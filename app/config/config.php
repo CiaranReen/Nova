@@ -5,16 +5,6 @@
  */
 $config = array ();
 
-//Base URL of the site eg. http://www.example.com
-if ($_SERVER['HTTP_HOST'] == 'playground.dev')
-{
-    define('URL', 'http://playground.dev');
-}
-else
-{
-    define('URL', 'http://playgrounddev.netau.net');
-}
-
 //Set the debugging to true or false
 $config['debug'] = false;
 

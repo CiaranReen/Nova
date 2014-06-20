@@ -14,7 +14,7 @@ class Db extends PDO {
         $databasePath = 'app/config/database.php';
         if (! file_exists($databasePath))
         {
-            show_error('The database file does not exist.');
+            die('The database file does not exist.');
         }
         else
         {
@@ -22,12 +22,13 @@ class Db extends PDO {
 
             if (!is_array($database))
             {
-                echo('The database file needs to be an array. See the documentation for more information.');
+                die('The database file needs to be an array. See the documentation for more information.');
             }
             elseif (count($database) == 0)
             {
-                echo('No database configuration details were found in the config file.');
+                die('No database configuration details were found in the config file.');
             }
+
             parent::__construct(''.$database['default']['type'].':host='. $database['default']['host'] .';dbname='.
                 $database['default']['name'].'', ''.$database['default']['user'].'', $database['default']['pass']);
         }

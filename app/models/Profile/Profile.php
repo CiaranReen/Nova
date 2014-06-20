@@ -15,7 +15,7 @@ class Profile extends NovaBaseModel {
 
     public function findByUsername($username)
     {
-        $sql = $this->db->prepare("SELECT * FROM user
+        $sql = $this->db->rawSql("SELECT * FROM user
         WHERE username = :username");
 
         $sql->execute(array (

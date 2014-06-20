@@ -1,8 +1,9 @@
 <?php
 
 /**
- * Class AuthController
+ * Class ProfileController
  */
+require 'app/models/Index/Index.php';
 
 class ProfileController extends NovaBaseController {
 
@@ -10,6 +11,16 @@ class ProfileController extends NovaBaseController {
     function __construct()
     {
         parent::__construct();
+        $indexModel = new Index();
+        $categories = $indexModel->fetchAll('category');
+        $user = $indexModel->find(NovaSession::get('user_id'), 'user');
+
+        if (!empty($user))
+        {
+            $this->view->user = $user;
+        }
+
+        $this->view->categories = $categories;
     }
 
     public function indexAction()

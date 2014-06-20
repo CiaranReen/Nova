@@ -2,12 +2,14 @@
     <div class="page-header"><h1><?php echo $this->user[0]['username']; ?>'s Profile</h1></div>
     <h1>Total Points: <?php echo $this->user[0]['points'] ?></h1>
     <h1>Badges</h1>
-    <?php foreach ($this->badges as $badge) : ?>
-        <a class="topic-anchor" href="/topics/view/<?php echo $badge['id']; ?>">
-            <p><?php echo $badge['name']; ?></p>
-            <p><?php echo $badge['earned']; ?></p>
-        </a>
-    <?php endforeach; ?>
+    <?php if (isset($this->badges)) : ?>
+        <?php foreach ($this->badges as $badge) : ?>
+            <a class="topic-anchor" href="/topics/view/<?php echo $badge['id']; ?>">
+                <p><?php echo $badge['name']; ?></p>
+                <p><?php echo $badge['earned']; ?></p>
+            </a>
+        <?php endforeach; ?>
+    <?php endif; ?>
 </div>
 
 

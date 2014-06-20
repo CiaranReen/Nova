@@ -16,20 +16,33 @@ class Auth extends NovaBaseModel {
     /**
      * Login function
      * @param $email
-     * @param $password
      * @return bool
      */
-    public function login($email, $password)
+    public function login($email)
     {
-        $sql = $this->db->prepare('SELECT * FROM user WHERE email = :email AND password = :password');
+        $sql = $this->select()
+                    ->from(array('user' => 'u'))
+                    ->where('email = ?', $email);
 
-        $sql->execute(array (
-            ':email' => $email,
-            ':password' => $password,
-        ));
+        $query = $this->db->prepare($sql);
 
-        $data = $sql->fetchAll();
-        return $data;
+        $query->execute();
+
+        return $query->fetch();
+    }
+
+    public function getUserPasswordByEmail($email)
+    {
+        $sql = $this->select('password')
+            ->from(array('user' => 'u'))
+            ->where('email = ?', $email);
+
+        $query = $this->db->prepare($sql);
+        $query->execute();
+
+        $data = $query->fetch();
+
+        return $data['password'];
     }
 
     public function getSecurityQuestionByEmail($email)
@@ -65,21 +78,20 @@ class Auth extends NovaBaseModel {
     }
 
     /**
-     * Testing for gORM
+     * Testing for Solace
      * @return string
      */
     public function test()
     {
-        $sql = $this->select();
-        $sql .= $this->from(array('u' => 'user'), array('u.id', 'u.first_name'));
-        $sql .= $this->innerJoin(array('a' => 'address'), 'u.address_id = a.address.id');
-        $sql .= $this->where('u.id = ' . 1);
+        $id = '7';
+        $sql = $this->select('name, id, description')
+                    ->from(array('course' => 'c'))
+                    ->where('id = ?' . $id);
+
         echo '<pre>'; var_dump($sql); die();
         $query = $this->db->prepare($sql);
         $query->execute();
 
-        $data = $query->fetchAll();
-
-        return $sql;
+        return $query->fetchAll();
     }
 }

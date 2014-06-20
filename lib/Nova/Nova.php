@@ -1,81 +1,40 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: ciaran
- * Date: 18/06/14
- * Time: 14:03
+ * Critical low-level functions to run the app 20/06/2014
+ *
+ * This class provides functionality for many common database functions. Solace utilizes the PDO class
+ * to provide sanitization and validation across all queries. Solace is effectively the gateway between the models
+ * and PDO, building the query and passing the built SQL back and forth between the two.
+ *
+ * @copyright  2014 Nova Framework
+ * @license    http://www.novaframework.com/license/3_0.txt   PHP License 3.0
+ * @version    Release: @package_version@
+ * @link       http://novaframework.com/package/PackageName
+ * @since      Class available since Release 0.0.1
  */
 
-/**
- * Critical functions to run the app
- * Class Nova
- */
 class Nova
 {
 
-// ------------------------------------------------------------------------
-
-    /**
-     * Returns the main config.php file for the app
-     *
-     * Custom config files can be loaded by being passed as a param
-     *
-     * @param       var
-     * @return      mixed
-     */
-    function getConfig($customConfig = null)
-    {
-        static $config;
-
-        //Load the default config file
-        if (!isset($config))
-        {
-            $configFile = APP_PATH . 'config/config.php';
-
-            if (file_exists($configFile))
-            {
-                //Config file is present
-                require $configFile;
-            }
-            else
-            {
-                $configFile = APP_PATH . 'config/' . $customConfig;
-
-                if (file_exists($configFile))
-                {
-                    //Config file is present
-                    require $configFile;
-                }
-                //No config file is present
-                else
-                {
-                    die('No config file is present in your config directory.');
-                }
-            }
-
-            if (empty($config))
-            {
-                //The loaded config file has nothing in it!
-                die('The loaded config file is empty in your config directory.');
-            }
-
-            return $config;
-        }
-    }
-
-// ------------------------------------------------------------------------
-
+    // ------------------------------------------------------------------------
 
     /**
      *
-     * Set the way methods are called. From a design perspective, methods are called after the controller in the URL,
+     * Run the app
+     *
+     * This essentially sets the way Controllers and methods are linked to the called URL.
+     * From a design perspective, methods are called after the controller in the URL,
      * followed by any parameters
-     * For example, http://novaframework.co.uk/{CONTROLLER}/{METHOD}/{PARAMETER}/
+     * For example, http://novaframework.co.uk/{CONTROLLER}/{METHOD}/{PARAMETER}/ etc
      *
      * @return      bool
      */
-    function parseUrl()
+    function run()
     {
+        //Start the session
+        session_start();
+
+        //Get the config
         $loadedConfig = $this->getConfig();
 
         $url = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -174,6 +133,56 @@ class Nova
         else
         {
             $controller->indexAction();
+        }
+    }
+
+// ------------------------------------------------------------------------
+
+    /**
+     * Returns the main config.php file for the app
+     *
+     * Custom config files can be loaded by being passed as a param
+     *
+     * @param       var
+     * @return      mixed
+     */
+    function getConfig($customConfig = null)
+    {
+        static $config;
+
+        //Load the default config file
+        if (!isset($config))
+        {
+            $configFile = APP_PATH . 'config/config.php';
+
+            if (file_exists($configFile))
+            {
+                //Config file is present
+                require $configFile;
+            }
+            else
+            {
+                $configFile = APP_PATH . 'config/' . $customConfig;
+
+                if (file_exists($configFile))
+                {
+                    //Config file is present
+                    require $configFile;
+                }
+                //No config file is present
+                else
+                {
+                    die('No config file is present in your config directory.');
+                }
+            }
+
+            if (empty($config))
+            {
+                //The loaded config file has nothing in it!
+                die('The loaded config file is empty in your config directory.');
+            }
+
+            return $config;
         }
     }
 }

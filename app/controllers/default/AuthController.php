@@ -4,10 +4,12 @@
  * Class AuthController
  */
 
+use Nova\Error as Error;
+
 class AuthController extends NovaBaseController {
 
     //Call the NovaBaseController construct
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
     }
@@ -20,24 +22,41 @@ class AuthController extends NovaBaseController {
     public function loginAction()
     {
         $authModel = new Auth();
-        //$authModel->test();
-        $email = $this->getRequest('email');
-        $password = $authModel->sha1PasswordHash($this->getRequest('password'));
-        $auth = $authModel->login($email, $password);
+        $hash = new Hash();
 
-        if ($auth[0]['role'] === 'admin')
+        //$testSolace = $authModel->test();
+        //echo '<pre>'; var_dump($testSolace); die();
+
+        $email = $this->getRequest('email');
+        $userPassword = $authModel->getUserPasswordByEmail($email);
+
+        $userInput = $this->getRequest('password');
+        $verifyPassword = $hash->decrypt($userInput, $userPassword);
+
+        if ($verifyPassword === true)
         {
-            NovaSession::set('adminLoggedIn', true);
-            NovaSession::set('loggedIn', true);
-            NovaSession::set('user_id', $auth[0]['id']);
+            $auth = $authModel->login($email, $password);
+
+            if ($auth['role'] === 'admin')
+            {
+                NovaSession::set('adminLoggedIn', true);
+                NovaSession::set('loggedIn', true);
+                NovaSession::set('user_id', $auth['id']);
+                $this->goToUrl('/');
+            }
+            elseif ($auth['role'] === 'default')
+            {
+                NovaSession::set('loggedIn', true);
+                NovaSession::set('user_id', $auth['id']);
+                $this->goToUrl('/');
+            }
+        }
+        else
+        {
+            // TODO Redirect to wrong login
             $this->goToUrl('/');
         }
-        elseif ($auth[0]['role'] === 'default')
-        {
-            NovaSession::set('loggedIn', true);
-            NovaSession::set('user_id', $auth[0]['id']);
-            $this->goToUrl('/');
-        }
+
     }
 
     public function logoutAction()

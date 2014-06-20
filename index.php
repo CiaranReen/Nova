@@ -25,17 +25,19 @@ if(version_compare(phpversion(), "5.2.0", "<")) {
     exit("<b>Fatal Error:</b> PHP version must be 5.2.0 or greater to run Nova.");
 }
 
-require 'Nova/Constants.php';
-require 'Nova/Database/Db.php';
-require 'Nova/Nova.php';
+require 'lib/Nova/Constants.php';
+require 'lib/Nova/Hash.php';
+require 'lib/Nova/Database/Db.php';
+require 'lib/Nova/Database/Solace.php';
+require 'lib/Nova/Nova.php';
 
-require 'Nova/Bootstrap.php';
-require 'Nova/Controllers/NovaBaseController.php';
-require 'Nova/Views/NovaBaseView.php';
-require 'Nova/Models/NovaBaseModel.php';
-require 'Nova/Forms/NovaBaseForm.php';
-require 'Nova/Session/NovaSession.php';
+require 'lib/Nova/Controllers/NovaBaseController.php';
+require 'lib/Nova/Views/NovaBaseView.php';
+require 'lib/Nova/Models/NovaBaseModel.php';
+require 'lib/Nova/Forms/NovaBaseForm.php';
+require 'lib/Nova/Session/NovaSession.php';
 require 'vendor/autoload.php';
 
 //Run the application!
-$app = new Bootstrap();
+$app = new Nova();
+$app->run();

@@ -19,9 +19,7 @@ class Categories extends NovaBaseModel {
         INNER JOIN course AS c ON cc.course_id = c.id
         WHERE cc.category_id = :id');
 
-        $sql->execute(array(
-            'id' => $categoryId
-        ));
+        $sql->execute();
 
         return $sql->fetchAll();
     }
