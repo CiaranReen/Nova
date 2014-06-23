@@ -441,3 +441,36 @@ h1 {
     margin-bottom: 10px !important;
     margin-left: 10px;
 }
+
+.table-delete {
+    display:none;
+}
+
+.table-delete-active {
+    display: inline;
+    color: red;
+}
+
+.table-delete-active:hover {
+    display: inline;
+    color: red;
+}
+
+.bulk-actions {
+    width: 400px;
+}
+
+/******* ADD NEW BUTTON ********/
+.add-new-button {
+    background: none repeat scroll 0 0 #e0e0e0;
+    border: 0 none;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 4px;
+    padding: 4px 8px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: none;
+    top: -3px;
+}

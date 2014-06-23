@@ -15,68 +15,74 @@ class Topics extends NovaBaseModel {
 
     public function getTopics($courseId)
     {
-        $sql = $this->db->prepare("SELECT * FROM course_topic as ct
-        INNER JOIN topic as t ON ct.topic_id = t.id
-        WHERE ct.course_id = :courseId");
+        $sql = $this->db->select()
+            ->from(array('course_topic' => 'ct'))
+            ->innerJoin(array('topic' => 't'), 'ct.topic_id = t.id')
+            ->where('ct.course_id = ?', $courseId);
+        $query = $this->db->prepare($sql);
 
-        $sql->execute(array (
-            ':courseId' => $courseId
-        ));
+        $query->execute();
 
-        return $sql->fetchAll();
+        return $query->fetchAll();
     }
 
     public function getCommentsByTopicId($topicId)
     {
-        $sql = $this->db->prepare("SELECT * FROM comment AS c
-        INNER JOIN user AS u ON c.user_id = u.id
-        WHERE c.topic_id = :topicid
-        AND c.parent = 0");
+        $sql = $this->db->select()
+            ->from(array('comment' => 'c'))
+            ->innerJoin(array('user' => 'u'), 'c.user_id = u.id')
+            ->where('c.topic_id = ?', $topicId)
+            ->andWhere('c.parent = ?', 0);
+        $query = $this->db->prepare($sql);
 
-        $sql->execute(array (
-            ':topicid' => $topicId,
-        ));
+        $query->execute();
 
-        return $sql->fetchAll();
+        return $query->fetchAll();
     }
 
     public function getChildComments($commentId)
     {
-        $sql = $this->db->prepare("SELECT * FROM comment as c
-        INNER JOIN user AS u ON c.user_id = u.id
-        WHERE c.parent = :parent");
+        $sql = $this->db->select()
+            ->from(array('comment' => 'c'))
+            ->innerJoin(array('user' => 'u'), 'c.user_id = u.id')
+            ->where('c.parent = ?', $commentId);
 
-        $sql->execute(array (
-            ':parent' => $commentId
-        ));
+        $query = $this->db->prepare($sql);
 
-        return $sql->fetchAll();
+        $query->execute();
+
+        return $query->fetchAll();
     }
 
     public function getCodePassQuestionsByTopicId($topicId)
     {
-        $sql = $this->db->prepare("SELECT * FROM test_question AS tq
-        INNER JOIN topic AS t ON tq.topic_id = t.id
-        WHERE topic_id = :topicid");
+        $sql = $this->db->select()
+            ->from(array('test_question' => 'tq'))
+            ->innerJoin(array('topic' => 't'), 'tq.topic_id = t.id')
+            ->where('topic_id = ?', $topicId);
+        $query = $this->db->prepare($sql);
 
-        $sql->execute(array (
-            ':topicid' => $topicId
-        ));
+        $query->execute();
 
-        return $sql->fetchAll();
+        return $query->fetchAll();
     }
 
     public function checkResults($questionId, $answer)
     {
-        $sql = $this->db->prepare("SELECT * FROM test_question
-        WHERE id = :questionid AND correct_answer = :answer");
+        /*$sql = $this->db->rawSql("SELECT * FROM test_question
+        WHERE id = :questionid AND correct_answer = :answer");*/
 
-        $sql->execute(array (
-            ':questionid' => $questionId,
-            ':answer' => $answer,
-        ));
+        $sql = $this->db->select()
+            ->from(array('test_question' => ''))
+            ->where('id = ?', $questionId)
+            ->andWhere('correct_answer = ?', $answer);
+        //echo '<pre>'; var_dump($sql); die();
 
-        if ($sql->rowCount() > 0)
+        $query = $this->db->prepare($sql);
+
+        $query->execute();
+
+        if ($query->rowCount() > 0)
         {
             return true;
         }
@@ -88,13 +94,13 @@ class Topics extends NovaBaseModel {
 
     public function getBadge($topicId)
     {
-        $sql = $this->db->prepare("SELECT * FROM badge
-        WHERE topic_id = :topicid");
+        $sql = $this->db->select()
+            ->from(array('badge' => ''))
+            ->where('topic_id = ?', $topicId);
+        $query = $this->db->prepare($sql);
 
-        $sql->execute(array (
-            ':topicid' => $topicId
-        ));
+        $query->execute();
 
-        return $sql->fetchAll();
+        return $query->fetch();
     }
 }

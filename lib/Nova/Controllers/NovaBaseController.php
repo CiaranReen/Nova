@@ -19,7 +19,7 @@ abstract class NovaBaseController {
      * By design, each model should have the same name as the controller but without anything appended
      * For example, IndexController will be linked to the model Index
      */
-    function __construct()
+    public function __construct()
     {
         $this->view = new NovaBaseView();
 

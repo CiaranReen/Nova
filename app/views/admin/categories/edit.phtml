@@ -26,11 +26,11 @@
             <div class="form-body">
                 <form id="register" action="<?php echo URL; ?>/admin/categories/edit" method="post">
                     <div class="form-group">
-                        <input class="form-control" type="hidden" value="<?php echo $category['id']; ?>" name="id">
+                        <input class="form-control" type="hidden" value="<?php echo $this->category['id']; ?>" name="id">
                     </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Category Name <span class="required"> * </span></label>
-                        <input class="form-control" type="text" value="<?php echo $category['name']; ?>" name="name">
+                        <input class="form-control" type="text" value="<?php echo $this->category['name']; ?>" name="name">
                     </div>
                     <div class="form-actions fluid">
                         <button class="btn blue" type="submit">Save</button>

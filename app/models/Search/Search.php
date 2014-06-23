@@ -15,7 +15,7 @@ class Search extends NovaBaseModel {
 
     public function search($query)
     {
-        $sql = $this->db->prepare("SELECT * FROM course_topic AS ct
+        $sql = $this->db->rawSql("SELECT * FROM course_topic AS ct
         INNER JOIN topic AS t ON ct.topic_id = t.id
         INNER JOIN course AS c ON ct.course_id = c.id
         WHERE c.name LIKE ? OR t.name LIKE ?");

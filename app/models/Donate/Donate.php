@@ -15,14 +15,14 @@ class Donate extends NovaBaseModel {
 
     public function getTotalPerMonth($month)
     {
-        $sql = $this->db->prepare("SELECT SUM(amount) as amount FROM donation
-        WHERE month = :month");
+        $sql = $this->select('SUM(amount) as amount')
+            ->from(array('donation' => ''))
+            ->where('month = ?', $month);
+        $query = $this->db->prepare($sql);
 
-        $sql->execute(array (
-            ':month' => $month,
-        ));
+        $query->execute();
 
-        $data = $sql->fetchAll();
+        $data = $query->fetchAll();
 
         foreach ($data as $d)
         {

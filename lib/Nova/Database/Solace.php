@@ -21,34 +21,34 @@ class Solace extends Db {
 //---------------------------------------------------------------------------------
 
     /**
-     * @var
+     * @var array
      */
-    protected $_select;
+    protected $_select = array();
 
     /**
-     * @var
+     * @var array
      */
-    protected $_from;
+    protected $_from = array();
 
     /**
-     * @var
+     * @var array
      */
-    protected $_where;
+    protected $_innerJoin = array();
 
     /**
-     * @var
+     * @var array
      */
-    protected $_andWhere;
+    protected $_where = array();
 
     /**
-     * @var
+     * @var array
      */
-    protected $_innerJoin;
+    protected $_andWhere = array();
 
     /**
-     * @var
+     * @var array
      */
-    protected $query;
+    protected $_orderBy = array();
 
     /**
      * Access to the PDO functions
@@ -70,6 +70,7 @@ class Solace extends Db {
      */
     function select($fields = '*')
     {
+        $this->reset_values();
         $this->_select = "SELECT " . $fields;
         return $this;
     }
@@ -149,15 +150,22 @@ class Solace extends Db {
             //Is an alias set?
             if ($value != '')
             {
-                $joinTableSql = ' INNER JOIN ' . $value . ' AS ' . $key;
+                $joinTableSql = 'INNER JOIN ' . $key . ' AS ' . $value;
             }
             else
             {
-                $joinTableSql = ' INNER JOIN ' . $value;
+                $joinTableSql = 'INNER JOIN ' . $value;
             }
         }
 
         $this->_innerJoin = $joinTableSql . ' ON ' . $joinColumn;
+
+        return $this;
+    }
+
+    public function orderBy($column, $order)
+    {
+        $this->_orderBy = 'ORDER BY ' . $column . $order;
 
         return $this;
     }
@@ -190,7 +198,7 @@ class Solace extends Db {
 
         $insertSql = $this->insert($tableName, $columns, $values);
 
-        $query = $this->pdo->prepare($insertSql);
+        $query = $this->db->pdo->prepare($insertSql);
         $query->execute();
 
         return true;
@@ -289,7 +297,7 @@ class Solace extends Db {
      */
     public function delete($id, $table)
     {
-        $sql = $this->pdo->prepare('DELETE FROM ' . $table . ' WHERE id = ' . $id);
+        $sql = $this->db->pdo->prepare('DELETE FROM ' . $table . ' WHERE id = ' . $id);
         $sql->execute();
         return true;
     }
@@ -300,7 +308,7 @@ class Solace extends Db {
      */
     public function lastInsertId($seqname = NULL)
     {
-        return $this->pdo->lastInsertId();
+        return $this->db->pdo->lastInsertId();
     }
 
     /**
@@ -320,17 +328,20 @@ class Solace extends Db {
         {
             foreach ($sql as $stmt)
             {
-                $preparedSql[] = $stmt;
+                if (!is_array($stmt) && $stmt != null)
+                {
+                    $preparedSql[] = $stmt;
+                }
             }
-
         }
         else
         {
             return false;
         }
 
-        // Pop the objects off the end of the array
+        // Pop the object off the end of the array
         array_pop($preparedSql);
+        //echo '<pre>'; var_dump($preparedSql); die();
 
         // Turn the remaining array elements into one long string
         $preparedSql = implode(' ', $preparedSql);
@@ -348,6 +359,18 @@ class Solace extends Db {
         {
             return $this->pdo->prepare($preparedSql);
         }
+    }
+
+    /**
+     * Reset the QB values
+     */
+    public function reset_values()
+    {
+        $this->_select = null;
+        $this->_from = null;
+        $this->_innerJoin = null;
+        $this->_where = null;
+        $this->_andWhere = null;
     }
 
     /**

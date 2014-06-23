@@ -29,12 +29,13 @@ class Register extends NovaBaseModel {
      */
     public function checkEmailExists($email)
     {
-        $sql = $this->db->prepare('SELECT * FROM user WHERE email = :email');
-        $sql->execute(array(
-            ':email' => $email,
-        ));
+        $sql = $this->select()
+            ->from(array('user' => 'u'))
+            ->where('email = ?', $email);
+        $query = $this->db->prepare($sql);
+        $query->execute();
 
-        if ($sql->rowCount() > 0)
+        if ($query->rowCount() > 0)
         {
             return true;
         }

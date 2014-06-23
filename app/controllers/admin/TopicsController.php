@@ -33,6 +33,12 @@ class TopicsController extends NovaBaseController {
         $topicModel = new Topics();
         $topics = $topicModel->fetchAll('topic');
 
+        //PAGINATOR
+        $paginator = new Pagination();
+        $paginator->setResultsPerPage(5);
+        $paginator->setTotalNumberOfResults(count($topics));
+        $this->view->paginator = $paginator->create($topics);
+
         $this->view->topics = $topics;
         $this->view->render('topics/index');
     }

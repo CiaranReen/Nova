@@ -21,7 +21,7 @@
                 <td><?php echo $course['name']; ?></td>
                 <td><?php echo $course[4]; ?></td>
                 <td><?php echo $course['description']; ?></td>
-                <td><a class="delete-course" href="#_">Delete</a><i class="fa fa-trash"></i> /
+                <td><a class="table-delete" href="#_">Delete</a><i class="fa fa-trash"></i> /
                 <a href="<?php echo URL; ?>/admin/courses/edit/<?php echo $course['id']; ?>">Edit</a><i class="fa fa-trash"></i></td>
             </tr>
         <?php endforeach; ?>
@@ -30,16 +30,17 @@
 </div>
 <script>
     /*****************************************
-     * DELETE course
+     * DELETE comment
      *****************************************/
     $(document).ready(function () {
-        $('.delete-course').on('click', function(){
-            var c = confirm('Are you sure you want to DELETE this course?');
+        $('.table-delete').on('click', function(){
+            var c = confirm('Are you sure you want to DELETE this comment?');
             if(c == true){
-                var courseid = $(this).closest('tr').attr('id');
+                var id = $(this).closest('tr').attr('id');
+                var table = 'comment';
                 $.ajax({
-                    url: "/admin/ajax/deletecourse",
-                    data: {courseid : courseid},
+                    url: "/admin/ajax/delete",
+                    data: {id : id, table : table},
                     dataType: "json",
                     type: "POST",
                     success: function(data){
@@ -57,15 +58,17 @@
     $('.bulk-delete').on('click', function(){
         var action = $('#bulk-actions option:selected').text();
         if (action == 'Delete') {
-            var c = confirm('Are you sure you want to DELETE the selected vendor product(s)?');
+            var c = confirm('Are you sure you want to DELETE the selected comment(s)?');
             if(c == true){
-                var productid = [];
+                var id = [];
                 $(':checkbox:checked').each(function(i){
-                    productid[i] = $(this).val();
+                    id[i] = $(this).val();
+                    //Set the table here, this is the only difference between each ajax delete
+                    var table = 'comment';
                     $.ajax({
                         async: false,
-                        url: "/admin/ajax/delete-vendor-products",
-                        data: {productid : productid[i]},
+                        url: "/admin/ajax/delete",
+                        data: {id : id[i], table : table},
                         dataType: "json",
                         type: "POST",
                         success: function(data){

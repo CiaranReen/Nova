@@ -1,17 +1,18 @@
+<?php if (!empty($this->codepass)) : ?>
 <div class="page-header">
-    <h1><?php echo $this->codepass[0]['name']; ?> Code Pass</h1>
+    <h1><?php echo $this->codepass['name']; ?> Code Pass</h1>
 </div>
-<?php if ($this->codePassFail) : ?>
+<?php if (isset($this->codePassFail)) : ?>
     <div class="alert alert-danger">
         <?php echo $this->codePassFail; ?>
     </div>
 <?php endif; ?>
-<?php if ($this->codePassSuccess) : ?>
+<?php if (isset($this->codePassSuccess)) : ?>
     <div class="alert alert-success">
         <?php echo $this->codePassSuccess; ?>
     </div>
 <?php endif; ?>
-<p>Points on completion: <?php echo $this->question['points']; ?></p>
+<p>Points on completion: <?php echo $this->codepass[0]['points']; ?></p>
 
 <!-- Questions section -->
 <form action="" method="post">
@@ -21,7 +22,12 @@
         <label><?php echo $question['answer_two']; ?></label><input name="<?php echo $question[0] ?>" type="checkbox" value="B">
         <label><?php echo $question['answer_three']; ?></label><input name="<?php echo $question[0] ?>" type="checkbox" value="C">
         <label><?php echo $question['answer_four']; ?></label><input name="<?php echo $question[0] ?>" type="checkbox" value="D">
-        <!-- End questions section -->
     <?php endforeach; ?>
     <input type="submit" value="Submit">
 </form>
+<!-- End questions section -->
+    <?php else: ?>
+    <div class="page-header">
+        <h1>There is no Code Pass available for this course yet</h1>
+    </div>
+<?php endif; ?>

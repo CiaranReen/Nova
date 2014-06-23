@@ -36,8 +36,10 @@ class CategoriesController extends NovaBaseController {
         $categoryModel = new Categories();
         $categoryId = $this->getParam('view');
 
+        $category = $categoryModel->find($categoryId, 'category');
         $courses = $categoryModel->getCourses($categoryId);
 
+        $this->view->category = $category;
         $this->view->courses = $courses;
         $this->view->render('category/view');
     }

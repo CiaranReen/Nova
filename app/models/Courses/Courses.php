@@ -15,40 +15,44 @@ class Courses extends NovaBaseModel {
 
     public function getTopics($courseId, $sort = null)
     {
-        $sql = $this->db->prepare("SELECT * FROM course_topic as ct
-        INNER JOIN topic as t ON ct.topic_id = t.id
-        WHERE ct.course_id = :courseId
-        ORDER BY t.difficulty " . $sort);
+        $sql = $this->select()
+            ->from(array('course_topic' => 'ct'))
+            ->innerJoin(array('topic' => 't'), 'ct.topic_id = t.id')
+            ->where('ct.course_id = ?', $courseId)
+            ->orderBy('t.difficulty', $sort);
 
-        $sql->execute(array (
-            ':courseId' => $courseId,
-        ));
+        $query = $this->db->prepare($sql);
 
-        return $sql->fetchAll();
+        $query->execute();
+
+        return $query->fetchAll();
     }
 
     public function getCourses()
     {
-        $sql = $this->db->prepare("SELECT * FROM category_course as cc
-        INNER JOIN category AS c ON cc.category_id = c.id
-        INNER JOIN course AS co ON cc.course_id = co.id");
+        $sql = $this->select()
+            ->from(array('category_course' => 'cc'))
+            ->innerJoin(array('category' => 'c'), 'cc.category_id = c.id')
+            ->innerJoin(array('course' => 'co'), 'cc.course_id = co.id');
 
-        $sql->execute();
+        $query = $this->db->prepare($sql);
 
-        return $sql->fetchAll();
+        $query->execute();
+
+        return $query->fetchAll();
     }
 
     public function getCourseById($courseId)
     {
-        $sql = $this->db->prepare("SELECT * FROM category_course as cc
-        INNER JOIN category AS c ON cc.category_id = c.id
-        INNER JOIN course AS co ON cc.course_id = co.id
-        WHERE cc.course_id = :courseid");
+        $sql = $this->select()
+            ->from(array('category_course' => 'cc'))
+            ->innerJoin(array('category' => 'c'), 'cc.category_id = c.id')
+            ->innerJoin(array('course' => 'co'), 'cc.course_id = co.id')
+            ->where('cc.course_id = ?', $courseId);
+        $query = $this->db->prepare($sql);
 
-        $sql->execute(array (
-            ':courseid' => $courseId,
-        ));
+        $query->execute();
 
-        return $sql->fetchAll();
+        return $query->fetchAll();
     }
 }

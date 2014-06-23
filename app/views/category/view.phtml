@@ -1,5 +1,5 @@
 <div class="row">
-    <h1>Categories</h1>
+    <h1><?php echo $this->category['name']; ?></h1>
     <?php foreach ($this->courses as $course) : ?>
         <div class="col-md-3">
             <h3><a href="<?php echo URL; ?>/courses/view/<?php echo $course['id']; ?>"><?php echo $course['name']; ?></a></h3>

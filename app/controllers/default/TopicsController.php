@@ -107,14 +107,15 @@ class TopicsController extends NovaBaseController {
                 //Passed. Save the corresponding badge in the db.
                 $user = $topicModel->find(NovaSession::get('user_id'), 'user');
                 $badge = $topicModel->getBadge($topicId);
+                echo '<pre>'; var_dump($badge); die();
 
                 $data = array (
                     'user_id' => $user['id'],
-                    'badge_id' => $badge[0][0]
+                    'badge_id' => $badge[0]
                 );
 
                 $topicModel->insertRecord($data, 'user_badge');
-                $this->view->codePassSuccess = 'You got 100%! Well done! You\'ve earned the ' . $badge[0]['name'] . 'badge!' ;
+                $this->view->codePassSuccess = 'You got 100%! Well done! You\'ve earned the ' . $badge['name'] . 'badge!' ;
             }
 
         }

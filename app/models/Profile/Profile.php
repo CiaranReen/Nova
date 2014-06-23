@@ -15,13 +15,13 @@ class Profile extends NovaBaseModel {
 
     public function findByUsername($username)
     {
-        $sql = $this->db->rawSql("SELECT * FROM user
-        WHERE username = :username");
+        $sql = $this->select()
+            ->from(array('user' => ''))
+            ->where('username = ?', $username);
+        $query = $this->db->prepare($sql);
 
-        $sql->execute(array (
-            ':username' => $username
-        ));
+        $query->execute();
 
-        return $sql->fetchAll();
+        return $query->fetchAll();
     }
 }

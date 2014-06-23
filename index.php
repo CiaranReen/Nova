@@ -27,6 +27,7 @@ if(version_compare(phpversion(), "5.2.0", "<")) {
 
 require 'lib/Nova/Constants.php';
 require 'lib/Nova/Hash.php';
+require 'lib/Nova/Pagination.php';
 require 'lib/Nova/Database/Db.php';
 require 'lib/Nova/Database/Solace.php';
 require 'lib/Nova/Nova.php';

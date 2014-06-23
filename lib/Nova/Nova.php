@@ -65,26 +65,56 @@ class Nova
          */
         if ($url[1] !== 'admin')
         {
-            $requestedController = $loadedConfig['dir']['controllers'] . ucfirst($url[1]) . 'Controller.php';
-
-            //Does the controller exist?
-            if (file_exists($requestedController))
+            //Satisfy GET requests
+            if (strpos($url[1], '?') == true)
             {
-                require $requestedController;
-            }
+                $requestedController = $loadedConfig['dir']['controllers'] . ucfirst($url[0]) . 'Controller.php';
 
-            $object = ucfirst($url[1]) . 'Controller';
-            $controller = new $object;
+                //Does the controller exist?
+                if (file_exists($requestedController))
+                {
+                    require $requestedController;
+                }
+
+                $object = ucfirst($url[0]) . 'Controller';
+                $controller = new $object;
+            }
+            else
+            {
+                $requestedController = $loadedConfig['dir']['controllers'] . ucfirst($url[1]) . 'Controller.php';
+
+                //Does the controller exist?
+                if (file_exists($requestedController))
+                {
+                    require $requestedController;
+                }
+
+                $object = ucfirst($url[1]) . 'Controller';
+                $controller = new $object;
+            }
 
             //Call the requested method. If no method is found call the Index method.
             if (isset($url[2]))
             {
-                $method = $url[2] . 'Action';
-
-                if (method_exists($controller, $method))
+                if (strpos($url[2], '?') == true)
                 {
-                    $controller->$method();
+                    $method = $url[0] . 'Action';
+
+                    if (method_exists($controller, $method))
+                    {
+                        $controller->$method();
+                    }
                 }
+                else
+                {
+                    $method = $url[2] . 'Action';
+
+                    if (method_exists($controller, $method))
+                    {
+                        $controller->$method();
+                    }
+                }
+
             }
             else
             {
@@ -110,15 +140,33 @@ class Nova
         }
         else
         {
-            $file = $loadedConfig['dir']['admin']['controllers'] . ucfirst($url[2]) . 'Controller.php';
 
-            if (file_exists($file))
+            if (strpos($url[2], '?') == true)
             {
-                require $file;
-            }
+                $url = explode('?', $url[2]);
 
-            $object = ucfirst($url[2]) . 'Controller';
-            $controller = new $object;
+                $file = $loadedConfig['dir']['admin']['controllers'] . ucfirst($url[0]) . 'Controller.php';
+
+                if (file_exists($file))
+                {
+                    require $file;
+                }
+
+                $object = ucfirst($url[0]) . 'Controller';
+                $controller = new $object;
+            }
+            else
+            {
+                $file = $loadedConfig['dir']['admin']['controllers'] . ucfirst($url[2]) . 'Controller.php';
+
+                if (file_exists($file))
+                {
+                    require $file;
+                }
+
+                $object = ucfirst($url[2]) . 'Controller';
+                $controller = new $object;
+            }
         }
 
         if (isset($url[3]))

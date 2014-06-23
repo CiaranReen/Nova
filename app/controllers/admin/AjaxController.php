@@ -24,35 +24,12 @@ class AjaxController extends NovaBaseController {
         $this->view->render('index');
     }
 
-    public function deletecategoryAction()
+    public function deleteAction()
     {
         $ajaxModel = new Ajax();
-        $categoryId = $this->getRequest('categoryid');
-        $ajaxModel->delete($categoryId, 'category');
-        return true;
-    }
-
-    public function deletecourseAction()
-    {
-        $ajaxModel = new Ajax();
-        $courseId = $this->getRequest('courseid');
-        $ajaxModel->delete($courseId, 'course');
-        return true;
-    }
-
-    public function deletetopicAction()
-    {
-        $ajaxModel = new Ajax();
-        $topicId = $this->getRequest('topicid');
-        $ajaxModel->delete($topicId, 'topic');
-        return true;
-    }
-
-    public function deleteuserAction()
-    {
-        $ajaxModel = new Ajax();
-        $userId = $this->getRequest('userid');
-        $ajaxModel->delete($userId, 'user');
+        $id = $this->getRequest('id');
+        $table = $this->getRequest('table');
+        $ajaxModel->delete($id, $table);
         return true;
     }
 }
