@@ -8,7 +8,7 @@ require 'app/models/Index/Index.php';
 class ProfileController extends NovaBaseController {
 
     //Call the NovaBaseController construct
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $indexModel = new Index();
@@ -30,6 +30,9 @@ class ProfileController extends NovaBaseController {
 
     public function viewAction()
     {
+        //Scaling leveling
+        $level = floor(pow((6000/500),((1/1.2))));
+        $this->view->level = $level;
         $this->view->render('profile/view');
     }
 }

@@ -59,6 +59,7 @@ class Topics extends NovaBaseModel {
         $sql = $this->db->select()
             ->from(array('test_question' => 'tq'))
             ->innerJoin(array('topic' => 't'), 'tq.topic_id = t.id')
+            ->innerJoin(array('badge' => 'b'), 'tq.topic_id = b.topic_id')
             ->where('topic_id = ?', $topicId);
         $query = $this->db->prepare($sql);
 

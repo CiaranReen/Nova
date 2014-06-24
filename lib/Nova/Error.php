@@ -1,7 +1,5 @@
 <?php
 
-namespace Nova\Error;
-
 class Error
 {
     public function display_error($message)

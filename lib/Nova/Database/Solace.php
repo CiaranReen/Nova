@@ -28,6 +28,11 @@ class Solace extends Db {
     /**
      * @var array
      */
+    protected $_distinct = array();
+
+    /**
+     * @var array
+     */
     protected $_from = array();
 
     /**
@@ -38,7 +43,27 @@ class Solace extends Db {
     /**
      * @var array
      */
+    protected $_leftJoin = array();
+
+    /**
+     * @var array
+     */
+    protected $_rightJoin = array();
+
+    /**
+     * @var array
+     */
+    protected $_fullJoin = array();
+
+    /**
+     * @var array
+     */
     protected $_where = array();
+
+    /**
+     * @var array
+     */
+    protected $_like = array();
 
     /**
      * @var array
@@ -48,7 +73,69 @@ class Solace extends Db {
     /**
      * @var array
      */
+    protected $_orWhere = array();
+
+    /**
+     * @var array
+     */
+    protected $_in = array();
+
+    /**
+     * @var array
+     */
+    protected $_between = array();
+
+    /**
+     * @var array
+     */
     protected $_orderBy = array();
+
+    /**
+     * @var array
+     */
+    protected $_union = array();
+
+    /**
+     * @var array
+     */
+    protected $_limit = array();
+
+    /**
+     * @var array
+     */
+    protected $_dropTable = array();
+
+    /**
+     * @var array
+     */
+    protected $_dropIndex = array();
+
+    /**
+     * @var array
+     */
+    protected $_dropDatabase = array();
+
+    /**
+     * @var array
+     */
+    protected $_truncateTable = array();
+
+    /**
+     * @var array
+     */
+    protected $_createTable = array();
+
+    /**
+     * @var array
+     */
+    protected $_addColumn = array();
+
+    /**
+     * @var array
+     */
+    protected $_dropColumn = array();
+
+
 
     /**
      * Access to the PDO functions
@@ -68,10 +155,23 @@ class Solace extends Db {
      * @param       $fields
      * @return      string
      */
-    function select($fields = '*')
+    public function select($fields = '*')
     {
         $this->reset_values();
         $this->_select = "SELECT " . $fields;
+        return $this;
+    }
+
+    /**
+     * Select Distinct portion of Solace QB
+     *
+     * @param       string $fields
+     * @return      $this
+     */
+    public function distinct($fields = '*')
+    {
+        $this->reset_values();
+        $this->_distinct = "SELECT DISTINCT " . $fields;
         return $this;
     }
 
@@ -81,7 +181,7 @@ class Solace extends Db {
      * @param       array $table
      * @return      $this
      */
-    function from($table = array())
+    public function from($table = array())
     {
         foreach ($table as $key=>$value)
         {
@@ -102,18 +202,21 @@ class Solace extends Db {
     /**
      * Where portion of Solace QB
      *
-     * @param $column
-     * @param $field
-     * @return $this
+     * @param       $column
+     * @param       $field
+     * @return      $this
      */
-    function where($column, $field)
+    public function where($column, $field = false)
     {
-        //Encaps in single quotes
-        $encapsField = '\'' . $field . '\'';
+        if ($field !== false)
+        {
+            //Encaps in single quotes
+            $encapsField = '\'' . $field . '\'';
 
-        $newWhere = str_replace('?', $encapsField, $column);
+            $newWhere = str_replace('?', $encapsField, $column);
 
-        $this->_where = 'WHERE ' . $newWhere;
+            $this->_where = 'WHERE ' . $newWhere;
+        }
 
         return $this;
     }
@@ -125,7 +228,7 @@ class Solace extends Db {
      * @param       $field
      * @return      $this
      */
-    function andWhere($column, $field)
+    public function andWhere($column, $field)
     {
         //Encaps in single quotes
         $encapsField = '\'' . $field . '\'';
@@ -138,7 +241,51 @@ class Solace extends Db {
     }
 
     /**
-     * Inner join portion of the Solace Query Handler
+     * Or Where portion of Solace QB
+     *
+     * @param       $column
+     * @param       $field
+     * @return      $this
+     */
+    public function orWhere($column, $field)
+    {
+        //Encaps in single quotes
+        $encapsField = '\'' . $field . '\'';
+
+        $newWhere = str_replace('?', $encapsField, $column);
+
+        $this->_orWhere = 'OR ' . $newWhere;
+
+        return $this;
+    }
+
+    /**
+     * In portion of Solace QB
+     *
+     * @param $in
+     * @return $this
+     */
+    public function in($in)
+    {
+        $this->_in = ' IN (' . $in . ')';
+        return $this;
+    }
+
+    /**
+     * Between portion of Solace QB
+     *
+     * @param $value1
+     * @param $value2
+     * @return $this
+     */
+    public function between($value1, $value2)
+    {
+        $this->_between = ' BETWEEN ' . $value1 . ' AND ' . $value2;
+        return $this;
+    }
+
+    /**
+     * Inner join portion of the Solace QB
      * @param       array $joinTable
      * @param       $joinColumn
      * @return      string
@@ -163,16 +310,150 @@ class Solace extends Db {
         return $this;
     }
 
+    /**
+     * Left join portion of Solace QB
+     *
+     * @param       array $joinTable
+     * @param       $joinColumn
+     * @return      $this
+     */
+    public function leftJoin(array $joinTable, $joinColumn)
+    {
+        foreach ($joinTable as $key => $value)
+        {
+            //Is an alias set?
+            if ($value != '')
+            {
+                $joinTableSql = 'LEFT JOIN ' . $key . ' AS ' . $value;
+            }
+            else
+            {
+                $joinTableSql = 'LEFT JOIN ' . $value;
+            }
+        }
+
+        $this->_leftJoin = $joinTableSql . ' ON ' . $joinColumn;
+
+        return $this;
+    }
+
+    /**
+     * Right join portion of Solace QB
+     *
+     * @param       array $joinTable
+     * @param       $joinColumn
+     * @return      $this
+     */
+    public function rightJoin(array $joinTable, $joinColumn)
+    {
+        foreach ($joinTable as $key => $value)
+        {
+            //Is an alias set?
+            if ($value != '')
+            {
+                $joinTableSql = 'RIGHT JOIN ' . $key . ' AS ' . $value;
+            }
+            else
+            {
+                $joinTableSql = 'RIGHT JOIN ' . $value;
+            }
+        }
+
+        $this->_rightJoin = $joinTableSql . ' ON ' . $joinColumn;
+
+        return $this;
+    }
+
+    /**
+     * Full Outer Join portion of Solace QB
+     *
+     * @param       array $joinTable
+     * @param       $joinColumn
+     * @return      $this
+     */
+    public function fullJoin(array $joinTable, $joinColumn)
+    {
+        foreach ($joinTable as $key => $value)
+        {
+            //Is an alias set?
+            if ($value != '')
+            {
+                $joinTableSql = 'FULL OUTER JOIN ' . $key . ' AS ' . $value;
+            }
+            else
+            {
+                $joinTableSql = 'FULL OUTER JOIN ' . $value;
+            }
+        }
+
+        $this->_fullJoin = $joinTableSql . ' ON ' . $joinColumn;
+
+        return $this;
+    }
+
+    /**
+     * Order By portion of Solace QB
+     *
+     * @param       $column
+     * @param       $order
+     * @return      $this
+     */
     public function orderBy($column, $order)
     {
         $this->_orderBy = 'ORDER BY ' . $column . $order;
+        return $this;
+    }
 
+    /**
+     * Like portion of Solace QB
+     *
+     * @param       $pattern
+     * @return      $this
+     */
+    public function like($pattern)
+    {
+        $this->_like = ' LIKE ' . $pattern;
+        return $this;
+    }
+
+    /**
+     * Union portion of Solace QB
+     *
+     * @param       $columns1
+     * @param       $table1
+     * @param       $columns2
+     * @param       $table2
+     * @return      $this
+     */
+    public function union($columns1, $table1, $columns2, $table2)
+    {
+        $this->_union = 'SELECT ' . $columns1 . ' FROM ' . $table1 . ' UNION SELECT ' .
+            $columns2 . ' FROM ' . $table2;
+        return $this;
+    }
+
+    /**
+     * Limit portion of Solace QB
+     *
+     * @param       $number
+     * @return      $this
+     */
+    public function limit($number)
+    {
+        $this->_limit = 'LIMIT ' . $number;
+        return $this;
+    }
+
+    public function groupBy($column)
+    {
+        $this->_groupBy = 'GROUP BY ' . $column;
         return $this;
     }
 
 
     /**
      * Insert a new record into the db
+     *
      * @param       $data
      * @param       $tableName
      * @return      bool
@@ -206,6 +487,7 @@ class Solace extends Db {
 
     /**
      * Insert into portion for Solace QB
+     *
      * @param       $tableName
      * @param       $columns
      * @param       $values
@@ -219,6 +501,7 @@ class Solace extends Db {
 
     /**
      * Update a record into the db
+     *
      * @param       $data
      * @param       $tableName
      * @param       $where
@@ -246,6 +529,7 @@ class Solace extends Db {
 
     /**
      * Update portion of the Solace QB
+     *
      * @param       $tableName
      * @param       $setSql
      * @param       $where
@@ -259,6 +543,7 @@ class Solace extends Db {
 
     /**
      * Find a row based on the PK.
+     *
      * @param       $id
      * @param       null $table
      * @return      mixed
@@ -276,6 +561,7 @@ class Solace extends Db {
 
     /**
      * Fetches all rows from a specified table
+     *
      * @param       $table
      * @return      array
      */
@@ -286,11 +572,12 @@ class Solace extends Db {
         $query = $this->prepare($sql);
         $query->execute();
 
-        return $query->fetchAll();
+        return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
     /**
      * Delete a record from the specified table
+     *
      * @param       $id
      * @param       $table
      * @return      bool
@@ -303,6 +590,8 @@ class Solace extends Db {
     }
 
     /**
+     * Get the last inserted ID in thd DB
+     *
      * @param       null $seqname
      * @return      string
      */
@@ -362,26 +651,162 @@ class Solace extends Db {
     }
 
     /**
-     * Reset the QB values
-     */
-    public function reset_values()
-    {
-        $this->_select = null;
-        $this->_from = null;
-        $this->_innerJoin = null;
-        $this->_where = null;
-        $this->_andWhere = null;
-    }
-
-    /**
      * Function for raw SQL queries
      *
-     * @param $sql
-     * @return PDOStatement
+     * @param       $sql
+     * @return      PDOStatement
      */
     public function rawSql($sql)
     {
         return $this->pdo->prepare($sql);
+    }
+
+    /**
+     * Drop a table
+     *
+     * @param       $table
+     * @return      $this
+     */
+    public function dropTable($table)
+    {
+        $this->_dropTable = 'DROP TABLE ' . $table;
+        return $this;
+    }
+
+    /**
+     * Drop an index
+     *
+     * @param $table
+     * @param $index
+     * @return $this
+     */
+    public function dropIndex($table, $index)
+    {
+        $this->_dropIndex = 'ALTER TABLE ' . $table . ' DROP INDEX ' . $index;
+        return $this;
+    }
+
+    /**
+     * Drop a database
+     *
+     * @param $database
+     * @return $this
+     */
+    public function dropDatabase($database)
+    {
+        $this->_dropDatabase = 'DROP DATABASE ' . $database;
+        return $this;
+    }
+
+    /**
+     * Truncate a table
+     *
+     * @param $table
+     * @return $this
+     */
+    public function truncateTable($table)
+    {
+        $this->_truncateTable = 'TRUNCATE TABLE ' . $table;
+        return $this;
+    }
+
+    /**
+     * Add a column to a table
+     *
+     * @param $table
+     * @param $column
+     * @param $datatype
+     * @return $this
+     */
+    public function addColumn($table, $column, $datatype)
+    {
+        $this->_addColumn = 'ALTER TABLE ' . $table . 'ADD ' . $column . ' ' . $datatype;
+        return $this;
+    }
+
+    /**
+     * Drop a column from a table
+     *
+     * @param $table
+     * @param $column
+     * @return $this
+     */
+    public function dropColumn($table, $column)
+    {
+        $this->_dropColumn = 'ALTER TABLE ' . $table . ' DROP COLUMN ' . $column;
+        return $this;
+    }
+
+    /**
+     * Modify a table column
+     *
+     * @param $table
+     * @param $column
+     * @param $datatype
+     */
+    public function modifyColumn($table, $column, $datatype)
+    {
+        $this->_modifyColumn = 'ALTER TABLE ' . $table . ' MODIFY COLUMN ' . $column . ' ' . $datatype;
+    }
+
+    /**
+     * Set the auto increment of a PK
+     *
+     * @param $table
+     * @param $increment
+     * @return $this
+     */
+    public function setAutoIncrement($table, $increment)
+    {
+        $this->_autoIncrement = 'ALTER TABLE ' . $table . ' AUTO_INCREMENT=' . $increment;
+        return $this;
+    }
+
+    /**
+     * Create a table
+     *
+     * @param $table
+     * @return $this
+     */
+    public function createTable($table)
+    {
+        $this->_createTable = 'CREATE TABLE ' . $table;
+        return $this;
+    }
+
+    /**
+     * Function to insert current time into field
+     *
+     * @return bool|string
+     */
+    public function NOW()
+    {
+        return (date("Y-m-d H:i:s"));
+    }
+
+
+    /**
+     * Reset the QB values
+     * This function is needed to instantiate multiple objects in the same function, alternatively
+     * Write one, query the database, save to controller var, reset object, repeat
+     */
+    protected function reset_values()
+    {
+        $this->_select      = null;
+        $this->_distinct    = null;
+        $this->_from        = null;
+        $this->_where       = null;
+        $this->_andWhere    = null;
+        $this->_orWhere     = null;
+        $this->_in          = null;
+        $this->_between     = null;
+        $this->_innerJoin   = null;
+        $this->_leftJoin    = null;
+        $this->_rightJoin   = null;
+        $this->_orderBy     = null;
+        $this->_like        = null;
+        $this->_limit       = null;
+        $this->_union       = null;
     }
 
 }

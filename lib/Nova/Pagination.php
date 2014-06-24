@@ -104,6 +104,72 @@ class Pagination
     }
 
     /**
+     * @param mixed $baseUrl
+     */
+    public function setBaseUrl($baseUrl)
+    {
+        $this->baseUrl = $baseUrl;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBaseUrl()
+    {
+        return $this->baseUrl;
+    }
+
+    /**
+     * @param mixed $data
+     */
+    public function setData($data)
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
+     * @param array $pages
+     */
+    public function setPages($pages)
+    {
+        $this->pages = $pages;
+    }
+
+    /**
+     * @return array
+     */
+    public function getPages()
+    {
+        return $this->pages;
+    }
+
+    /**
+     * @param int $startPage
+     */
+    public function setStartPage($startPage)
+    {
+        $this->startPage = $startPage;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStartPage()
+    {
+        return $this->startPage;
+    }
+
+
+
+    /**
      * Create the paginator. This returns a paginator object with all the requested options and the data to be displayed
      *
      * @param $data

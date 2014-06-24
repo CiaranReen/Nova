@@ -25,11 +25,20 @@ if(version_compare(phpversion(), "5.2.0", "<")) {
     exit("<b>Fatal Error:</b> PHP version must be 5.2.0 or greater to run Nova.");
 }
 
+require 'lib/Nova/Error.php';
+$error = new Error();
+
 require 'lib/Nova/Constants.php';
 require 'lib/Nova/Hash.php';
 require 'lib/Nova/Pagination.php';
 require 'lib/Nova/Database/Db.php';
+require 'lib/Nova/Routes.php';
+
+
+require 'app/config/routes.php';
+
 require 'lib/Nova/Database/Solace.php';
+require 'lib/Nova/Database/Db_Benchmark.php';
 require 'lib/Nova/Nova.php';
 
 require 'lib/Nova/Controllers/NovaBaseController.php';
@@ -37,8 +46,9 @@ require 'lib/Nova/Views/NovaBaseView.php';
 require 'lib/Nova/Models/NovaBaseModel.php';
 require 'lib/Nova/Forms/NovaBaseForm.php';
 require 'lib/Nova/Session/NovaSession.php';
+
 require 'vendor/autoload.php';
 
 //Run the application!
 $app = new Nova();
-$app->run();
+$app->run($routes->getRoutes());

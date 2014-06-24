@@ -84,6 +84,7 @@ class TopicsController extends NovaBaseController {
 
         $topicId = $this->getParam('codepass');
         $codePass = $topicModel->getCodePassQuestionsByTopicId($topicId);
+        echo '<pre>'; var_dump($codePass); die();
 
         //Validate test results
         if ($this->isPost() === true)
@@ -107,7 +108,6 @@ class TopicsController extends NovaBaseController {
                 //Passed. Save the corresponding badge in the db.
                 $user = $topicModel->find(NovaSession::get('user_id'), 'user');
                 $badge = $topicModel->getBadge($topicId);
-                echo '<pre>'; var_dump($badge); die();
 
                 $data = array (
                     'user_id' => $user['id'],

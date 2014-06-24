@@ -28,16 +28,16 @@
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($this->paginator->data as $data) : ?>
-            <tr id="<?php echo $data['id']; ?>">
-                <td><input class="checkbox" value="<?php echo $data['id']; ?>" type="checkbox"></td>
-                <td><?php echo $data['id']; ?></td>
+        <?php foreach ($this->paginator->data as $topic) : ?>
+            <tr id="<?php echo $topic['id']; ?>">
+                <td><input class="checkbox" value="<?php echo $topic['id']; ?>" type="checkbox"></td>
+                <td><?php echo $topic['id']; ?></td>
                 <td>
-                    <a href="<?php echo URL; ?>/admin/topics/edit/<?php echo $data['id']; ?>"><?php echo $data['name']; ?></a>
+                    <a href="<?php echo URL; ?>/admin/topics/edit/<?php echo $topic['id']; ?>"><?php echo $topic['name']; ?></a>
                     <a class="table-delete" href="#_">Delete</a>
                 </td>
-                <td><?php echo $data['difficulty']; ?></td>
-                <td><?php echo $data['description']; ?></td>
+                <td><?php echo $topic['difficulty']; ?></td>
+                <td><?php echo $topic['description']; ?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>
@@ -45,8 +45,8 @@
 </div>
 
 <div class="paginator">
-    <?php foreach ($this->paginator->pages as $paginator) : ?>
-        <?php echo $paginator; ?>
+    <?php foreach ($this->paginator->pages as $pages) : ?>
+        <?php echo $pages; ?>
     <?php endforeach; ?>
 </div>
 

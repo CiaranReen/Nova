@@ -28,6 +28,7 @@ class CoursesController extends NovaBaseController {
     public function indexAction()
     {
         $courseModel = new Courses();
+
         $courses = $courseModel->fetchAll('course');
 
         $this->view->courses = $courses;
@@ -40,6 +41,8 @@ class CoursesController extends NovaBaseController {
 
         $courseId = $this->getParam('view');
         $course = $courseModel->find($courseId, 'course');
+        /*$benchmark = new Db_Benchmark();
+        $benchmark->getTime($courseModel->getTopics($courseId));*/
 
         if ($this->getRequest('action') === null)
         {

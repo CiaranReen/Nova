@@ -39,6 +39,7 @@ class AccountController extends NovaBaseController {
             $this->view->render('account/success');
         }
 
+        $this->view->level = $level;
         $this->view->account = $account;
         $this->view->render('account/index');
     }

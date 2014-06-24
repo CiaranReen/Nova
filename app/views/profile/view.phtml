@@ -1,5 +1,6 @@
 <div class="row">
     <div class="page-header"><h1><?php echo $this->user['username']; ?>'s Profile</h1></div>
+    <h1>Level: <?php echo $this->level; ?></h1>
     <h1>Total Points: <?php echo $this->user['points'] ?></h1>
     <h1>Badges</h1>
     <?php if (isset($this->badges)) : ?>

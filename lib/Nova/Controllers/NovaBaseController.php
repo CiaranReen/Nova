@@ -61,13 +61,19 @@ abstract class NovaBaseController {
     {
         if ($this->isPost() === true)
         {
-            $this->_request = $_POST[$value];
-            return $this->_request;
+            if (isset($_POST[$value]))
+            {
+                $this->_request = $_POST[$value];
+                return $this->_request;
+            }
         }
         else if ($this->isGet() === true)
         {
-            $this->_request = $_GET[$value];
-            return $this->_request;
+            if (isset($_GET[$value]))
+            {
+                $this->_request = $_GET[$value];
+                return $this->_request;
+            }
         }
 
         return false;

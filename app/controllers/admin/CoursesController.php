@@ -35,6 +35,12 @@ class CoursesController extends NovaBaseController {
 
         $courses = $courseModel->getCourses();
 
+        //PAGINATOR
+        $paginator = new Pagination();
+        $paginator->setResultsPerPage(10);
+        $paginator->setTotalNumberOfResults(count($courses));
+        $this->view->paginator = $paginator->create($courses);
+
         $this->view->courses = $courses;
         $this->view->render('courses/index');
     }

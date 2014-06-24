@@ -28,6 +28,5 @@ class NovaBaseView
             require 'app/views/' . $name . '.phtml';
             require 'app/layout/default/footer.phtml';
         }
-
     }
 }

@@ -33,6 +33,12 @@ class CategoriesController extends NovaBaseController {
         $categoryModel = new Categories();
         $categories = $categoryModel->fetchAll('category');
 
+        //PAGINATOR
+        $paginator = new Pagination();
+        $paginator->setResultsPerPage(10);
+        $paginator->setTotalNumberOfResults(count($categories));
+        $this->view->paginator = $paginator->create($categories);
+
         $this->view->categories = $categories;
         $this->view->render('categories/index');
     }

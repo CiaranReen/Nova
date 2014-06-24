@@ -28,7 +28,7 @@
         </thead>
 
         <tbody>
-        <?php foreach ($this->users as $user) : ?>
+        <?php foreach ($this->paginator->data as $user) : ?>
             <tr id="<?php echo $user['id']; ?>">
                 <td><input class="checkbox" value="<?php echo $user['id']; ?>" type="checkbox"></td>
                 <td><?php echo $user['id']; ?></td>
@@ -46,8 +46,8 @@
 </div>
 
 <div class="paginator">
-    <?php foreach ($this->paginator as $paginator) : ?>
-        <?php echo $paginator; ?>
+    <?php foreach ($this->paginator->pages as $pages) : ?>
+        <?php echo $pages; ?>
     <?php endforeach; ?>
 </div>
 

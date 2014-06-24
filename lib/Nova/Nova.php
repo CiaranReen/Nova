@@ -27,9 +27,10 @@ class Nova
      * followed by any parameters
      * For example, http://novaframework.co.uk/{CONTROLLER}/{METHOD}/{PARAMETER}/ etc
      *
+     * @param       $route
      * @return      bool
      */
-    function run()
+    public function run($route)
     {
         //Start the session
         session_start();
@@ -40,6 +41,26 @@ class Nova
         $url = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $url = rtrim($url, '/');
         $url = explode('/', $url);
+
+        /*
+         * --------------------------------------------------
+         * Custom routes, if any, called here
+         * --------------------------------------------------
+         */
+        if ($route != null)
+        {
+            $controller = explode('/', $route);
+            $controller = end($controller);
+            $controller = explode('.', $controller);
+            $controller = reset($controller);
+            if (file_exists($route))
+            {
+                require $route;
+                $controller = new $controller();
+                $controller->indexAction();
+                exit();
+            }
+        }
 
         /*
          * ------------------------------------------
@@ -194,7 +215,7 @@ class Nova
      * @param       var
      * @return      mixed
      */
-    function getConfig($customConfig = null)
+    protected function getConfig($customConfig = null)
     {
         static $config;
 

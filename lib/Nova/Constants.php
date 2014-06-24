@@ -6,7 +6,16 @@
  * Time: 14:03
  */
 
-//Base URL of the site eg. http://www.example.com
+
+/*
+| -------------------------------------------------------------------------
+| App-wide constants
+| -------------------------------------------------------------------------
+| Set your app-wide constants here. Commonly used ones are already defined.
+|
+|
+*/
+
 if ($_SERVER['HTTP_HOST'] == 'playground.dev')
 {
     define('URL', 'http://playground.dev');

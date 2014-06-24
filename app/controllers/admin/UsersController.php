@@ -38,7 +38,7 @@ class UsersController extends NovaBaseController {
         $paginator = new Pagination();
         $paginator->setResultsPerPage(10);
         $paginator->setTotalNumberOfResults(count($users));
-        $this->view->paginator = $paginator->create($topic);
+        $this->view->paginator = $paginator->create($users);
 
         $this->view->users = $users;
         $this->view->render('users/index');
