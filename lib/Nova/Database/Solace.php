@@ -400,7 +400,7 @@ class Solace extends Db {
      */
     public function orderBy($column, $order)
     {
-        $this->_orderBy = 'ORDER BY ' . $column . $order;
+        $this->_orderBy = 'ORDER BY ' . $column . ' ' . $order;
         return $this;
     }
 
@@ -464,7 +464,7 @@ class Solace extends Db {
         $values = '';
         foreach ($data as $value)
         {
-            $values .= '\'' . $value . '\', ';
+            $values .= '' . $this->db->pdo->quote($value) . ', ';
         }
         $values = substr($values, 0, -2);
 
@@ -513,14 +513,15 @@ class Solace extends Db {
         $setSql = '';
         foreach ($data as $key => $value)
         {
-            $setSql .= '`' . $key . '` = \'' . $value . '\', ';
+            $setSql .= '`' . $key . '` = ' . $this->db->pdo->quote($value) . ', ';
         }
 
         $setSql = substr($setSql, 0, -2);
 
         $insertSql = $this->update($tableName, $setSql, $where);
 
-        $query = $this->pdo->prepare($insertSql);
+        $query = $this->db->pdo->prepare($insertSql);
+
         $query->execute();
 
         return true;
@@ -608,9 +609,10 @@ class Solace extends Db {
      * @param       null $options
      * @return      PDOStatement|void
      */
-    final function prepare($sql, $options = null)
+    final public function prepare($sql, $options = null)
     {
         $preparedSql = array();
+        //echo '<pre>'; var_dump($sql); die();
 
         // If the passed sql is not an array or object then we discard it
         if (is_object($sql))
@@ -630,7 +632,6 @@ class Solace extends Db {
 
         // Pop the object off the end of the array
         array_pop($preparedSql);
-        //echo '<pre>'; var_dump($preparedSql); die();
 
         // Turn the remaining array elements into one long string
         $preparedSql = implode(' ', $preparedSql);

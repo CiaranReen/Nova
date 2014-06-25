@@ -53,6 +53,9 @@ class DonateController extends NovaBaseController {
 
             $this->view->render('donate/thankyou');
         }
-        $this->view->render('donate/index');
+        else
+        {
+            $this->view->render('donate/index');
+        }
     }
 }

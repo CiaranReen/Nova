@@ -84,7 +84,6 @@ class TopicsController extends NovaBaseController {
 
         $topicId = $this->getParam('codepass');
         $codePass = $topicModel->getCodePassQuestionsByTopicId($topicId);
-        echo '<pre>'; var_dump($codePass); die();
 
         //Validate test results
         if ($this->isPost() === true)

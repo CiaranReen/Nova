@@ -5,12 +5,10 @@
     <h1>Badges</h1>
     <?php if (isset($this->badges)) : ?>
         <?php foreach ($this->badges as $badge) : ?>
-            <a class="topic-anchor" href="/topics/view/<?php echo $badge['id']; ?>">
+            <a class="topic-anchor" href="/topics/view/<?php echo $badge['topic_id']; ?>">
                 <p><?php echo $badge['name']; ?></p>
                 <p><?php echo $badge['earned']; ?></p>
             </a>
         <?php endforeach; ?>
     <?php endif; ?>
 </div>
-
-

@@ -72,7 +72,7 @@
         /*****************************************
          * DELETE topic
          *****************************************/
-        $('.delete-topic').on('click', function(){
+        $('.table-delete').on('click', function(){
             var c = confirm('Are you sure you want to DELETE this topic?');
             if(c == true){
                 var id = $(this).closest('tr').attr('id');
@@ -96,7 +96,7 @@
      * BULK DELETE topic
      *****************************************/
     $('.bulk-delete').on('click', function(){
-        var action = $('#bulk-actions option:selected').text();
+        var action = $('.bulk-actions option:selected').text();
         if (action == 'Delete') {
             var c = confirm('Are you sure you want to DELETE the selected topic(s)?');
             if(c == true){

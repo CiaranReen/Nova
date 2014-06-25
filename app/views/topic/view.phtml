@@ -8,10 +8,10 @@
 <?php endif; ?>
 <p><?php echo $this->topic['description']; ?></p>
 <p><?php echo $this->topic['content']; ?></p>
-<video width="400" height="320" controls>
+<!--<video width="400" height="320" controls>
     <source src="https://www.youtube.com/watch?feature=player_detailpage&v=uUV-K7ggTjc" type="video/mp4">
     <source src="https://www.youtube.com/watch?feature=player_detailpage&v=uUV-K7ggTjc" type="video/ogg">
-</video>
+</video>-->
 
 <div class="page-header">
     <span><h4>Ready to level?</h4> <a href="/topics/codepass/<?php echo $this->topic['id']; ?>">Take the Code Pass.</a></span>
@@ -54,7 +54,7 @@
         <!-- Child comments section -->
         <div class="child-comments">
             <?php foreach ($this->childComments as $childComments) : ?>
-                <?php foreach ($childComments as$childComment) : ?>
+                <?php foreach ($childComments as $childComment) : ?>
                     <?php if ($comment[0] == $childComment['parent']) : ?>
                         <p><a href="/profile/view/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $childComment['username']; ?></a></p>
                         <p><?php echo $childComment['comment']; ?></p>

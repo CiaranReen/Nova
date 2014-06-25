@@ -18,15 +18,15 @@ class NovaBaseView
 
         if (strpos($domain, 'admin'))
         {
-            require 'app/layout/admin/header.phtml';
-            require 'app/views/admin/' . $name . '.phtml';
-            require 'app/layout/admin/footer.phtml';
+            require_once 'app/layout/admin/header.phtml';
+            require_once 'app/views/admin/' . $name . '.phtml';
+            require_once 'app/layout/admin/footer.phtml';
         }
         else
         {
-            require 'app/layout/default/header.phtml';
-            require 'app/views/' . $name . '.phtml';
-            require 'app/layout/default/footer.phtml';
+            require_once 'app/layout/default/header.phtml';
+            require_once 'app/views/' . $name . '.phtml';
+            require_once 'app/layout/default/footer.phtml';
         }
     }
 }
