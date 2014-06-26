@@ -179,6 +179,31 @@ body h1, body h2, body h3 {
 
 /******* END COMMENTS *********/
 
+/******* CODE STYLING *********/
+
+.pre-default-code {
+    background-color: #eee;
+    border: 0 none;
+}
+
+.pre-default-code code {
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif
+}
+
+.pre-default-code .main-highlight {
+    color: blue;
+}
+
+.comment {
+    color: grey;
+}
+
+.var {
+    color: #7D151A;
+}
+
+/******* END CODE STYLING *******/
+
 .register-container {
     margin-right: auto;
     margin-left: auto;

@@ -1,11 +1,9 @@
 <h1>Edit your details</h1>
 <form id="account" action="<?php echo URL; ?>/account/" method="post">
+    <input type="hidden" value="<?php echo $_COOKIE['CSRF']; ?>" name="csrf">
     <input type="hidden" value="<?php echo $this->account['id']; ?>" name="id">
     <input type="text" value="<?php echo $this->account['first_name']; ?>" name="first-name" placeholder="First Name*">
     <input type="text" value="<?php echo $this->account['last_name']; ?>" name="last-name" placeholder="Last Name*">
-    <input type="text" value="<?php echo $this->account['company']; ?>" name="company" placeholder="Company">
     <input type="email" value="<?php echo $this->account['email']; ?>" name="email" placeholder="Email address*">
     <input type="submit" value="Update">
 </form>
-
-

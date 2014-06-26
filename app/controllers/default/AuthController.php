@@ -24,9 +24,6 @@ class AuthController extends NovaBaseController {
         $authModel = new Auth();
         $hash = new Hash();
 
-        //$testSolace = $authModel->test();
-        //echo '<pre>'; var_dump($testSolace); die();
-
         $email = $this->getRequest('email');
         $userPassword = $authModel->getUserPasswordByEmail($email);
 
@@ -36,6 +33,7 @@ class AuthController extends NovaBaseController {
         if ($verifyPassword === true)
         {
             $auth = $authModel->login($email, $password);
+            $hash->generateCSRFCookie();
 
             if ($auth['role'] === 'admin')
             {

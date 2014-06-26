@@ -12,8 +12,11 @@ $config['debug'] = false;
 $config['language'] = 'English';
 $config['charset'] = 'UTF-8';
 
-//Session lifetime length
-$config['session_expiration'] = 2800;
+//Session and cookie settings
+$config['session_expiration'] = 0;
+$config['session_cookie_httponly'] = 1;
+$config['use_only_cookies'] = 1;
+$config['cookie_secure'] = 1;
 
 //Default path variables
 $config['dir']['root'] = dirname(dirname(__DIR__));

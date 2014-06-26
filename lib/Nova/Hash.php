@@ -98,4 +98,31 @@ class Hash
             return false;
         }
     }
+
+    /**
+     * Function to check two passwords for a match
+     *
+     * @param $password
+     * @param $confPassword
+     * @return bool
+     */
+    public function passwordMatch($password, $confPassword)
+    {
+        if ($password === $confPassword)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Generate a csrf cookie for use with forms
+     */
+    public function generateCSRFCookie()
+    {
+        $sessionId = $_COOKIE['PHPSESSID'];
+        $rand = (string) (mt_rand());
+        setcookie('CSRF',$sessionId . $rand, 0, '/', '', '', true);
+    }
 }

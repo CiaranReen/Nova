@@ -10,7 +10,7 @@ require 'app/models/Index/Index.php';
 class TopicsController extends NovaBaseController {
 
     //Call the NovaBaseController construct
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
 

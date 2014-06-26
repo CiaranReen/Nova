@@ -9,7 +9,7 @@
 class RegisterController extends NovaBaseController {
 
     //Call the NovaBaseController construct
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
     }
@@ -17,10 +17,11 @@ class RegisterController extends NovaBaseController {
     public function indexAction()
     {
         $registerModel = new Register();
+        $hash = new Hash();
 
-        if ($this->isPost() === true && $this->passwordMatch($this->getRequest('password'), $this->getRequest('conf-password')) === true)
+        if ($this->isPost() === true && $hash->passwordMatch($this->getRequest('password'), $this->getRequest('conf-password')) === true)
         {
-            $newPass = $registerModel->sha1PasswordHash($this->getRequest('password'));
+            $newPass = $hash->encrypt($this->getRequest('password'));
 
             if ($registerModel->checkEmailExists($this->getRequest('email')) === false)
             {
@@ -29,7 +30,7 @@ class RegisterController extends NovaBaseController {
                     'last_name' => $this->getRequest('last-name'),
                     'role' => 'default',
                     'is_over_13' => $this->getRequest('age'),
-                    'company' => $this->getRequest('company'),
+                    'username' => $this->getRequest('username'),
                     'email' => $this->getRequest('email'),
                     'password' => $newPass,
                     'security_question_id' => $this->getRequest('security-question'),
