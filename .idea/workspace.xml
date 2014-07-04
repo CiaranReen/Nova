@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d9522f1-37cf-42c6-92a5-60e6477d3a07" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\Go\Controllers\ErrorController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\Go\Controllers\GoBaseController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\Go\Database\GoDatabase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\Go\Models\GoBaseModel.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\Go\Session\GoSession.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\Go\Views\GoBaseView.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\go\Bootstrap.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="D:\wamp\www\Playground\go" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Database/Db.php" afterPath="$PROJECT_DIR$/lib/Nova/Database/Db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.php" afterPath="$PROJECT_DIR$/app/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
     </list>
     <ignored path="Playground.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1402698286087" ignored="false" />
+    <file path="/Dummy.txt" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1403886247537" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +29,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="view.phtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/courses/view.phtml">
+      <file leaf-file-name="Pagination.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/Nova/Pagination.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="44" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.5860849">
+            <state line="2" column="3" selection-start="10" selection-end="10" vertical-scroll-proportion="-3.5165484">
+              <folding>
+                <element signature="e#7#341#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Routes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Nova/Routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="4.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Nova.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Nova/Nova.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="217" column="23" selection-start="6769" selection-end="6769" vertical-scroll-proportion="-6.923077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="35" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="29" selection-start="333" selection-end="333" vertical-scroll-proportion="-9.807693">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Db.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Nova/Database/Db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="9" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-21.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="72" selection-start="965" selection-end="965" vertical-scroll-proportion="-20.26923">
               <folding />
             </state>
           </provider>
@@ -60,10 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/layout/admin/footer.phtml" />
-        <option value="$PROJECT_DIR$/models/Ajax/Ajax.php" />
-        <option value="$PROJECT_DIR$/layout/admin/header.phtml" />
-        <option value="$PROJECT_DIR$/Go/Models/GoBaseModel.php" />
         <option value="$PROJECT_DIR$/controllers/admin/AjaxController.php" />
         <option value="$PROJECT_DIR$/views/admin/courses/add.phtml" />
         <option value="$PROJECT_DIR$/views/admin/courses/index.phtml" />
@@ -76,6 +124,10 @@
         <option value="$PROJECT_DIR$/layout/default/header.phtml" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/views/courses/view.phtml" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/index.php" />
+        <option value="$PROJECT_DIR$/lib/Nova/Database/Db.php" />
+        <option value="$PROJECT_DIR$/app/config/config.php" />
+        <option value="$PROJECT_DIR$/app/config/database.php" />
       </list>
     </option>
   </component>
@@ -112,6 +164,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -130,19 +183,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nova" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.smartKeys" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -205,7 +307,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25506938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25773746" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -287,71 +389,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/admin/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="71" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Ajax/Ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="28" selection-start="116" selection-end="116" vertical-scroll-proportion="0.08794788" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/admin/header.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="32" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.9674267" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/admin/AjaxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="518" selection-end="518" vertical-scroll-proportion="0.61563516" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/courses/add.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Users/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="99" selection-end="99" vertical-scroll-proportion="0.08794788" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/users/add.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/users/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="45" selection-start="900" selection-end="900" vertical-scroll-proportion="0.6289517" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/admin/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="399" selection-end="399" vertical-scroll-proportion="0.38110748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/admin/CoursesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="401" selection-end="401" vertical-scroll-proportion="0.38110748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/courses/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="34" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/admin/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="41" selection-start="179" selection-end="179" vertical-scroll-proportion="0.2931596" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/default/header.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="64" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.6628665" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="64" column="13" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.6815287" />
@@ -362,10 +399,68 @@
         <state line="75" column="1" selection-start="1634" selection-end="1634" vertical-scroll-proportion="1.5175159" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/courses/view.phtml">
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="44" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.5860849">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="4.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Nova.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="23" selection-start="6769" selection-end="6769" vertical-scroll-proportion="-6.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="35" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Database/Db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="9" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-21.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/basic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="8" selection-start="3583" selection-end="3583" vertical-scroll-proportion="0.6898585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="72" selection-start="965" selection-end="965" vertical-scroll-proportion="-20.26923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="29" selection-start="333" selection-end="333" vertical-scroll-proportion="-9.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="10" selection-end="10" vertical-scroll-proportion="-3.5165484">
+          <folding>
+            <element signature="e#7#341#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

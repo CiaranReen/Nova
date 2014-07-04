@@ -29,8 +29,8 @@ class Db extends PDO {
                 die('No database configuration details were found in the config file.');
             }
 
-            parent::__construct(''.$database['default']['type'].':host='. $database['default']['host'] .';dbname='.
-                $database['default']['name'].'', ''.$database['default']['user'].'', $database['default']['pass']);
+            parent::__construct(''.$database['production']['type'].':host='. $database['production']['host'] .';dbname='.
+                $database['production']['name'].'', ''.$database['production']['user'].'', $database['production']['pass']);
         }
     }
 }

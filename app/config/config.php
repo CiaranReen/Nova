@@ -19,7 +19,7 @@ $config['use_only_cookies'] = 1;
 $config['cookie_secure'] = 1;
 
 //Default path variables
-$config['dir']['root'] = dirname(dirname(__DIR__));
+//$config['dir']['root'] = dirname(dirname(__DIR__));
 $config['dir']['app'] = 'app/';
 $config['dir']['models'] = $config['dir']['app'].'models/';
 $config['dir']['controllers'] = $config['dir']['app'].'controllers/default/';
