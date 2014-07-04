@@ -7,7 +7,11 @@
     </div>
 <?php endif; ?>
 <h5><?php echo $this->topic['description']; ?></h5>
-<p><em>by <a href="#"><?php echo $this->topic['author']; ?></a> <?php echo date('j F Y', strtotime($this->topic['added'])); ; ?></em></p>
+<p>
+    <em>by <a class="author" href="#"><?php echo $this->topic['author']; ?></a>
+        <?php echo date('j F Y', strtotime($this->topic['added'])); ?>
+         <a class="total-comments" href="#comments"><i class="fa fa-comment"></i> <?php echo $this->totalComments ?> comments</a></em>
+</p>
 
 
 <p><?php echo $this->topic['content']; ?></p>
@@ -20,7 +24,7 @@
     <span><h4>Ready to level?</h4> <a href="/topics/codepass/<?php echo $this->topic['id']; ?>">Take the Code Pass.</a></span>
 </div>
 
-<div class="comments-section">
+<div id="comments" class="comments-section">
     <h4>Comments</h4>
     <form action="" method="post">
         <div class="form-group">
@@ -78,6 +82,7 @@
                 <?php foreach ($childComments as $childComment) : ?>
                     <?php if ($comment[0] == $childComment['parent']) : ?>
                         <div class="comment-wrapper">
+
                             <div class="comment-image">
                                 <?php if (is_null($comment['avatar'])) : ?>
                                     <img src="<?php echo URL; ?>/public/images/noavatar.png">
@@ -85,21 +90,28 @@
                                     <img src="<?php echo $comment['avatar'] ?>">
                                 <?php endif; ?>
                             </div>
+
                             <div class="comment-header">
                                 <a href="/profile/view/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $childComment['username']; ?></a>
                                 <?php echo $childComment['created']; ?>
                             </div>
+
                             <p><?php echo $childComment['comment']; ?></p>
+                            <!-- Votes -->
                             <span id="<?php echo $childComment[0]; ?>" class="votes">
-                                <a class="up-votes" href="#_" title="<?php echo $childComment['votes_up']; ?> up votes"><?php echo $childComment['votes_up'];?> <i class="fa fa-angle-up"></i></a>
-                                <a class="down-votes" href="#_" title="<?php echo $childComment['votes_down']; ?> down votes"><?php echo $childComment['votes_down']; ?> <i class="fa fa-angle-down"></i></a>
+                                <a class="up-votes" href="#_" title="<?php echo $childComment['votes_up']; ?> up votes">
+                                    <?php echo $childComment['votes_up'];?> <i class="fa fa-angle-up"></i></a>
+                                <a class="down-votes" href="#_" title="<?php echo $childComment['votes_down']; ?> down votes">
+                                    <?php echo $childComment['votes_down']; ?> <i class="fa fa-angle-down"></i></a>
                             </span>
+                            <!-- End votes -->
                             <span>
                             <?php if ($this->user['username'] == $childComment['username']) : ?>
                                 <a class="delete-comment" href="#_">Delete</a>
                             <?php endif; ?>
                                 <a class="comment-reply">Reply</a>
                             </span>
+
                             <form class="<?php echo $childComment['id']; ?>-form with-parent" action="" method="post">
                                 <div class="form-group">
                                     <input type="hidden" name="parent" value="<?php echo $childComment['id']; ?>">
@@ -124,7 +136,7 @@
         $(".alert-fade").delay(3000).fadeOut("slow");
 
         $(".comment-reply").on("click", function () {
-            $(this).next("form").toggle();
+            $(this).parent().next("form").toggle();
         });
 
         $(".up-votes").on("click", function () {
@@ -142,9 +154,13 @@
                             return newVal + " <i class='fa fa-angle-up'></i>";
                         });
                     }
-                    else
+                    else if (data == 'false')
                     {
-                        alert('You have already voted on this comment.');
+                        alert('You have already voted on this comment');
+                    }
+                    else if (data == 'Not logged in')
+                    {
+                        alert('You need to be logged in to vote')
                     }
                 }
             });
@@ -165,9 +181,13 @@
                             return newVal + " <i class='fa fa-angle-down'></i>";
                         });
                     }
-                    else
+                    else if (data == 'false')
                     {
                         alert('You have already voted on this comment');
+                    }
+                    else if (data == 'Not logged in')
+                    {
+                        alert('You need to be logged in to vote')
                     }
                 }
             });

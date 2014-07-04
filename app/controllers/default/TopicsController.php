@@ -50,6 +50,16 @@ class TopicsController extends NovaBaseController {
 
         $this->view->childComments = $childComments;
 
+        //Total Comments - here we get the child and top level comments and sum them for a total
+        $countChildren = array ();
+        foreach ($childComments as $cc)
+        {
+            $countChildren[] = count($cc);
+        }
+        $countedChildren = array_sum($countChildren);
+
+        $totalComments = count($comments) + $countedChildren;
+
         if ($this->isPost() === true)
         {
             if ($this->getRequest('comment-reply') != null)
@@ -76,6 +86,7 @@ class TopicsController extends NovaBaseController {
 
         $this->view->user = $user;
         $this->view->comments = $comments;
+        $this->view->totalComments = $totalComments;
         $this->view->topic = $topic;
         $this->view->render('topic/view');
     }
@@ -133,6 +144,12 @@ class TopicsController extends NovaBaseController {
         $topicModel = new Topics();
 
         // Users cannot repeatedly vote on comments, so check if they have voted already
+        if (NovaSession::get('user_id') == null)
+        {
+            echo 'Not logged in';
+            exit;
+        }
+
         $check = $topicModel->checkUserCanVote(NovaSession::get('user_id'), $this->getRequest('id'));
         if ($check == true)
         {
@@ -178,6 +195,13 @@ class TopicsController extends NovaBaseController {
         $topicModel = new Topics();
 
         // Users cannot repeatedly vote on comments, so check if they have voted already
+        if (NovaSession::get('user_id') == null)
+        {
+            echo 'Not logged in';
+            exit;
+        }
+
+        // Users cannot repeatedly vote on comments, so check if they have voted already
         $check = $topicModel->checkUserCanVote(NovaSession::get('user_id'), $this->getRequest('id'));
         if ($check == true)
         {
@@ -211,7 +235,5 @@ class TopicsController extends NovaBaseController {
             echo 'false';
             exit;
         }
-
-
     }
 }

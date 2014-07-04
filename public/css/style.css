@@ -157,6 +157,10 @@ a {
     text-decoration: none;
 }
 
+.author {
+    margin-right: 30px;
+}
+
 /********* COMMENTS *********/
 .comment-wrapper {
     margin-bottom: 24px;
@@ -240,6 +244,10 @@ a {
 
 .down-votes {
     color: rgba(0, 39, 59, 0.35);
+}
+
+.total-comments {
+    margin-left: 30px;
 }
 
 /******* END COMMENTS *********/

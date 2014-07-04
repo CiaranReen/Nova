@@ -9,7 +9,7 @@ require 'app/models/Index/Index.php';
 
 class AccountController extends NovaBaseController {
 
-    //Call the GoBaseController construct
+    //Call the NovaBaseController construct
     public function __construct()
     {
         parent::__construct();
@@ -21,7 +21,6 @@ class AccountController extends NovaBaseController {
         if (!empty($user))
         {
             $this->view->user = $user;
-            $this->goToUrl('/');
         }
 
         $this->view->categories = $categories;
