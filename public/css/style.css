@@ -12,6 +12,10 @@ body h1, body h2, body h3 {
     font-weight: 300;
 }
 
+a {
+    outline: none !important;
+}
+
 #header {
     background-color: #3B414E;
     height: 45px;
@@ -30,58 +34,61 @@ body h1, body h2, body h3 {
     float: left;
     list-style: none;
     display: inline;
-    border-left: 1px solid #ffffff;
 }
 
 .site-header li a {
-    color: #ffffff;
-    padding: 15px 26px;
+    color: #c0ccdb;
+    padding: 17px 26px 11px;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 .site-header li a:hover {
     color: #ffffff;
 }
 
-.category-dropdown {
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
-    font-family: 'Proxima Nova',sans-serif;
-    left: 0;
-    position: absolute;
-    top: 45px;
-    background-color: #FFFFFF;
-    border-color: #DDDDDD #DDDDDD #999999;
-    border-image: none;
-    border-style: solid;
-    border-width: 1px;
-    display: none;
-    float: left;
-    font-size: 14px;
-    line-height: 18px;
-    list-style: none outside none;
-    padding: 3px 0;
-    z-index: 1000;
+.dropdown-hover:hover {
+    background-color: #ffffff;
+    color: #3B414E !important;
 }
 
-.category-dropdown li {
-    padding: 10px;
-    width: 100%;
+.logo a {
+    font-weight: bold;
+    color: #ffffff !important;
+    font-size: 110%;
+}
+
+.category-dropdown {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    top: 31px !important;
+    left: 0 !important;
+    z-index: 10;
 }
 
 .category-dropdown li a {
-    font-size: 14px;
-    line-height: 18px;
-    width: 160px;
+    background: none repeat scroll 0 0 #fefefe;
+    color: #8e8e8e;
+    display: inline-block;
+    font: 14px/17px "Helvetica Neue",Arial,sans-serif;
+    padding: 10px !important;
     text-align: left;
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
-    border-top: 1px solid rgba(0, 0, 0, 0);
-    color: #444444;
     position: relative;
+    white-space: nowrap;
+    width: 170px;
 }
 
-.category-dropdown li:hover {
-    background-color: #252527;
+.category-dropdown li a:hover {
+    font-weight: bold;
+}
+
+.computing:hover {
+    background-color: #679D20;
+}
+
+.maths:hover {
+    background-color: #C42915;
 }
 
 .search-container {
@@ -106,7 +113,6 @@ body h1, body h2, body h3 {
 .search-text {
     border: 0 none;
     border-radius: 2px;
-    font-size: 14px;
     font-style: normal;
     height: 29px;
     margin: -5px 0 0;
@@ -152,6 +158,12 @@ body h1, body h2, body h3 {
 }
 
 /********* COMMENTS *********/
+.comment-wrapper {
+    margin-bottom: 24px;
+    position: relative;
+    transition: all 0.2s ease-in-out 0s;
+}
+
 .comments-section {
     width: 630px;
 }
@@ -171,10 +183,63 @@ body h1, body h2, body h3 {
 
 .comment-reply {
     cursor: pointer;
+    float: left;
+    font-size: 13px;
+    line-height: 15px;
+    list-style-type: none;
+    margin: 0 7px 0 0;
+    padding: 0;
+    color: rgba(0, 39, 59, 0.35);
+}
+
+.delete-comment {
+    cursor: pointer;
+    float: left;
+    font-size: 13px;
+    line-height: 15px;
+    list-style-type: none;
+    margin: 0 7px 0 0;
+    padding: 0;
+    color: rgba(0, 39, 59, 0.35);
+}
+
+.comment-reply a {
 }
 
 .child-comments {
     margin-left: 40px;
+}
+
+.comment-header {
+    font-size: 13px;
+    line-height: 1;
+    margin-bottom: 3px;
+    padding-right: 46px;
+}
+
+.comment-header a {
+    color: #777;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.comment-image img {
+    width: 48px;
+    height: 48px;
+    float: left;
+    margin-right: 5px;
+}
+
+.votes {
+    margin-top: -5px;
+}
+
+.up-votes {
+    color: rgba(0, 39, 59, 0.35);
+}
+
+.down-votes {
+    color: rgba(0, 39, 59, 0.35);
 }
 
 /******* END COMMENTS *********/

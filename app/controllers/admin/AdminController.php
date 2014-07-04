@@ -11,7 +11,7 @@ require 'app/models/Index/Index.php';
 class AdminController extends NovaBaseController {
 
     //Call the GoBaseController construct
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $loggedIn = NovaSession::get('adminLoggedIn');

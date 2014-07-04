@@ -9,12 +9,14 @@
         $(".side-list").on("click", function (e) {
             $(this).siblings().removeClass("active");
             $(this).addClass("active");
-            $.cookie("a",this.id);
         });
-        var a = $.cookie("a");
-        if (a) {
-            $("#"+a).find("i").last().removeClass().addClass("fa fa-chevron-down");
-            $("#"+a).addClass("active");
+        var pathname = window.location.pathname;
+        var pathArray = pathname.split("/");
+        var lastEl = pathArray[pathArray.length-1];
+        if (lastEl)
+        {
+            $("#"+lastEl).find("i").last().removeClass().addClass("fa fa-chevron-down");
+            $("#"+lastEl).addClass("active");
         }
     });
 </script>

@@ -104,4 +104,54 @@ class Topics extends NovaBaseModel {
 
         return $query->fetch();
     }
+
+    public function getTimeDifference($time) {
+        //Let's set the current time
+        $currentTime = date('Y-m-d H:i:s');
+        $toTime = strtotime($currentTime);
+
+        //And the time the notification was set
+        $fromTime = strtotime($time);
+
+        //Now calc the difference between the two
+        $timeDiff = floor(abs($toTime - $fromTime) / 60);
+
+        //Now we need find out whether or not the time difference needs to be in
+        //minutes, hours, or days
+        if ($timeDiff < 2) {
+            $timeDiff = "Just now";
+        } elseif ($timeDiff > 2 && $timeDiff < 60) {
+            $timeDiff = floor(abs($timeDiff)) . " minutes ago";
+        } elseif ($timeDiff > 60 && $timeDiff < 120) {
+            $timeDiff = floor(abs($timeDiff / 60)) . " hour ago";
+        } elseif ($timeDiff < 1440) {
+            $timeDiff = floor(abs($timeDiff / 60)) . " hours ago";
+        } elseif ($timeDiff > 1440 && $timeDiff < 2880) {
+            $timeDiff = floor(abs($timeDiff / 1440)) . " day ago";
+        } elseif ($timeDiff > 2880) {
+            $timeDiff = floor(abs($timeDiff / 1440)) . " days ago";
+        }
+
+        return $timeDiff;
+    }
+
+    public function checkUserCanVote($userId, $commentId)
+    {
+        $sql = $this->select()
+            ->from(array('user_comment' => 'uc'))
+            ->where('user_id = ?', $userId)
+            ->andWhere('comment_id = ?', $commentId);
+        $query = $this->db->prepare($sql);
+
+        $query->execute();
+
+        if ($query->rowCount() > 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 }

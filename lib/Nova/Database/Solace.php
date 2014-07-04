@@ -519,12 +519,41 @@ class Solace extends Db {
         $setSql = substr($setSql, 0, -2);
 
         $insertSql = $this->update($tableName, $setSql, $where);
-
         $query = $this->db->pdo->prepare($insertSql);
-
         $query->execute();
 
         return true;
+    }
+
+    /**
+     * Increment a db field
+     *
+     * @param $data
+     * @param $tableName
+     * @param $where
+     * @return bool
+     */
+    public function incrementRecord($data, $tableName, $where)
+    {
+        //Columns and values
+        $setSql = '';
+        foreach ($data as $key => $value)
+        {
+            $setSql .= '`' . $key . '` = ' . $value . ', ';
+        }
+
+        $setSql = substr($setSql, 0, -2);
+
+        $insertSql = $this->update($tableName, $setSql, $where);
+        $query = $this->db->pdo->prepare($insertSql);
+        if ($query->execute())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 
@@ -552,8 +581,8 @@ class Solace extends Db {
     public function find($id, $table = null)
     {
         $sql = $this->select()
-                    ->from(array('' . $table . '' => ''))
-                    ->where('id = ?', $id);
+            ->from(array('' . $table . '' => ''))
+            ->where('id = ?', $id);
         $query = $this->prepare($sql);
         $query->execute();
 
@@ -569,7 +598,7 @@ class Solace extends Db {
     public function fetchAll($table)
     {
         $sql = $this->select()
-                    ->from(array('' . $table . '' => ''));
+            ->from(array('' . $table . '' => ''));
         $query = $this->prepare($sql);
         $query->execute();
 

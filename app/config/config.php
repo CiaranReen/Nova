@@ -28,5 +28,6 @@ $config['dir']['forms'] = $config['dir']['app'].'forms/';
 $config['dir']['layout'] = $config['dir']['app'].'layout/';
 
 //Admin paths
+$config['url']['admin'] = '/admin/';
 $config['dir']['admin']['controllers'] = $config['dir']['app'].'controllers/admin/';
 $config['dir']['admin']['views'] = $config['dir']['app'].'views/admin/';

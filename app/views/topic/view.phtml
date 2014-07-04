@@ -6,7 +6,10 @@
         <?php echo $this->success; ?>
     </div>
 <?php endif; ?>
-<p><?php echo $this->topic['description']; ?></p>
+<h5><?php echo $this->topic['description']; ?></h5>
+<p><em>by <a href="#"><?php echo $this->topic['author']; ?></a> <?php echo date('j F Y', strtotime($this->topic['added'])); ; ?></em></p>
+
+
 <p><?php echo $this->topic['content']; ?></p>
 <!--<video width="400" height="320" controls>
     <source src="https://www.youtube.com/watch?feature=player_detailpage&v=uUV-K7ggTjc" type="video/mp4">
@@ -33,22 +36,40 @@
         <p>No comments have been posted yet.</p>
     <?php endif; ?>
     <?php foreach ($this->comments as $comment) : ?>
-        <p><a href="/profile/view/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $comment['username'] ?></a></p>
-        <p><?php echo $comment['comment']; ?></p>
-        <p><?php echo $comment['created']; ?></p>
-        <?php if ($this->user['username'] == $comment['username']) : ?>
-            <p><a class="delete-comment" href="#_">Delete</a></p>
-        <?php endif; ?>
-        <a class="comment-reply">Reply</a>
-        <form class="<?php echo $comment['id']; ?>-form with-parent" action="" method="post">
-            <div class="form-group">
-                <input class="form-control" type="hidden" name="parent" value="<?php echo $comment[0]; ?>">
-                <textarea class="form-control comments-box" name="comment-reply" placeholder="Reply to this comment..."></textarea>
+        <div class="comment-wrapper">
+            <div class="comment-image">
+                <?php if (is_null($comment['avatar'])) : ?>
+                    <img src="<?php echo URL; ?>/public/images/noavatar.png">
+                <?php else : ?>
+                    <img src="<?php echo $comment['avatar'] ?>">
+                <?php endif; ?>
             </div>
-            <div class="form-actions fluid">
-                <input class="btn" type="submit" value="Submit">
+            <div class="comment-header">
+                <a href="/profile/view/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $comment['username'] ?></a>
+                <?php echo $comment['created']; ?>
             </div>
-        </form>
+
+            <p><?php echo $comment['comment']; ?></p>
+            <span id="<?php echo $comment[0]; ?>">
+                <a class="up-votes" href="#_" title="<?php echo $comment['votes_up'];?> up votes"><?php echo $comment['votes_up'];?> <i class="fa fa-angle-up"></i></a>
+                <a class="down-votes" href="#_" title="<?php echo $comment['votes_down']; ?> down votes"><?php echo $comment['votes_down']; ?> <i class="fa fa-angle-down"></i></a>
+            </span>
+            <span>
+            <?php if ($this->user['username'] == $comment['username']) : ?>
+                <a class="delete-comment" href="#_">Delete</a>
+            <?php endif; ?>
+                <a class="comment-reply">Reply</a>
+            </span>
+            <form class="<?php echo $comment['id']; ?>-form with-parent" action="" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="hidden" name="parent" value="<?php echo $comment[0]; ?>">
+                    <textarea class="form-control comments-box" name="comment-reply" placeholder="Reply to this comment..."></textarea>
+                </div>
+                <div class="form-actions fluid">
+                    <input class="btn" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
         <!-- End parent comments -->
 
         <!-- Child comments section -->
@@ -56,22 +77,39 @@
             <?php foreach ($this->childComments as $childComments) : ?>
                 <?php foreach ($childComments as $childComment) : ?>
                     <?php if ($comment[0] == $childComment['parent']) : ?>
-                        <p><a href="/profile/view/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $childComment['username']; ?></a></p>
-                        <p><?php echo $childComment['comment']; ?></p>
-                        <p><?php echo $childComment['created']; ?></p>
-                        <?php if ($this->user['username'] == $comment['username']) : ?>
-                            <p><a class="delete-comment" href="#_">Delete</a></p>
-                        <?php endif; ?>
-                        <a class="comment-reply">Reply</a>
-                        <form class="<?php echo $childComment['id']; ?>-form with-parent" action="" method="post">
-                            <div class="form-group">
-                                <input type="hidden" name="parent" value="<?php echo $childComment['id']; ?>">
-                                <textarea class="form-control comments-box" name="comment-reply" placeholder="Reply to this comment..."></textarea>
+                        <div class="comment-wrapper">
+                            <div class="comment-image">
+                                <?php if (is_null($comment['avatar'])) : ?>
+                                    <img src="<?php echo URL; ?>/public/images/noavatar.png">
+                                <?php else : ?>
+                                    <img src="<?php echo $comment['avatar'] ?>">
+                                <?php endif; ?>
                             </div>
-                            <div class="form-actions fluid">
-                                <input class="btn" type="submit" value="Submit">
+                            <div class="comment-header">
+                                <a href="/profile/view/<?php echo $comment['username']; ?>" class="comment-user"><?php echo $childComment['username']; ?></a>
+                                <?php echo $childComment['created']; ?>
                             </div>
-                        </form>
+                            <p><?php echo $childComment['comment']; ?></p>
+                            <span id="<?php echo $childComment[0]; ?>" class="votes">
+                                <a class="up-votes" href="#_" title="<?php echo $childComment['votes_up']; ?> up votes"><?php echo $childComment['votes_up'];?> <i class="fa fa-angle-up"></i></a>
+                                <a class="down-votes" href="#_" title="<?php echo $childComment['votes_down']; ?> down votes"><?php echo $childComment['votes_down']; ?> <i class="fa fa-angle-down"></i></a>
+                            </span>
+                            <span>
+                            <?php if ($this->user['username'] == $childComment['username']) : ?>
+                                <a class="delete-comment" href="#_">Delete</a>
+                            <?php endif; ?>
+                                <a class="comment-reply">Reply</a>
+                            </span>
+                            <form class="<?php echo $childComment['id']; ?>-form with-parent" action="" method="post">
+                                <div class="form-group">
+                                    <input type="hidden" name="parent" value="<?php echo $childComment['id']; ?>">
+                                    <textarea class="form-control comments-box" name="comment-reply" placeholder="Reply to this comment..."></textarea>
+                                </div>
+                                <div class="form-actions fluid">
+                                    <input class="btn" type="submit" value="Submit">
+                                </div>
+                            </form>
+                        </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
             <?php endforeach; ?>
@@ -87,6 +125,52 @@
 
         $(".comment-reply").on("click", function () {
             $(this).next("form").toggle();
+        });
+
+        $(".up-votes").on("click", function () {
+            var id = $(this).closest('span').attr('id');
+            var a = $(this);
+            $.ajax({
+                url: "/topics/upvote",
+                data: {id : id},
+                type: "POST",
+                success: function(data, status, xhr) {
+                    if(data == 'true')
+                    {
+                        $(a).html( function(i, oldval) {
+                            var newVal = parseInt( oldval, 10) + 1;
+                            return newVal + " <i class='fa fa-angle-up'></i>";
+                        });
+                    }
+                    else
+                    {
+                        alert('You have already voted on this comment.');
+                    }
+                }
+            });
+        });
+
+        $(".down-votes").on("click", function () {
+            var id = $(this).closest('span').attr('id');
+            var a = $(this);
+            $.ajax({
+                url: "/topics/downvote",
+                data: {id : id},
+                type: "POST",
+                success: function(data, status, xhr) {
+                    if(data == 'true')
+                    {
+                        $(a).html( function(i, oldval) {
+                            var newVal = parseInt( oldval, 10) + 1;
+                            return newVal + " <i class='fa fa-angle-down'></i>";
+                        });
+                    }
+                    else
+                    {
+                        alert('You have already voted on this comment');
+                    }
+                }
+            });
         });
     });
 </script>

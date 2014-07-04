@@ -41,11 +41,13 @@ class TopicsController extends NovaBaseController {
         $topic = $topicModel->find($topicId, 'topic');
         $comments = $topicModel->getCommentsByTopicId($topic['id']);
 
+        //Child comments
         $childComments = array();
         foreach ($comments as $comment)
         {
             $childComments[] = $topicModel->getChildComments($comment[0]);
         }
+
         $this->view->childComments = $childComments;
 
         if ($this->isPost() === true)
@@ -121,5 +123,95 @@ class TopicsController extends NovaBaseController {
 
         $this->view->codepass = $codePass;
         $this->view->render('topic/codepass');
+    }
+
+    /**
+     * AJAX request for up voting a comment
+     */
+    public function upvoteAction()
+    {
+        $topicModel = new Topics();
+
+        // Users cannot repeatedly vote on comments, so check if they have voted already
+        $check = $topicModel->checkUserCanVote(NovaSession::get('user_id'), $this->getRequest('id'));
+        if ($check == true)
+        {
+            $data = array (
+                'votes_up' => 'votes_up + 1',
+            );
+
+            // Increment the db field accordingly
+            $query = $topicModel->incrementRecord($data, 'comment', $this->getRequest('id'));
+
+            // Did the query execute successfully?
+            if ($query == true)
+            {
+                $data = array (
+                    'user_id' => NovaSession::get('user_id'),
+                    'comment_id' => $this->getRequest('id'),
+                );
+
+                $topicModel->insertRecord($data, 'user_comment');
+                echo 'true';
+                exit;
+            }
+            else
+            {
+                echo 'false';
+                exit;
+            }
+        }
+        else
+        {
+            echo 'false';
+            exit;
+        }
+
+
+    }
+
+    /**
+     * AJAX request for down voting a comment
+     */
+    public function downvoteAction()
+    {
+        $topicModel = new Topics();
+
+        // Users cannot repeatedly vote on comments, so check if they have voted already
+        $check = $topicModel->checkUserCanVote(NovaSession::get('user_id'), $this->getRequest('id'));
+        if ($check == true)
+        {
+            $data = array (
+                'votes_down' => 'votes_down + 1',
+            );
+
+            // Increment the db field accordingly
+            $query = $topicModel->incrementRecord($data, 'comment', $this->getRequest('id'));
+
+            // Did the query execute successfully?
+            if ($query == true)
+            {
+                $data = array (
+                    'user_id' => NovaSession::get('user_id'),
+                    'comment_id' => $this->getRequest('id'),
+                );
+
+                $topicModel->insertRecord($data, 'user_comment');
+                echo 'true';
+                exit;
+            }
+            else
+            {
+                echo 'false';
+                exit;
+            }
+        }
+        else
+        {
+            echo 'false';
+            exit;
+        }
+
+
     }
 }

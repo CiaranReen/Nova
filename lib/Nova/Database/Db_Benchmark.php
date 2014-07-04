@@ -1,5 +1,7 @@
 <?php
 /**
+ * Provides functions for running benchmarks against DB queries.
+ *
  * Created by PhpStorm.
  * User: ciaran
  * Date: 24/06/14

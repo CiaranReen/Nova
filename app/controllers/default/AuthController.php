@@ -4,7 +4,6 @@
  * Class AuthController
  */
 
-use Nova\Error as Error;
 
 class AuthController extends NovaBaseController {
 

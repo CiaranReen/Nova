@@ -27,9 +27,7 @@ class NovaSession {
         {
             return $_SESSION[$key];
         }
-
         return false;
-
     }
 
     /**
@@ -48,16 +46,16 @@ class NovaSession {
 
     /**
      * Destroy a session. If a param is passed in just destroy that param
-     * @param null $key
+     * @param null $session
      * @return bool
      */
-    public static function destroy($key = null)
+    public static function destroy($session = null)
     {
-        if (isset($key))
+        if (isset($session))
         {
-            if (isset($_SESSION[$key]))
+            if (isset($_SESSION[$session]))
             {
-                unset($_SESSION[$key]);
+                unset($_SESSION[$session]);
                 return true;
             }
             else
@@ -69,6 +67,20 @@ class NovaSession {
         {
             session_destroy();
             return true;
+        }
+    }
+
+    public static function destroyKey($session, $key)
+    {
+        if (isset($_SESSION[$session][$key]))
+        {
+            unset($_SESSION[$session][$key]);
+            return true;
+        }
+        else
+        {
+            echo 'The session key was not found.';
+            return false;
         }
     }
 }

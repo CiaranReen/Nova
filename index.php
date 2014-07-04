@@ -44,6 +44,7 @@ require 'lib/Nova/Nova.php';
 require 'lib/Nova/Controllers/NovaBaseController.php';
 require 'lib/Nova/Views/NovaBaseView.php';
 require 'lib/Nova/Models/NovaBaseModel.php';
+require 'lib/Nova/Modules/Basket.php';
 require 'lib/Nova/Forms/NovaBaseForm.php';
 require 'lib/Nova/Session/NovaSession.php';
 
