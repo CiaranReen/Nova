@@ -3,12 +3,12 @@
 /**
  * Class Db
  */
-class Db extends PDO {
+class Db {
 
     /**
      * Connect to the database
      */
-    public function __construct()
+    public function connect()
     {
         //Does the db connection file exist?
         $databasePath = 'app/config/database.php';
@@ -29,8 +29,18 @@ class Db extends PDO {
                 die('No database configuration details were found in the config file.');
             }
 
-            parent::__construct(''.$database['production']['type'].':host='. $database['production']['host'] .';dbname='.
-                $database['production']['name'].'', ''.$database['production']['user'].'', $database['production']['pass']);
+            try
+            {
+                $DBH = new PDO (''.$database['production']['type'].':host='. $database['production']['host'] .';dbname='.
+                    $database['production']['name'].'', ''.$database['production']['user'].'', $database['production']['pass'], array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+                return $DBH;
+            }
+            catch (PDOException $ex){
+                die(json_encode(array(
+                    'outcome' => false,
+                    'message' => 'Unable to connect'
+                )));
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ class TopicsController extends NovaBaseController {
 
         $indexModel = new Index();
         $categories = $indexModel->fetchAll('category');
+
         $user = $indexModel->find(NovaSession::get('user_id'), 'user');
 
         if (!empty($user))

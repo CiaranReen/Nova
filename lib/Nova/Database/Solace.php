@@ -142,8 +142,8 @@ class Solace extends Db {
      */
     public function __construct()
     {
-        parent::__construct();
-        $this->pdo = new Db();
+        $db = new Db();
+        $this->pdo = $db->connect();
     }
 
 //---------------------------------------------------
@@ -664,6 +664,7 @@ class Solace extends Db {
 
         // Turn the remaining array elements into one long string
         $preparedSql = implode(' ', $preparedSql);
+
 
         // Trim the whitespace off the end
         $preparedSql = rtrim($preparedSql);

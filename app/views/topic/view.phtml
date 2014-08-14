@@ -9,7 +9,7 @@
 <h5><?php echo $this->topic['description']; ?></h5>
 <p>
     <em>by <a class="author" href="#"><?php echo $this->topic['author']; ?></a>
-        <?php echo date('j F Y', strtotime($this->topic['added'])); ?>
+        <?php echo @date('j F Y', strtotime($this->topic['added'])); ?>
          <a class="total-comments" href="#comments"><i class="fa fa-comment"></i> <?php echo $this->totalComments ?> comments</a></em>
 </p>
 

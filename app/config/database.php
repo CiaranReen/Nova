@@ -15,8 +15,8 @@ $database['default'] = array (
 $database['production'] = array (
     'type' => 'mysql',
     'host' => 'mysql7.000webhost.com',
-    'name' => 'a1584847_play',
-    'user' => 'a1584847_play',
+    'name' => 'a1584847_playgro',
+    'user' => 'a1584847_playgro',
     'pass' => 'playground1',
 );
 
