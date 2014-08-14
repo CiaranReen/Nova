@@ -1,8 +1,12 @@
-<h1>Search Results</h1>
+<h1>Search Results for '<?php echo $this->query?>'</h1>
+<?php if (!empty($this->results)) : ?>
 <?php foreach ($this->results as $result) : ?>
     <a href="<?php echo URL; ?>/topics/view/<?php echo $result[0]; ?>">
         <p><?php echo $result[4]; ?></p>
     </a>
     <?php echo $result[6]; ?>
-    <p>Category <?php echo $result['name']; ?></p>
+    <p>Category: <?php echo $result['name']; ?></p>
 <?php endforeach; ?>
+<?php else : ?>
+    <p>There were no results found for '<?php echo $this->query; ?>'</p>
+<?php endif; ?>

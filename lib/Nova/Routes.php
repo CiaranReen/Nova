@@ -35,6 +35,11 @@ class Routes
         return $this->routes;
     }
 
+    /**
+     * Sets the requested custom route
+     * @param $url
+     * @param $controller
+     */
     public function set($url, $controller)
     {
         global $error;

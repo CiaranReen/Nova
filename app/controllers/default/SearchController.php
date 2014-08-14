@@ -10,7 +10,7 @@ require 'app/models/Index/Index.php';
 class SearchController extends NovaBaseController {
 
     //Call the NovaBaseController construct
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
 
@@ -34,6 +34,7 @@ class SearchController extends NovaBaseController {
             $query = $this->getRequest('query');
 
             $results = $searchModel->search($query);
+            $this->view->query = $query;
             $this->view->results = $results;
         }
         $this->view->render('search/index');

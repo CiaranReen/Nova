@@ -31,7 +31,7 @@ class AuthController extends NovaBaseController {
 
         if ($verifyPassword === true)
         {
-            $auth = $authModel->login($email, $password);
+            $auth = $authModel->login($email);
             $hash->generateCSRFCookie();
 
             if ($auth['role'] === 'admin')
@@ -39,13 +39,13 @@ class AuthController extends NovaBaseController {
                 NovaSession::set('adminLoggedIn', true);
                 NovaSession::set('loggedIn', true);
                 NovaSession::set('user_id', $auth['id']);
-                $this->goToUrl('/');
+                $this->goToUrl('/dashboard');
             }
             elseif ($auth['role'] === 'default')
             {
                 NovaSession::set('loggedIn', true);
                 NovaSession::set('user_id', $auth['id']);
-                $this->goToUrl('/');
+                $this->goToUrl('/dashboard');
             }
         }
         else
