@@ -2,158 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d9522f1-37cf-42c6-92a5-60e6477d3a07" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/User.php" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\admin\AdminController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\admin\AjaxController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\admin\CategoriesController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\admin\CoursesController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\admin\TopicsController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\admin\UsersController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\AccountController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\AreaController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\BasketController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\CategoriesController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\CoursesController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\DonateController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\ProfileController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\RegisterController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\TopicsController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\layout\admin\footer.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\layout\admin\header.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Account\Account.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Ajax\Ajax.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Area\Area.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Auth\Auth.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Basket\Basket.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Categories\Categories.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Courses\Courses.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Donate\Donate.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Index\Index.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Profile\Profile.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Register\Register.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Search\Search.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Topics\Topics.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\Users\Users.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\CHANGELOG" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\README.rdoc" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\VERSION" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\composer.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Account.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\ApiConnectionError.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\ApiError.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\ApiRequestor.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\ApiResource.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\ApplicationFee.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\AttachedObject.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\AuthenticationError.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Balance.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\BalanceTransaction.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Card.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\CardError.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Charge.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Coupon.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Customer.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Error.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Event.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\InvalidRequestError.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Invoice.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\InvoiceItem.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\List.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Object.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Plan.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\RateLimitError.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Recipient.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\SingletonApiResource.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Stripe.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Subscription.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Token.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Transfer.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Util.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\Stripe\Util\Set.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\lib\data\ca-certificates.crt" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\AccountTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\ApiRequestorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\ApplicationFeeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\AuthenticationErrorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\BalanceTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\BalanceTransactionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\CardErrorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\ChargeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\CouponTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\CustomerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\DiscountTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\Error.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\InvalidRequestErrorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\InvoiceTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\ObjectTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\PlanTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\RecipientTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\SubscriptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\Token.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\TransferTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\models\stripe\test\Stripe\UtilTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\account\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\account\success.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\categories\add.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\categories\edit.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\categories\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\comments\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\courses\add.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\courses\edit.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\courses\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\login.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\topics\add.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\topics\edit.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\topics\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\users\add.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\users\edit.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\admin\users\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\area\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\area\success.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\area\view.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\auth\forgotten-password.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\auth\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\auth\security-question.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\basket\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\courses\view.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\donate\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\donate\thankyou.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\profile\view.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\register\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\register\success.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\topic\codepass.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\topic\topic-doc.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\topic\view.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\lib\Nova\Constants.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Database/Db.php" afterPath="$PROJECT_DIR$/lib/Nova/Database/Db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Database/Db_Benchmark.php" afterPath="$PROJECT_DIR$/lib/Nova/Database/Db_Benchmark.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Loader.php" afterPath="$PROJECT_DIR$/lib/Nova/Loader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Nova.php" afterPath="$PROJECT_DIR$/lib/Nova/Nova.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Database/Solace.php" afterPath="$PROJECT_DIR$/lib/Nova/Database/Solace.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.php" afterPath="$PROJECT_DIR$/app/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\AuthController.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\DashboardController.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\controllers\default\SearchController.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\wamp\www\Playground\app\forms\Courses\CoursesForm.php" afterPath="$PROJECT_DIR$/app/forms/CoursesForm.php" />
-      <change type="MOVED" beforePath="D:\wamp\www\Playground\app\layout\default\footer.phtml" afterPath="$PROJECT_DIR$/app/views/layout/footer.phtml" />
-      <change type="MOVED" beforePath="D:\wamp\www\Playground\app\layout\default\header.phtml" afterPath="$PROJECT_DIR$/app/views/layout/header.phtml" />
-      <change type="MOVED" beforePath="D:\wamp\www\Playground\app\views\index\index.phtml" afterPath="$PROJECT_DIR$/app/views/index.phtml" />
-      <change type="MOVED" beforePath="D:\wamp\www\Playground\lib\Nova\Controllers\NovaBaseController.php" afterPath="$PROJECT_DIR$/lib/Nova/Controllers/Base.php" />
-      <change type="MOVED" beforePath="D:\wamp\www\Playground\lib\Nova\Forms\NovaBaseForm.php" afterPath="$PROJECT_DIR$/lib/Nova/Forms/Base.php" />
-      <change type="MOVED" beforePath="D:\wamp\www\Playground\lib\Nova\Models\NovaBaseModel.php" afterPath="$PROJECT_DIR$/lib/Nova/Models/Base.php" />
-      <change type="MOVED" beforePath="D:\wamp\www\Playground\lib\Nova\Session\NovaSession.php" afterPath="$PROJECT_DIR$/lib/Nova/Session/Base.php" />
-      <change type="MOVED" beforePath="D:\wamp\www\Playground\lib\Nova\Views\NovaBaseView.php" afterPath="$PROJECT_DIR$/lib/Nova/Views/Base.php" />
     </list>
     <ignored path="Playground.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426977288301" ignored="false" />
+    <file path="/Dummy.txt" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426978206286" ignored="false" />
     <file path="/Db.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426951601815" ignored="false" />
     <file path="/Solace.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426952256905" ignored="false" />
     <file path="/NovaBaseView.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1412799742461" ignored="false" />
@@ -250,7 +106,7 @@
       <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="59" selection-start="782" selection-end="782" vertical-scroll-proportion="-17.653847">
+            <state line="27" column="59" selection-start="782" selection-end="782" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -259,7 +115,7 @@
       <file leaf-file-name="Base.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Nova/Views/Base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="39" selection-start="373" selection-end="373" vertical-scroll-proportion="-8.5">
+            <state line="18" column="39" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -268,7 +124,7 @@
       <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="33" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.3076923">
+            <state line="2" column="33" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -277,7 +133,7 @@
       <file leaf-file-name="IndexController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="30" selection-start="171" selection-end="171" vertical-scroll-proportion="0.1403302">
+            <state line="13" column="5" selection-start="262" selection-end="262" vertical-scroll-proportion="0.2606132">
               <folding />
             </state>
           </provider>
@@ -286,10 +142,8 @@
       <file leaf-file-name="Base.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Nova/Controllers/Base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="34" selection-start="1528" selection-end="1528" vertical-scroll-proportion="-32.03846">
-              <folding>
-                <element signature="e#7#310#0" expanded="true" />
-              </folding>
+            <state line="52" column="34" selection-start="1528" selection-end="1528" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -382,6 +236,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -393,8 +293,8 @@
     <property name="options.lastSelected" value="preferences.keymap" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -459,7 +359,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19797225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20010673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -580,15 +480,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="23" selection-start="625" selection-end="625" vertical-scroll-proportion="0.38089624">
-          <folding>
-            <element signature="e#7#447#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/php-activerecord/lib/Model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="6" selection-start="1760" selection-end="1760" vertical-scroll-proportion="0.3431604">
@@ -598,14 +489,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="33" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.3076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Nova/Nova.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="46" selection-start="56" selection-end="56" vertical-scroll-proportion="0.04009434">
+        <state line="2" column="33" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -619,30 +503,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Controllers/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="34" selection-start="1528" selection-end="1528" vertical-scroll-proportion="-32.03846">
-          <folding>
-            <element signature="e#7#310#0" expanded="true" />
-          </folding>
+        <state line="52" column="34" selection-start="1528" selection-end="1528" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="59" selection-start="782" selection-end="782" vertical-scroll-proportion="-17.653847">
+        <state line="27" column="59" selection-start="782" selection-end="782" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Views/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="39" selection-start="373" selection-end="373" vertical-scroll-proportion="-8.5">
+        <state line="18" column="39" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Nova.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="46" selection-start="56" selection-end="56" vertical-scroll-proportion="0.04009434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="10" selection-end="10" vertical-scroll-proportion="0.04009434">
+          <folding>
+            <element signature="e#7#447#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="30" selection-start="171" selection-end="171" vertical-scroll-proportion="0.14066194">
+        <state line="13" column="5" selection-start="262" selection-end="262" vertical-scroll-proportion="0.2606132">
           <folding />
         </state>
       </provider>
