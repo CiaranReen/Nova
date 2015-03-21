@@ -14,7 +14,7 @@
  * @since      Class available since Release 0.0.1
  */
 
-class Solace extends Db {
+class Database_Solace extends Database_Db {
 
 //---------------------------------------------------------------------------------
 // Initialize the variables here so we can return an object from every function.
@@ -142,8 +142,8 @@ class Solace extends Db {
      */
     public function __construct()
     {
-        $db = new Db();
-        $this->pdo = $db->connect();
+        $db = Database_Db::getInstance();
+        $this->pdo = $db->getDb();
     }
 
 //---------------------------------------------------

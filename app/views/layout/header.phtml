@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Codedab</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <!-- Font awesome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="<?php echo URL; ?>/public/js/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>/public/js/dropit/dropit.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>/public/css/style.css"/>
+
+    <script type="text/javascript" src="<?php echo URL; ?>/public/js/custom.js"></script>
+    <script type="text/javascript" src="<?php echo URL; ?>/public/js/dropit/dropit.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.site-header').dropit({
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div id="header">
+    <nav id="nav">
+        <ul class="site-header">
+            <li class="logo"><a href="<?php echo URL; ?>">codedab</a></li>
+            <li>
+                <a class="dropdown-hover" href="#_">Categories <i class="fa fa-angle-down"></i></a>
+                <ul class="category-dropdown">
+                    <?php foreach ($this->categories as $category) : ?>
+                        <li><a class="<?php echo strtolower($category['name']); ?>" href="<?php echo URL; ?>/categories/view/<?php echo $category['id']; ?>"><?php echo $category['name']; ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </li>
+            <li>
+                <form class="search-container" action="<?php echo URL; ?>/search/">
+                    <i class="fa fa-search"></i><input type="text" class="search-text" name="query" placeholder="Search for courses...">
+                </form>
+            </li>
+            <?php if (isset($_SESSION['loggedIn'])) : ?>
+                <li class="pull-right">
+                    <a href="#_"><?php echo $this->user['first_name'] . ' ' . $this->user['last_name']; ?> <i class="fa fa-angle-down"></i></a>
+                    <ul class="category-dropdown">
+                        <li><a href="<?php echo URL; ?>/dashboard">Dashboard</a></li>
+                        <li><a href="<?php echo URL; ?>/account/">My Account</a></li>
+                        <li><a href="<?php echo URL; ?>/auth/logout/">Logout</a></li>
+                    </ul>
+                </li>
+            <?php else: ?>
+                <li class="pull-right"><a href="<?php echo URL; ?>/auth/">Login</a></li>
+                <li class="pull-right"><a href="<?php echo URL; ?>/register/">Register</a></li>
+            <?php endif; ?>
+        </ul>
+
+    </nav>
+</div>
+
+<div id="content">

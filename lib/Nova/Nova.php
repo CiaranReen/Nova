@@ -1,10 +1,8 @@
 <?php
 /**
- * Critical low-level functions to run the app 20/06/2014
+ * Critical low-level functions to run the app
  *
- * This class provides functionality for many common database functions. Solace utilizes the PDO class
- * to provide sanitization and validation across all queries. Solace is effectively the gateway between the models
- * and PDO, building the query and passing the built SQL back and forth between the two.
+ * Front Controller for the app. Handle incoming requests, set up sessions and and get the config file for app-wide use
  *
  * @copyright  2014 Nova Framework
  * @license    http://www.novaframework.com/license/3_0.txt   PHP License 3.0

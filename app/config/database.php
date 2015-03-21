@@ -4,7 +4,7 @@
  * Main database configuration details
  */
 
-$database['default'] = array (
+$database['development'] = array (
     'type' => 'mysql',
     'host' => 'localhost',
     'name' => 'playground',
@@ -14,10 +14,10 @@ $database['default'] = array (
 
 $database['production'] = array (
     'type' => 'mysql',
-    'host' => 'mysql7.000webhost.com',
-    'name' => 'a1584847_playgro',
-    'user' => 'a1584847_playgro',
-    'pass' => 'playground1',
+    'host' => 'codedab.com.mysql',
+    'name' => 'codedab_com',
+    'user' => 'codedab_com',
+    'pass' => 'bW6ivbGE',
 );
 
 return $database;

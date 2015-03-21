@@ -3,13 +3,15 @@
 /**
  * Class Db
  */
-class Db {
+class Database_Db {
+
+    private static $instance;
+    private $pdoConnection;
 
     /**
      * Connect to the database
      */
-    public function connect()
-    {
+    private function __construct() {
         //Does the db connection file exist?
         $databasePath = 'app/config/database.php';
         if (! file_exists($databasePath))
@@ -31,9 +33,9 @@ class Db {
 
             try
             {
-                $DBH = new PDO (''.$database['production']['type'].':host='. $database['production']['host'] .';dbname='.
-                    $database['production']['name'].'', ''.$database['production']['user'].'', $database['production']['pass'], array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-                return $DBH;
+                $this->pdoConnection = new PDO (''.$database['development']['type'].':host='. $database['development']['host'] .';dbname='.
+                    $database['development']['name'].'', ''.$database['development']['user'].'', $database['development']['pass'], array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+                //return $this->pdoConnection;
             }
             catch (PDOException $ex){
                 die(json_encode(array(
@@ -43,4 +45,36 @@ class Db {
             }
         }
     }
+
+    public function getDb() {
+        if ($this->pdoConnection instanceof PDO) {
+            return $this->pdoConnection;
+        }
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getInstance(){
+        if (self::$instance == null){
+            $className = __CLASS__;
+            self::$instance = new $className;
+        }
+
+        return self::$instance;
+    }
+
+    /**
+     * To ensure only 1 instance of object exists, disable cloning and wakeup
+     */
+    public function __clone()
+    {
+        return false;
+    }
+
+    public function __wakeup()
+    {
+        return false;
+    }
+
 }

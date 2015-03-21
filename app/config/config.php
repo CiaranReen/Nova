@@ -19,15 +19,10 @@ $config['use_only_cookies'] = 1;
 $config['cookie_secure'] = 1;
 
 //Default path variables
-//$config['dir']['root'] = dirname(dirname(__DIR__));
+$config['dir']['root'] = dirname(dirname(__DIR__));
 $config['dir']['app'] = 'app/';
 $config['dir']['models'] = $config['dir']['app'].'models/';
-$config['dir']['controllers'] = $config['dir']['app'].'controllers/default/';
+$config['dir']['controllers'] = $config['dir']['app'].'controllers/';
 $config['dir']['views'] = $config['dir']['app'].'views/';
 $config['dir']['forms'] = $config['dir']['app'].'forms/';
 $config['dir']['layout'] = $config['dir']['app'].'layout/';
-
-//Admin paths
-$config['url']['admin'] = '/admin/';
-$config['dir']['admin']['controllers'] = $config['dir']['app'].'controllers/admin/';
-$config['dir']['admin']['views'] = $config['dir']['app'].'views/admin/';

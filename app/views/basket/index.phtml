@@ -1,9 +1,0 @@
-<div class="row">
-    <h1>Basket</h1>
-    <?php foreach ($this->items as $item) : ?>
-        <div class="col-md-3">
-            <h3><a href="<?php echo URL; ?>/courses/view/<?php echo $item['name']; ?>"><?php echo $item['name']; ?></a></h3>
-            <p><?php echo $item['quantity']; ?></p>
-        </div>
-    <?php endforeach; ?>
-</div>

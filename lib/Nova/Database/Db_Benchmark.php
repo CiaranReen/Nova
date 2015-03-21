@@ -8,7 +8,7 @@
  * Time: 11:52
  */
 
-class Db_Benchmark extends Solace
+class Database_Db_Benchmark extends Solace
 {
 
     public function __construct()
