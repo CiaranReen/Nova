@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Controllers_Base {
+class IndexController extends BaseController {
 
     //Call the NovaBaseController construct
     public function __construct()

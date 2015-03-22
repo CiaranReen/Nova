@@ -19,12 +19,15 @@
  */
 
 function __autoload($class_name) {
-    $filename = str_replace('_', DIRECTORY_SEPARATOR, strtolower($class_name)).'.php';
+    $filename = str_replace('_', DIRECTORY_SEPARATOR, $class_name).'.php';
 
-    $file = 'lib/Nova/'.$filename;
+    $novaPath = 'lib/Nova/'.$filename;
+    $appPath = 'app/controllers/'.$filename;
 
-    if(file_exists($file)) {
-        require_once($file);
+    if(file_exists($novaPath)) {
+        require_once($novaPath);
+    } else if (file_exists($appPath)) {
+        require_once($appPath);
     } else {
         throw new Exception("Unable to load $class_name.");
     }
