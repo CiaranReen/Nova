@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d9522f1-37cf-42c6-92a5-60e6477d3a07" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/IndexController.php" afterPath="$PROJECT_DIR$/app/controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Nova.php" afterPath="$PROJECT_DIR$/lib/Nova/Nova.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.php" afterPath="$PROJECT_DIR$/app/config/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Playground.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427023920814" ignored="false" />
+    <file path="/Dummy.txt" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427060523193" ignored="false" />
     <file path="/Db.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426951601815" ignored="false" />
     <file path="/Solace.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426952256905" ignored="false" />
     <file path="/NovaBaseView.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1412799742461" ignored="false" />
@@ -85,6 +82,10 @@
     <file path="/Loader.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426984432519" ignored="false" />
     <file path="/Nova.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426985888769" ignored="false" />
     <file path="/BaseController.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426983631188" ignored="false" />
+    <file path="$PROJECT_DIR$/../ciaranreen/app/views/nova.blade.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427049587954" ignored="false" />
+    <file path="/nova.blade.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427049587954" ignored="false" />
+    <file path="/Auth.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427061571417" ignored="false" />
+    <file path="/Logging.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427061576441" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,9 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/Nova/Forms/Base.php" />
-        <option value="$PROJECT_DIR$/lib/Nova/Session/Base.php" />
-        <option value="$PROJECT_DIR$/app/models/Index/Index.php" />
         <option value="$PROJECT_DIR$/app/controllers/default/IndexController.php" />
         <option value="$PROJECT_DIR$/lib/Nova/Models/Base.php" />
         <option value="$PROJECT_DIR$/lib/Nova/Database/Solace.php" />
@@ -137,6 +135,9 @@
         <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/app/config/config.php" />
         <option value="$PROJECT_DIR$/lib/Nova/Nova.php" />
+        <option value="$PROJECT_DIR$/lib/Nova/Auth.php" />
+        <option value="$PROJECT_DIR$/lib/Nova/Auth/Auth.php" />
+        <option value="$PROJECT_DIR$/lib/Nova/Auth/Logging.php" />
       </list>
     </option>
   </component>
@@ -231,11 +232,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.keymap" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ciaranreen" />
+    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -246,11 +247,11 @@
       <recent name="$PROJECT_DIR$/models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\Playground\lib\Nova\Auth" />
       <recent name="D:\wamp\www\Playground\app\views" />
       <recent name="D:\wamp\www\Playground\app\controllers" />
       <recent name="D:\wamp\www\Playground\app\forms" />
       <recent name="D:\wamp\www\Playground\app\layout" />
-      <recent name="D:\wamp\www\Playground\app\models" />
     </key>
   </component>
   <component name="RunManager">
@@ -300,7 +301,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21291356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21931697" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -382,32 +383,7 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="57" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="57" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="59" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Nova/Database/Solace.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="25" selection-start="2675" selection-end="2675" vertical-scroll-proportion="-13.730769" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Pagination.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Nova/Hash.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
@@ -437,11 +413,6 @@
         <state line="12" column="5" selection-start="290" selection-end="290" vertical-scroll-proportion="0.24056605" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Nova/Loader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="25" selection-start="866" selection-end="866" vertical-scroll-proportion="0.44103774" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/constants.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="27" selection-start="441" selection-end="441" vertical-scroll-proportion="0.2806604" />
@@ -460,6 +431,56 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="46" selection-start="53" selection-end="53" vertical-scroll-proportion="0.04009434" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="7" selection-end="328" vertical-scroll-proportion="0.04009434">
+          <folding>
+            <element signature="e#7#328#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Hash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="10" selection-end="10" vertical-scroll-proportion="0.04009434">
+          <folding>
+            <element signature="e#7#404#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/logs/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Auth/Logging.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="18" selection-start="367" selection-end="368" vertical-scroll-proportion="0.30070755">
+          <folding>
+            <element signature="e#7#303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Auth/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="11" selection-start="323" selection-end="323" vertical-scroll-proportion="0.2606132">
+          <folding>
+            <element signature="e#7#310#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
