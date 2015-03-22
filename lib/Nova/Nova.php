@@ -67,7 +67,7 @@ class Nova
          */
         if ($url[0] == $_SERVER['HTTP_HOST'] && !isset($url[1]))
         {
-            $indexController = $loadedConfig['dir']['controllers'].'/IndexController.php';
+            $indexController = $loadedConfig['controllers'].'/IndexController.php';
             if (file_exists($indexController))
             {
                 require $indexController;
@@ -87,7 +87,7 @@ class Nova
             //Satisfy GET requests
             if (strpos($url[1], '?') == true)
             {
-                $requestedController = $loadedConfig['dir']['controllers'] . ucfirst($url[0]) . 'Controller.php';
+                $requestedController = $loadedConfig['controllers'] . ucfirst($url[0]) . 'Controller.php';
 
                 //Does the controller exist?
                 if (file_exists($requestedController))
@@ -100,7 +100,7 @@ class Nova
             }
             else
             {
-                $requestedController = $loadedConfig['dir']['controllers'] . ucfirst($url[1]) . 'Controller.php';
+                $requestedController = $loadedConfig['controllers'] . ucfirst($url[1]) . 'Controller.php';
 
                 //Does the controller exist?
                 if (file_exists($requestedController))
@@ -140,53 +140,6 @@ class Nova
                 $controller->indexAction();
             }
         }
-        /*
-         * --------------------------------------------------------
-         * Admin area - Load the requested admin controller
-         * --------------------------------------------------------
-         */
-        elseif (isset($url[1]) && !isset($url[2]))
-        {
-            $adminController = $loadedConfig['dir']['admin']['controllers'] . ucfirst($url[1]) . 'Controller.php';
-
-            if (file_exists($adminController))
-            {
-                require $adminController;
-            }
-
-            $object = ucfirst($url[1]) . 'Controller';
-            $controller = new $object;
-        }
-        else
-        {
-
-            if (strpos($url[2], '?') == true)
-            {
-                $url = explode('?', $url[2]);
-
-                $file = $loadedConfig['dir']['admin']['controllers'] . ucfirst($url[0]) . 'Controller.php';
-
-                if (file_exists($file))
-                {
-                    require $file;
-                }
-
-                $object = ucfirst($url[0]) . 'Controller';
-                $controller = new $object;
-            }
-            else
-            {
-                $file = $loadedConfig['dir']['admin']['controllers'] . ucfirst($url[2]) . 'Controller.php';
-
-                if (file_exists($file))
-                {
-                    require $file;
-                }
-
-                $object = ucfirst($url[2]) . 'Controller';
-                $controller = new $object;
-            }
-        }
 
         if (isset($url[3]))
         {
@@ -215,7 +168,7 @@ class Nova
      */
     protected function getConfig($customConfig = null)
     {
-        static $config;
+         static $config;
 
         //Load the default config file
         if (!isset($config))

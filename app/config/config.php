@@ -1,28 +1,48 @@
 <?php
 
-/**
- * Main config of the app
- */
-$config = array ();
+$config = array(
 
-//Set the debugging to true or false
-$config['debug'] = false;
+    /*
+	|--------------------------------------------------------------------------
+	| Application Debug Mode
+	|--------------------------------------------------------------------------
+	|
+	| Set whether debugging should be turned on or off.
+	|
+	*/
+    'debug' => false,
 
-//Locale
-$config['language'] = 'English';
-$config['charset'] = 'UTF-8';
+    /*
+	|--------------------------------------------------------------------------
+	| Cookie settings
+	|--------------------------------------------------------------------------
+	|
+	| Set app-wide cookie settings
+	|
+	*/
 
-//Session and cookie settings
-$config['session_expiration'] = 0;
-$config['session_cookie_httponly'] = 1;
-$config['use_only_cookies'] = 1;
-$config['cookie_secure'] = 1;
+    'session_expiration' => 0,
+    'session_cookie_httponly' => true,
+    'use_only_cookies' => true,
+    'cookie_secure' => true,
 
-//Default path variables
-$config['dir']['root'] = dirname(dirname(__DIR__));
-$config['dir']['app'] = 'app/';
-$config['dir']['models'] = $config['dir']['app'].'models/';
-$config['dir']['controllers'] = $config['dir']['app'].'controllers/';
-$config['dir']['views'] = $config['dir']['app'].'views/';
-$config['dir']['forms'] = $config['dir']['app'].'forms/';
-$config['dir']['layout'] = $config['dir']['app'].'layout/';
+/*
+	|--------------------------------------------------------------------------
+	| Application Path Settings
+	|--------------------------------------------------------------------------
+	|
+	| Default path settings are shown. If you need custom paths for your app
+    | override the ones here
+	|
+	*/
+    'root' => dirname(dirname(__DIR__)),
+    'app' => 'app/',
+    'models' => 'app/models/',
+    'controllers' => 'app/controllers/',
+    'views' => 'app/views/',
+    'forms' => 'app/forms/',
+    'layout' => 'app/views/layout/'
+
+);
+
+return $config;
