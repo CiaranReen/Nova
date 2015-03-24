@@ -1,7 +1,14 @@
 <?php
-
 /**
- * Class NovaSession
+ * Session class
+ *
+ * All standard session functionality here
+ *
+ * @copyright  2014 Nova Framework
+ * @license    http://www.novaframework.com/license/3_0.txt   PHP License 3.0
+ * @version    Release: @package_version@
+ * @link       http://novaframework.com/package/PackageName
+ * @since      Class available since Release 0.0.1
  */
 
 class Session_Base {

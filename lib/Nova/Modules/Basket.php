@@ -48,7 +48,7 @@ class Nova_Basket
      */
     public function getBasket()
     {
-        return NovaSession::get('basket');
+        return Session_Base::get('basket');
     }
 
     /**

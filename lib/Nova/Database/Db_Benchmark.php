@@ -8,13 +8,13 @@
  * Time: 11:52
  */
 
-class Database_Db_Benchmark extends Solace
+class Database_Db_Benchmark extends Database_Solace
 {
 
     public function __construct()
     {
         parent::__construct();
-        $this->solace = new Solace();
+        $this->solace = new Database_Solace();
     }
 
     public function getTime($query)
