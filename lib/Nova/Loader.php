@@ -38,7 +38,5 @@ function __autoload($class_name) {
  *  Set up custom routing
  * ------------------------------------------------------
  */
-
-$routes = new Routes();
 require '/app/config/routes.php';
 require '/app/config/constants.php';

@@ -51,7 +51,7 @@ class Routes
 
         if ($fullUrl == $url)
         {
-            $requestedController = $controller . 'Controller.php';
+            $requestedController = $controller . '.php';
 
             if (file_exists($requestedController))
             {

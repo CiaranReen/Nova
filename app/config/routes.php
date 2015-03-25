@@ -11,5 +11,4 @@ $routes = new Routes();
 */
 
 
-$routes->set('/admin/', 'app/controllers/admin/Admin');
-$routes->set('/admin/courses/', 'app/controllers/admin/Courses');
+$routes->set('/', 'app/controllers/WelcomeController');

@@ -13,7 +13,7 @@
 
 class Auth_Logging implements SplObserver {
 
-    function update( SplSubject $SplSubject ) {
+    public function update( SplSubject $SplSubject ) {
 
         $status = $SplSubject->getStatus();
 
