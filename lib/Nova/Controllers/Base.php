@@ -26,6 +26,7 @@ abstract class Controllers_Base {
      */
     public function __construct()
     {
+        $this->hash = new Hash();
         $this->view = new Views_Base();
 
         $class = get_class($this);

@@ -2,165 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d9522f1-37cf-42c6-92a5-60e6477d3a07" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\dashboard\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\search\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\Chart.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\Chart.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\component.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\docs\Chart.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\docs\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\docs\prettify.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\docs\prettify.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\docs\prettify.less" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\docs\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\docs\styles.less" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\samples\bar.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\samples\doughnut.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\samples\line.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\samples\pie.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\samples\polarArea.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\samples\radar.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\samples\sixup.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\site\assets\6charts.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\site\assets\Chart.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\site\assets\effects.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\site\assets\excanvas.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\site\assets\html.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\site\assets\simple.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\site\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\Chart.js\site\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\css\admin.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\css\reset.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\images\jQuery-logo.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\images\mysql-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\images\noavatar.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\images\php-med-trans.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\images\php-punch.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\.tm_properties" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\MIT-LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\component.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\cookie.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\test\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\test\malformed_cookie.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\jquery-cookie\test\tests.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\js\custom.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\js\dropit\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\js\dropit\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\js\dropit\changelog.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\js\dropit\dropit.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\js\dropit\dropit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\public\media\IntroToPHPCourse.wma" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\LICENSE.TXT" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\changelog.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\langs\readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\license.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\advlist\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\anchor\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\autolink\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\autoresize\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\autosave\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\bbcode\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\charmap\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\code\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\colorpicker\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\contextmenu\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\directionality\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-cool.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-cry.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-embarassed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-frown.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-innocent.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-kiss.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-laughing.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-sealed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-surprised.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-undecided.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-wink.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\img\smiley-yell.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\emoticons\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\example\dialog.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\example\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\example_dependency\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\fullpage\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\fullscreen\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\hr\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\image\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\importcss\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\insertdatetime\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\layer\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\legacyoutput\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\link\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\lists\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\media\moxieplayer.swf" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\media\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\nonbreaking\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\noneditable\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\pagebreak\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\paste\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\preview\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\print\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\save\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\searchreplace\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\spellchecker\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\tabfocus\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\table\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\template\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\textcolor\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\textpattern\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\visualblocks\css\visualblocks.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\visualblocks\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\visualchars\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\plugins\wordcount\plugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\content.inline.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\content.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.dev.svg" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.eot" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.svg" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.ttf" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.woff" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\tinymce.dev.svg" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\tinymce.eot" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\tinymce.svg" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\tinymce.ttf" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\fonts\tinymce.woff" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\img\anchor.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\img\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\img\object.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\img\trans.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\skin.ie7.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\skins\lightgray\skin.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\themes\modern\theme.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\vendor\tinymce\js\tinymce\tinymce.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Loader.php" afterPath="$PROJECT_DIR$/lib/Nova/Loader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Auth/Logging.php" afterPath="$PROJECT_DIR$/lib/Nova/Auth/Logging.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Routes.php" afterPath="$PROJECT_DIR$/lib/Nova/Routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout/header.phtml" afterPath="$PROJECT_DIR$/app/views/layout/header.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routes.php" afterPath="$PROJECT_DIR$/app/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Controllers/Base.php" afterPath="$PROJECT_DIR$/lib/Nova/Controllers/Base.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\wamp\www\Playground\app\controllers\IndexController.php" afterPath="$PROJECT_DIR$/app/controllers/WelcomeController.php" />
     </list>
     <ignored path="Playground.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427294206744" ignored="false" />
+    <file path="/Dummy.txt" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428142404035" ignored="false" />
     <file path="/Db.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426951601815" ignored="false" />
     <file path="/Solace.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426952256905" ignored="false" />
     <file path="/NovaBaseView.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1412799742461" ignored="false" />
@@ -230,18 +77,19 @@
     <file path="/.htaccess" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426949840049" ignored="false" />
     <file path="/NovaBaseController.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426952170566" ignored="false" />
     <file path="/Db_Benchmark.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427155459382" ignored="false" />
-    <file path="/Base.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426952232903" ignored="false" />
+    <file path="/Base.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427363401099" ignored="false" />
     <file path="/IndexController.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427295059744" ignored="false" />
     <file path="/Index.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426952211618" ignored="false" />
     <file path="/Loader.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426984432519" ignored="false" />
     <file path="/Nova.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426985888769" ignored="false" />
     <file path="/BaseController.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426983631188" ignored="false" />
-    <file path="$PROJECT_DIR$/../ciaranreen/app/views/nova.blade.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427156166241" ignored="false" />
-    <file path="/nova.blade.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427156156878" ignored="false" />
+    <file path="$PROJECT_DIR$/../ciaranreen/app/views/nova.blade.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427369295149" ignored="false" />
+    <file path="/nova.blade.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427368872712" ignored="false" />
     <file path="/Auth.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427061571417" ignored="false" />
     <file path="/Logging.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427295392831" ignored="false" />
     <file path="/Basket.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427155697156" ignored="false" />
     <file path="/Cheddar.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427156594691" ignored="false" />
+    <file path="/WelcomeController.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427368886800" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,18 +112,16 @@
       <file leaf-file-name="Loader.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Nova/Loader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="3" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-25.5">
-              <folding>
-                <element signature="e#7#328#0" expanded="true" />
-              </folding>
+            <state line="39" column="3" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hash.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/Nova/Hash.php">
+      <file leaf-file-name="WelcomeController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/WelcomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4658018">
+            <state line="5" column="5" selection-start="96" selection-end="96" vertical-scroll-proportion="0.10023585">
               <folding />
             </state>
           </provider>
@@ -299,8 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/Nova/Auth.php" />
-        <option value="$PROJECT_DIR$/lib/Nova/Auth/Auth.php" />
         <option value="$PROJECT_DIR$/lib/Nova/Views/Base.php" />
         <option value="$PROJECT_DIR$/app/config/config.php" />
         <option value="$PROJECT_DIR$/lib/Nova/Database/Db_Benchmark.php" />
@@ -315,6 +159,8 @@
         <option value="$PROJECT_DIR$/app/config/routes.php" />
         <option value="$PROJECT_DIR$/lib/Nova/Loader.php" />
         <option value="$PROJECT_DIR$/lib/Nova/Auth/Logging.php" />
+        <option value="$PROJECT_DIR$/lib/Nova/Controllers/Base.php" />
+        <option value="$PROJECT_DIR$/app/controllers/WelcomeController.php" />
       </list>
     </option>
   </component>
@@ -471,14 +317,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22678763" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23212379" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -560,112 +406,88 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="2" selection-start="9" selection-end="9" vertical-scroll-proportion="0.04009434" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Nova/Modules/Basket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="27" selection-start="850" selection-end="850" vertical-scroll-proportion="0.3817967" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Nova/Views/Cheddar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="21" selection-start="774" selection-end="774" vertical-scroll-proportion="0.56264776" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Nova/Views/Base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="367" vertical-scroll-proportion="0.020094562">
-          <folding>
-            <element signature="e#6#367#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Nova.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="2" selection-start="59" selection-end="59" vertical-scroll-proportion="0.02004717">
-          <folding />
-        </state>
+        <state line="3" column="2" selection-start="59" selection-end="59" vertical-scroll-proportion="0.02004717" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="48" selection-start="1191" selection-end="1191" vertical-scroll-proportion="-22.5">
-          <folding />
-        </state>
+        <state line="53" column="48" selection-start="1191" selection-end="1191" vertical-scroll-proportion="-22.5" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layout/footer.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layout/header.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="91" selection-end="91" vertical-scroll-proportion="-5.230769">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="91" selection-end="91" vertical-scroll-proportion="-5.230769" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.9615384">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.9615384" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Auth/Logging.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="11" selection-start="361" selection-end="361" vertical-scroll-proportion="0.12028302">
-          <folding />
-        </state>
+        <state line="15" column="11" selection-start="361" selection-end="361" vertical-scroll-proportion="0.12028302" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Auth/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="24" selection-start="852" selection-end="852" vertical-scroll-proportion="0.4811321">
-          <folding />
-        </state>
+        <state line="33" column="24" selection-start="852" selection-end="852" vertical-scroll-proportion="0.4811321" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.22051887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/WelcomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="140" selection-end="140" vertical-scroll-proportion="0.12028302">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.22051887" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Error.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Controllers/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="19" selection-start="737" selection-end="737" vertical-scroll-proportion="0.38089624">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="37" selection-start="206" selection-end="206" vertical-scroll-proportion="-2.6153846" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Loader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="3" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-25.5">
-          <folding>
-            <element signature="e#7#328#0" expanded="true" />
-          </folding>
+        <state line="39" column="3" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/compat/lib/password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="13" selection-start="8414" selection-end="8414" vertical-scroll-proportion="0.3427896" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Hash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4658018">
+        <state line="113" column="9" selection-start="2562" selection-end="2562" vertical-scroll-proportion="2.2706857" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Nova/Session/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="12" selection-start="1834" selection-end="1834" vertical-scroll-proportion="1.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/WelcomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="5" selection-start="96" selection-end="96" vertical-scroll-proportion="0.10023585">
           <folding />
         </state>
       </provider>
