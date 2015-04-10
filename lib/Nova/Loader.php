@@ -22,12 +22,15 @@ function __autoload($class_name) {
     $filename = str_replace('_', DIRECTORY_SEPARATOR, $class_name).'.php';
 
     $novaPath = 'lib/Nova/'.$filename;
-    $appPath = 'app/controllers/'.$filename;
+    $controllerPath = 'app/controllers/'.$filename;
+    $modelPath = 'app/models/'.$filename;
 
     if(file_exists($novaPath)) {
         require_once($novaPath);
-    } else if (file_exists($appPath)) {
-        require_once($appPath);
+    } else if (file_exists($controllerPath)) {
+        require_once($controllerPath);
+    } else if (file_exists($modelPath)) {
+        require_once($modelPath);
     } else {
         throw new Exception("Unable to load $class_name.");
     }

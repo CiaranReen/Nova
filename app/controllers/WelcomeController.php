@@ -4,6 +4,6 @@ class WelcomeController extends BaseController {
 
     public function indexAction()
     {
-        $this->view->render('index.phtml');
+        $this->view->render('index.php');
     }
 }

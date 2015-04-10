@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ciaran
- * Date: 17/06/14
- * Time: 14:40
- */
 
-class CoursesForm extends NovaBaseForm
+class CoursesForm extends Forms_Base
 {
     /**
      * @return array
