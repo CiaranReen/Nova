@@ -2,102 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d9522f1-37cf-42c6-92a5-60e6477d3a07" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/index.php" />
-      <change type="DELETED" beforePath="D:\wamp\www\Playground\app\views\index.phtml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/CoursesForm.php" afterPath="$PROJECT_DIR$/app/forms/CoursesForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Nova/Loader.php" afterPath="$PROJECT_DIR$/lib/Nova/Loader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="$PROJECT_DIR$/app/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/WelcomeController.php" afterPath="$PROJECT_DIR$/app/controllers/WelcomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout/header.phtml" afterPath="$PROJECT_DIR$/app/views/layout/header.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Playground.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428663061309" ignored="false" />
-    <file path="/Db.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426951601815" ignored="false" />
-    <file path="/Solace.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426952256905" ignored="false" />
-    <file path="/NovaBaseView.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1412799742461" ignored="false" />
-    <file path="/header.phtml" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428665055198" ignored="false" />
-    <file path="/AuthController.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1412800665208" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/layout/header.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1412807563867" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/layout/footer.phtml" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1412809332956" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/index.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1415585304228" ignored="false" />
-    <file path="/index.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428665262032" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/config/config.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413238726195" ignored="false" />
-    <file path="/config.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426985934074" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/layout/header.phtml" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1415585582747" ignored="false" />
-    <file path="/footer.phtml" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1412809332625" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/about.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413241505186" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/contact.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413226128106" ignored="false" />
-    <file path="/contact.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413225774765" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/public/css/style.css" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413365027690" ignored="false" />
-    <file path="/style.css" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413365026572" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/config/database.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413236351004" ignored="false" />
-    <file path="/database.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413226705633" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/search.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413240266044" ignored="false" />
-    <file path="/search.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413240266044" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/register.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413307631007" ignored="false" />
-    <file path="/register.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413307573478" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/login.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413241394765" ignored="false" />
-    <file path="/login.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413241389412" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/success.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413236068755" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/fail.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413236431777" ignored="false" />
-    <file path="/fail.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413236431777" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/auth.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413279811358" ignored="false" />
-    <file path="/auth.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413241423314" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/account.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413279930572" ignored="false" />
-    <file path="/account.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413279871903" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/logout.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413241358824" ignored="false" />
-    <file path="/logout.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413241327773" ignored="false" />
-    <file path="/about.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413241503093" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/config/init.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413303822077" ignored="false" />
-    <file path="/init.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413299330963" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/includes/classes/topic.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413300858168" ignored="false" />
-    <file path="/topic.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1414189459951" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/OOTest.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413305473374" ignored="false" />
-    <file path="/OOTest.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413304844998" ignored="false" />
-    <file path="/a.dummy" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427295154613" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/includes/classes/Topic.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413302619382" ignored="false" />
-    <file path="/Topic.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413302613863" ignored="false" />
-    <file path="/placeOrder.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1413894812919" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/category.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1415623736534" ignored="false" />
-    <file path="/category.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1415623734384" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/topic.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1414189896402" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/admin/topic.phtml" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1415026883041" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/layout/admin/header.phtml" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1415033422068" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/admin/topic/index.phtml" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1415033024352" ignored="false" />
-    <file path="/index.phtml" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428663589482" ignored="false" />
-    <file path="$PROJECT_DIR$/../AIDc3347115/admin/delete-item.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1415033907496" ignored="false" />
-    <file path="/delete-item.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1415033633010" ignored="false" />
-    <file path="$PROJECT_DIR$/../SkyTest/index.html" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1424457720263" ignored="false" />
-    <file path="/index.html" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1424457684674" ignored="false" />
-    <file path="$PROJECT_DIR$/../SkyTest/uploadXML.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1424457674435" ignored="false" />
-    <file path="$PROJECT_DIR$/../SkyTest/JbScchedule" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1424455666882" ignored="false" />
-    <file path="/schedule" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1424456075028" ignored="false" />
-    <file path="$PROJECT_DIR$/../SkyTest/schedule" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1424456079714" ignored="false" />
-    <file path="$PROJECT_DIR$/../SkyTest/xml/schedule.xml" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1424458585594" ignored="false" />
-    <file path="/uploadXML.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1424457574484" ignored="false" />
-    <file path="$PROJECT_DIR$/../SkyTest/index.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1424458361504" ignored="false" />
-    <file path="/schedule.xml" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1424458540896" ignored="false" />
-    <file path="/IDB.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426947076416" ignored="false" />
-    <file path="/.htaccess" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426949840049" ignored="false" />
-    <file path="/NovaBaseController.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426952170566" ignored="false" />
-    <file path="/Db_Benchmark.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427155459382" ignored="false" />
-    <file path="/Base.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427363401099" ignored="false" />
-    <file path="/IndexController.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427295059744" ignored="false" />
-    <file path="/Index.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426952211618" ignored="false" />
-    <file path="/Loader.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428663503731" ignored="false" />
-    <file path="/Nova.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426985888769" ignored="false" />
-    <file path="/BaseController.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1426983631188" ignored="false" />
-    <file path="$PROJECT_DIR$/../ciaranreen/app/views/nova.blade.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428665166429" ignored="false" />
-    <file path="/nova.blade.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428665166429" ignored="false" />
-    <file path="/Auth.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427061571417" ignored="false" />
-    <file path="/Logging.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427295392831" ignored="false" />
-    <file path="/Basket.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427155697156" ignored="false" />
-    <file path="/Cheddar.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1427156594691" ignored="false" />
-    <file path="/WelcomeController.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428663437773" ignored="false" />
-    <file path="/CoursesForm.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428663146235" ignored="false" />
-    <file path="/User.php" changelist="9d9522f1-37cf-42c6-92a5-60e6477d3a07" time="1428663244440" ignored="false" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,10 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/index.php">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="15" selection-start="576" selection-end="576" vertical-scroll-proportion="0.4822695">
+            <state vertical-scroll-proportion="0.021601016" vertical-offset="0" max-vertical-offset="787">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,30 +54,18 @@
     </option>
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/Nova/Session/Base.php" />
-        <option value="$PROJECT_DIR$/lib/Nova/Modules/Basket.php" />
-        <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
-        <option value="$PROJECT_DIR$/lib/Nova/Views/Cheddar.php" />
-        <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/lib/Nova/Routes.php" />
-        <option value="$PROJECT_DIR$/app/config/routes.php" />
-        <option value="$PROJECT_DIR$/lib/Nova/Auth/Logging.php" />
-        <option value="$PROJECT_DIR$/lib/Nova/Controllers/Base.php" />
-        <option value="$PROJECT_DIR$/app/forms/CoursesForm.php" />
-        <option value="$PROJECT_DIR$/app/models/User.php" />
-        <option value="$PROJECT_DIR$/lib/Nova/Loader.php" />
-        <option value="$PROJECT_DIR$/app/views/index.phtml" />
-        <option value="$PROJECT_DIR$/app/controllers/WelcomeController.php" />
-        <option value="$PROJECT_DIR$/app/views/layout/header.phtml" />
-        <option value="$PROJECT_DIR$/app/views/index.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -184,7 +84,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -196,6 +96,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -210,7 +111,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Playground" />
+              <option name="myItemId" value="Nova" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -220,29 +121,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Playground" />
+              <option name="myItemId" value="Nova" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Playground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Playground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,7 +135,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Playground" />
+              <option name="myItemId" value="Nova" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -260,56 +143,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Playground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Playground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Playground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Playground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="fileTemplates" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ciaranreen" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jbfurniture-new" />
     <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -336,6 +182,16 @@
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <method />
     </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
@@ -365,36 +221,41 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="9d9522f1-37cf-42c6-92a5-60e6477d3a07" name="Default" comment="" />
       <created>1401820943898</created>
+      <option name="number" value="Default" />
       <updated>1401820943898</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23479189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -402,143 +263,111 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
+      <TodoPanelSettings />
     </option>
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
-    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
-    <option name="LIMIT_HISTORY" value="true" />
-    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="UPDATE_FILTER_SCOPE_NAME" />
-    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
-    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
-    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
-    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ACTIVE_VCS_NAME" />
-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Error.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Controllers/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="19" selection-start="737" selection-end="737" vertical-scroll-proportion="0.38089624">
-          <folding />
+        <state vertical-scroll-proportion="0.38089624" vertical-offset="0" max-vertical-offset="0">
+          <caret line="28" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/compat/lib/password.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="13" selection-start="8414" selection-end="8414" vertical-scroll-proportion="0.3427896" />
+        <state vertical-scroll-proportion="0.3427896" vertical-offset="0" max-vertical-offset="0">
+          <caret line="218" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Hash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="9" selection-start="2562" selection-end="2562" vertical-scroll-proportion="2.2706857" />
+        <state vertical-scroll-proportion="2.2706857" vertical-offset="0" max-vertical-offset="0">
+          <caret line="113" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Session/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="12" selection-start="1834" selection-end="1834" vertical-scroll-proportion="1.0" />
+        <state vertical-scroll-proportion="1.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="86" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="37" selection-start="206" selection-end="206" vertical-scroll-proportion="0.08018868">
-          <folding />
+        <state vertical-scroll-proportion="0.08018868" vertical-offset="0" max-vertical-offset="0">
+          <caret line="8" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.22051887">
-          <folding />
+        <state vertical-scroll-proportion="0.22051887" vertical-offset="0" max-vertical-offset="0">
+          <caret line="11" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/forms/CoursesForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="43" selection-end="43" vertical-scroll-proportion="0.04009434">
-          <folding />
+        <state vertical-scroll-proportion="0.04009434" vertical-offset="0" max-vertical-offset="0">
+          <caret line="2" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="2" selection-start="390" selection-end="390" vertical-scroll-proportion="0.36084905">
-          <folding />
+        <state vertical-scroll-proportion="0.36084905" vertical-offset="0" max-vertical-offset="0">
+          <caret line="20" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="44" selection-start="193" selection-end="193" vertical-scroll-proportion="-4.576923">
-          <folding />
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="0">
+          <caret line="7" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Nova/Loader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="28" selection-start="724" selection-end="724" vertical-scroll-proportion="0.3207547">
-          <folding />
+        <state vertical-scroll-proportion="0.3207547" vertical-offset="0" max-vertical-offset="0">
+          <caret line="25" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/WelcomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="38" selection-start="135" selection-end="135" vertical-scroll-proportion="0.12028302">
-          <folding />
+        <state vertical-scroll-proportion="0.12028302" vertical-offset="0" max-vertical-offset="0">
+          <caret line="6" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -549,18 +378,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layout/header.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="25" selection-start="55" selection-end="55" vertical-scroll-proportion="0.06014151">
-          <folding />
+        <state vertical-scroll-proportion="0.06014151" vertical-offset="0" max-vertical-offset="0">
+          <caret line="3" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="15" selection-start="576" selection-end="576" vertical-scroll-proportion="0.4822695">
+        <state vertical-scroll-proportion="0.4949608" vertical-offset="0" max-vertical-offset="893">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.021601016" vertical-offset="0" max-vertical-offset="787">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
